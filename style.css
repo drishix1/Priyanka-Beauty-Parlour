@@ -1,6 +1,7 @@
 /* ==========================================================================
-   Priyanka Beauty Parlour - Luxury & Royal Salon Theme
+   Priyanka Beauty Parlour - Modern Luxury & Royal Salon Theme
    Palette: Velvet Blush, Champagne Gold, Porcelain Rose & Rich Plum
+   Typography: 'Playfair Display' (Headings) & 'Plus Jakarta Sans' (Body)
    ========================================================================== */
 
 :root {
@@ -32,30 +33,32 @@
   --color-instagram: #E1306C;
   --color-facebook: #1877F2;
   
-  /* Typography */
-  --font-royal: 'Playfair Display', serif;
-  --font-heading: 'Cinzel', serif;
+  /* Typography System */
+  --font-royal: 'Playfair Display', Georgia, serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
   --font-script: 'Great Vibes', cursive;
-  --font-body: 'Poppins', sans-serif;
+  --font-accent: 'Cinzel', serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   
   /* Shadows & Curves */
-  --shadow-sm: 0 4px 12px rgba(107, 65, 78, 0.05);
-  --shadow-md: 0 10px 28px rgba(107, 65, 78, 0.08);
+  --shadow-sm: 0 4px 14px rgba(107, 65, 78, 0.06);
+  --shadow-md: 0 10px 30px rgba(107, 65, 78, 0.09);
   --shadow-lg: 0 18px 45px rgba(107, 65, 78, 0.12);
   --shadow-gold: 0 8px 24px rgba(212, 175, 55, 0.28);
-  --radius-sm: 8px;
+  --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-full: 9999px;
   --transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  --header-height: 80px;
-  --header-height-laptop: 74px;
-  --header-height-compact: 70px;
+  --header-height: 76px;
   --header-height-mobile: 68px;
 }
 
-/* Reset & Base */
-* {
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -65,6 +68,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -74,6 +78,9 @@ body {
   line-height: 1.65;
   overflow-x: hidden;
   max-width: 100%;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
@@ -92,18 +99,37 @@ ul {
   list-style: none;
 }
 
+button, input, select, textarea {
+  font-family: inherit;
+}
+
 .container {
   width: 92%;
-  max-width: 1180px;
+  max-width: 1220px;
   margin: 0 auto;
-  padding: 0 12px;
+  padding: 0 16px;
 }
 
 .text-center {
   text-align: center;
 }
 
-/* Typography & Section Headings */
+/* ==========================================================================
+   Typography & Global Headings
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-dark);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+p {
+  font-family: var(--font-body);
+  line-height: 1.65;
+}
+
 .section-badge {
   display: inline-block;
   font-family: var(--font-body);
@@ -121,20 +147,22 @@ ul {
 }
 
 .section-title {
-  font-family: var(--font-royal);
-  font-size: 2.4rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
   font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 12px;
   line-height: 1.22;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.02em;
+  word-break: break-word;
 }
 
 .section-subtitle {
+  font-family: var(--font-body);
   color: var(--color-text-muted);
-  font-size: 1.05rem;
+  font-size: clamp(0.92rem, 1.8vw, 1.05rem);
   max-width: 620px;
-  margin: 0 auto 45px auto;
+  margin: 0 auto 40px auto;
   line-height: 1.6;
 }
 
@@ -142,7 +170,10 @@ ul {
   margin-bottom: 45px;
 }
 
-/* Buttons System */
+/* ==========================================================================
+   Buttons System
+   ========================================================================== */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -159,6 +190,9 @@ ul {
   text-align: center;
   position: relative;
   overflow: hidden;
+  min-height: 44px;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .btn-royal-gold {
@@ -216,11 +250,13 @@ ul {
 .btn-sm {
   font-size: 0.85rem;
   padding: 8px 18px;
+  min-height: 38px;
 }
 
 .btn-lg {
   font-size: 1.05rem;
   padding: 14px 28px;
+  min-height: 50px;
 }
 
 .btn-block {
@@ -243,163 +279,14 @@ ul {
   color: var(--color-facebook);
 }
 
-/* 1. Top Announcement Bar */
-.top-bar {
-  background: linear-gradient(90deg, #FDEEF2 0%, #FFF4E8 50%, #FDEEF2 100%);
-  border-bottom: 1px solid var(--color-border);
-  font-size: 0.83rem;
-  padding: 7px 0;
-  color: var(--color-text-muted);
-  position: relative;
-  z-index: 1002;
-}
+/* ==========================================================================
+   Header & Navigation
+   ========================================================================== */
 
-.top-bar-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 14px;
-  max-width: 1280px;
-  width: 94%;
-  margin: 0 auto;
-  padding: 0 12px;
-}
-
-.top-info {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  gap: 8px;
-}
-
-.top-pill {
-  font-weight: 500;
-  white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
-  line-height: 1.2;
-}
-
-.top-info .divider {
-  color: #DDA8B6;
-  user-select: none;
-  font-size: 0.82rem;
-}
-
-.highlight-pill {
-  color: var(--color-pink-accent);
-  font-weight: 600;
-  background: rgba(217, 105, 131, 0.08);
-  padding: 2px 9px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(217, 105, 131, 0.15);
-}
-
-.top-actions {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  flex-shrink: 0;
-}
-
-.top-social-group {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-/* Thin vertical separator between social and contact groups */
-.top-social-group::after {
-  content: '';
-  display: block;
-  width: 1px;
-  height: 14px;
-  background: #DDA8B6;
-  margin-left: 6px;
-  opacity: 0.7;
-}
-
-.top-contact-group {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.top-social-link {
-  font-weight: 600;
-  font-size: 0.82rem;
-  color: var(--color-text-dark);
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 3px 8px;
-  border-radius: var(--radius-sm);
-  transition: var(--transition);
-  white-space: nowrap;
-  line-height: 1.2;
-}
-
-.top-social-link .social-svg {
-  flex-shrink: 0;
-  vertical-align: middle;
-}
-
-.ig-top-link:hover {
-  color: var(--color-instagram);
-  background: rgba(225, 48, 108, 0.08);
-}
-
-.fb-top-link:hover {
-  color: var(--color-facebook);
-  background: rgba(24, 119, 242, 0.08);
-}
-
-.top-phone-link {
-  font-weight: 700;
-  font-size: 0.83rem;
-  color: var(--color-text-dark);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px 8px;
-  border-radius: var(--radius-sm);
-  white-space: nowrap;
-  transition: var(--transition);
-  line-height: 1.2;
-}
-
-.top-phone-link:hover {
-  color: var(--color-gold);
-  background: rgba(212, 175, 55, 0.08);
-}
-
-.top-wa-badge {
-  background: rgba(37, 211, 102, 0.15);
-  color: #0E7836;
-  font-weight: 700;
-  font-size: 0.82rem;
-  padding: 3px 10px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(37, 211, 102, 0.28);
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  white-space: nowrap;
-  transition: var(--transition);
-  line-height: 1.2;
-}
-
-.top-wa-badge:hover {
-  background: var(--color-whatsapp);
-  color: #FFFFFF;
-  border-color: transparent;
-  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
-}
-
-/* Header & Sticky Nav */
 .main-header {
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -414,25 +301,25 @@ ul {
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  max-width: 1280px;
-  width: 94%;
+  width: 92%;
+  max-width: 1220px;
   margin: 0 auto;
-  padding: 0 12px;
+  padding: 0 16px;
   gap: 16px;
 }
 
-/* Highly Attractive Brand Logo & Typography */
+/* Brand Logo */
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   flex-shrink: 0;
   text-decoration: none;
 }
 
 .logo-ring {
-  width: 52px;
-  height: 52px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   padding: 2.5px;
   background: var(--color-gold-gradient);
@@ -463,41 +350,41 @@ ul {
 }
 
 .brand-name-gold {
-  font-family: var(--font-royal);
-  font-size: 1.65rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2.5vw, 1.6rem);
   font-weight: 800;
   letter-spacing: 0.5px;
   background: linear-gradient(135deg, #1F0E14 15%, #966C1E 50%, #D4AF37 80%, #F5DEB3 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: block;
-  line-height: 1.05;
+  line-height: 1.1;
 }
 
 .brand-tag-royal {
-  font-family: var(--font-body);
-  font-size: 0.65rem;
+  font-family: var(--font-accent);
+  font-size: 0.62rem;
   font-weight: 700;
-  letter-spacing: 2.8px;
+  letter-spacing: 2.4px;
   color: var(--color-gold);
   text-transform: uppercase;
   display: block;
-  margin-top: 3px;
+  margin-top: 2px;
   line-height: 1;
 }
 
-/* Centered Navigation Menu */
+/* Desktop Navigation Menu */
 .nav-menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  flex: 1 1 auto;
+  gap: clamp(12px, 1.6vw, 22px);
   margin: 0 auto;
 }
 
 .nav-link {
-  font-size: 0.92rem;
+  font-family: var(--font-body);
+  font-size: 0.90rem;
   font-weight: 500;
   color: var(--color-text-muted);
   position: relative;
@@ -534,7 +421,7 @@ ul {
   font-weight: 600;
 }
 
-/* Desktop CTA Actions */
+/* Desktop Quick Contact CTA */
 .header-cta {
   display: flex;
   align-items: center;
@@ -554,16 +441,18 @@ ul {
 .hamburger-btn {
   display: none;
   flex-direction: column;
-  justify-content: space-around;
-  width: 42px;
-  height: 42px;
-  padding: 9px 8px;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px 8px;
   background: transparent;
-  border: 1px solid var(--color-border);
+  border: 1.5px solid var(--color-border);
   border-radius: var(--radius-sm);
   cursor: pointer;
-  z-index: 1001;
+  z-index: 1002;
   transition: var(--transition);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hamburger-btn:hover {
@@ -576,23 +465,24 @@ ul {
   height: 2.5px;
   background-color: var(--color-text-dark);
   border-radius: 10px;
-  transition: var(--transition);
+  transition: transform 0.28s ease, opacity 0.2s ease;
   transform-origin: center;
+  display: block;
 }
 
 /* Mobile Backdrop Overlay */
 .nav-backdrop {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background: rgba(35, 18, 23, 0.45);
+  background: rgba(35, 18, 23, 0.5);
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 999;
+  z-index: 1000;
 }
 
 .nav-backdrop.active {
@@ -601,13 +491,16 @@ ul {
 }
 
 body.nav-open {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
-/* 2. Hero Section (Ultra Attractive & Majestic) */
+/* ==========================================================================
+   2. Hero Section
+   ========================================================================== */
+
 .hero-section {
   position: relative;
-  padding: 55px 0 75px 0;
+  padding: clamp(45px, 6vw, 75px) 0 clamp(55px, 7vw, 85px) 0;
   background: linear-gradient(180deg, #FFFFFF 0%, #FFF6F8 50%, var(--color-bg) 100%);
   overflow: hidden;
 }
@@ -640,7 +533,7 @@ body.nav-open {
 .hero-container {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 40px;
+  gap: clamp(30px, 4vw, 50px);
   align-items: center;
   position: relative;
   z-index: 1;
@@ -651,12 +544,13 @@ body.nav-open {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   border: 1.5px solid var(--color-border);
   padding: 7px 18px;
   border-radius: var(--radius-full);
   box-shadow: var(--shadow-sm);
   margin-bottom: 18px;
+  max-width: 100%;
 }
 
 .royal-crown-badge .sparkle {
@@ -665,19 +559,21 @@ body.nav-open {
 }
 
 .royal-crown-badge .badge-text {
-  font-size: 0.84rem;
+  font-family: var(--font-body);
+  font-size: clamp(0.75rem, 1.8vw, 0.84rem);
   font-weight: 600;
   color: var(--color-text-dark);
+  line-height: 1.3;
 }
 
-/* Main Shop Name: Specially Styled & Highly Attractive */
+/* Specially Styled Attractive Main Shop Name */
 .shop-title-wrapper {
   margin-bottom: 16px;
 }
 
 .shop-pre-title {
   font-family: var(--font-script);
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 4vw, 2.3rem);
   color: var(--color-pink-deep);
   display: block;
   line-height: 1;
@@ -690,8 +586,8 @@ body.nav-open {
 }
 
 .name-priyanka {
-  font-family: var(--font-royal);
-  font-size: 4rem;
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 6.5vw, 4rem);
   font-weight: 800;
   letter-spacing: -0.5px;
   line-height: 1.05;
@@ -699,17 +595,19 @@ body.nav-open {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0 4px 16px rgba(212, 175, 55, 0.28));
+  word-break: break-word;
 }
 
 .name-parlour {
-  font-family: var(--font-heading);
-  font-size: 1.85rem;
+  font-family: var(--font-accent);
+  font-size: clamp(1.2rem, 3.2vw, 1.85rem);
   font-weight: 800;
-  letter-spacing: 7px;
+  letter-spacing: clamp(3px, 1vw, 7px);
   text-transform: uppercase;
   color: var(--color-text-dark);
   line-height: 1.15;
   margin-top: 6px;
+  word-break: break-word;
 }
 
 /* Royal filigree divider */
@@ -719,6 +617,7 @@ body.nav-open {
   gap: 12px;
   margin-top: 14px;
   max-width: 440px;
+  width: 100%;
 }
 
 .divider-line {
@@ -738,10 +637,10 @@ body.nav-open {
 }
 
 .hero-tagline-stylish {
-  font-family: var(--font-heading);
-  font-size: 1.18rem;
+  font-family: var(--font-accent);
+  font-size: clamp(0.95rem, 2.2vw, 1.18rem);
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: clamp(1.5px, 0.5vw, 3px);
   text-transform: uppercase;
   color: var(--color-pink-deep);
   margin-bottom: 16px;
@@ -753,7 +652,7 @@ body.nav-open {
 }
 
 .hero-description {
-  font-size: 1.04rem;
+  font-size: clamp(0.94rem, 1.6vw, 1.04rem);
   color: var(--color-text-muted);
   max-width: 530px;
   margin-bottom: 26px;
@@ -844,15 +743,19 @@ body.nav-open {
   box-shadow: 0 4px 14px rgba(24, 119, 242, 0.2);
 }
 
-/* Right Column: Luxury Glassmorphism Appointment Booking Card at Top */
+/* Luxury Glassmorphism Appointment Booking Card */
 .hero-booking-card {
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 32px 28px;
+  padding: clamp(22px, 4vw, 32px) clamp(18px, 3.5vw, 28px);
   box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255, 255, 255, 0.8) inset;
   position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .booking-card-badge {
@@ -879,8 +782,8 @@ body.nav-open {
 }
 
 .booking-title {
-  font-family: var(--font-royal);
-  font-size: 1.55rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.35rem, 2.5vw, 1.6rem);
   font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 4px;
@@ -920,11 +823,12 @@ body.nav-open {
 .appointment-form input,
 .appointment-form select {
   width: 100%;
-  padding: 11px 14px 11px 38px;
+  min-height: 44px;
+  padding: 10px 14px 10px 38px;
   border: 1.5px solid var(--color-border);
   border-radius: var(--radius-sm);
   font-family: var(--font-body);
-  font-size: 0.9rem;
+  font-size: 16px; /* Prevents auto-zoom on mobile iOS */
   background: #FFFDFC;
   color: var(--color-text-dark);
   outline: none;
@@ -940,8 +844,9 @@ body.nav-open {
 
 .btn-booking-submit {
   margin-top: 6px;
-  font-size: 1rem;
+  font-size: 0.98rem;
   padding: 13px;
+  min-height: 48px;
 }
 
 .booking-guarantee {
@@ -949,11 +854,15 @@ body.nav-open {
   font-size: 0.76rem;
   color: var(--color-text-muted);
   margin-top: 14px;
+  line-height: 1.4;
 }
 
-/* 3. About Section */
+/* ==========================================================================
+   3. About Section
+   ========================================================================== */
+
 .about-section {
-  padding: 95px 0;
+  padding: clamp(60px, 8vw, 95px) 0;
   background: #FFFFFF;
   position: relative;
 }
@@ -961,12 +870,15 @@ body.nav-open {
 .about-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
-  gap: 60px;
+  gap: clamp(35px, 5vw, 60px);
   align-items: center;
 }
 
 .about-image-wrapper {
   position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 .about-photo-frame {
@@ -975,12 +887,14 @@ body.nav-open {
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border: 8px solid var(--color-pink-soft);
+  width: 100%;
 }
 
 .about-photo-frame img {
   width: 100%;
-  height: 460px;
+  height: clamp(280px, 50vw, 460px);
   object-fit: cover;
+  display: block;
 }
 
 /* Golden Corner Brackets */
@@ -1018,11 +932,13 @@ body.nav-open {
   display: flex;
   align-items: center;
   gap: 12px;
-  max-width: 220px;
+  max-width: 230px;
+  z-index: 2;
 }
 
 .floating-icon {
   font-size: 1.8rem;
+  flex-shrink: 0;
 }
 
 .floating-title {
@@ -1039,14 +955,14 @@ body.nav-open {
 }
 
 .about-text-content .lead-text {
-  font-size: 1.14rem;
+  font-size: clamp(1rem, 2vw, 1.14rem);
   color: var(--color-text-dark);
   margin-bottom: 14px;
   line-height: 1.65;
 }
 
 .about-text-content .body-text {
-  font-size: 0.98rem;
+  font-size: clamp(0.92rem, 1.8vw, 0.98rem);
   color: var(--color-text-muted);
   margin-bottom: 16px;
   line-height: 1.68;
@@ -1079,10 +995,11 @@ body.nav-open {
 .highlight-icon {
   font-size: 1.6rem;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .highlight-box h4 {
-  font-family: var(--font-royal);
+  font-family: var(--font-heading);
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--color-text-dark);
@@ -1095,16 +1012,19 @@ body.nav-open {
   line-height: 1.5;
 }
 
-/* 4. Services Section (Elevated UI/UX) */
+/* ==========================================================================
+   4. Services Section
+   ========================================================================== */
+
 .services-section {
-  padding: 95px 0;
+  padding: clamp(60px, 8vw, 95px) 0;
   background: var(--color-bg-alt);
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  gap: clamp(16px, 2.2vw, 24px);
   margin-bottom: 45px;
 }
 
@@ -1112,12 +1032,13 @@ body.nav-open {
   background: #FFFFFF;
   border: 1.5px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 30px 22px;
+  padding: clamp(24px, 3vw, 30px) clamp(18px, 2.5vw, 22px);
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   position: relative;
   transition: var(--transition);
+  height: 100%;
 }
 
 .service-card:hover {
@@ -1138,6 +1059,7 @@ body.nav-open {
   margin-bottom: 16px;
   border: 1px solid var(--color-pink-mid);
   transition: var(--transition);
+  flex-shrink: 0;
 }
 
 .service-card:hover .service-icon-wrap {
@@ -1147,8 +1069,8 @@ body.nav-open {
 }
 
 .service-name {
-  font-family: var(--font-royal);
-  font-size: 1.25rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 2vw, 1.25rem);
   font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 10px;
@@ -1166,8 +1088,10 @@ body.nav-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 12px;
+  padding-top: 14px;
   border-top: 1px solid var(--color-border-light);
+  gap: 8px;
+  margin-top: auto;
 }
 
 .service-tag {
@@ -1178,12 +1102,17 @@ body.nav-open {
   background: var(--color-pink-soft);
   padding: 4px 10px;
   border-radius: var(--radius-full);
+  white-space: nowrap;
 }
 
 .service-book-link {
-  font-size: 0.84rem;
+  font-size: 0.86rem;
   font-weight: 700;
   color: var(--color-gold);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
 }
 
 .service-book-link:hover {
@@ -1223,12 +1152,12 @@ body.nav-open {
   color: var(--color-gold) !important;
 }
 
-/* Services Consultation Banner (Replaces old price list) */
+/* Services Consultation Banner */
 .services-cta-banner {
   background: #FFFFFF;
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 36px 40px;
+  padding: clamp(24px, 4vw, 36px) clamp(20px, 4vw, 40px);
   box-shadow: var(--shadow-sm);
   display: flex;
   align-items: center;
@@ -1237,9 +1166,13 @@ body.nav-open {
   gap: 20px;
 }
 
+.cta-banner-text {
+  flex: 1 1 320px;
+}
+
 .cta-banner-text h3 {
-  font-family: var(--font-royal);
-  font-size: 1.35rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.5vw, 1.35rem);
   font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 6px;
@@ -1254,18 +1187,22 @@ body.nav-open {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
-/* 6. Gallery Section */
+/* ==========================================================================
+   6. Gallery Section
+   ========================================================================== */
+
 .gallery-section {
-  padding: 95px 0;
+  padding: clamp(60px, 8vw, 95px) 0;
   background: #FFFFFF;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  gap: clamp(16px, 2.5vw, 22px);
 }
 
 .gallery-item {
@@ -1275,8 +1212,9 @@ body.nav-open {
   box-shadow: var(--shadow-sm);
   background: #000;
   cursor: pointer;
-  height: 330px;
+  height: clamp(250px, 40vw, 330px);
   border: 3px solid #FFFFFF;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .gallery-item img {
@@ -1316,10 +1254,11 @@ body.nav-open {
 }
 
 .gallery-overlay h4 {
-  font-family: var(--font-royal);
+  font-family: var(--font-heading);
   font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 3px;
+  color: #FFFFFF;
 }
 
 .gallery-overlay p {
@@ -1332,12 +1271,12 @@ body.nav-open {
   display: none;
   position: fixed;
   z-index: 2000;
-  left: 0;
-  top: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.92);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -1349,55 +1288,75 @@ body.nav-open {
 }
 
 .lightbox-img {
-  max-width: 90%;
-  max-height: 82vh;
+  max-width: min(92vw, 900px);
+  max-height: 78vh;
   border-radius: var(--radius-sm);
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
-  border: 4px solid #FFFFFF;
+  border: 3px solid #FFFFFF;
+  object-fit: contain;
 }
 
 .lightbox-caption {
   color: #FFFFFF;
-  font-size: 1.05rem;
+  font-size: clamp(0.9rem, 2vw, 1.05rem);
   margin-top: 14px;
   text-align: center;
-  font-family: var(--font-royal);
+  font-family: var(--font-body);
+}
+
+.lightbox-caption strong {
+  font-family: var(--font-heading);
+  font-size: 1.15em;
 }
 
 .lightbox-close {
   position: absolute;
   top: 20px;
-  right: 30px;
+  right: 25px;
   color: #FFFFFF;
-  font-size: 42px;
+  font-size: 38px;
+  line-height: 1;
   font-weight: bold;
   cursor: pointer;
   transition: var(--transition);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .lightbox-close:hover {
   color: var(--color-gold-bright);
+  background: rgba(255, 255, 255, 0.25);
 }
 
-/* 8. Location & Map Section */
+/* ==========================================================================
+   8. Location & Map Section
+   ========================================================================== */
+
 .location-section {
-  padding: 95px 0;
+  padding: clamp(60px, 8vw, 95px) 0;
   background: var(--color-bg);
 }
 
 .location-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+  gap: clamp(24px, 4vw, 40px);
+  align-items: stretch;
 }
 
 .location-card {
   background: #FFFFFF;
   border: 1.5px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 38px;
+  padding: clamp(24px, 4vw, 38px);
   box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
 }
 
 .location-icon-badge {
@@ -1411,21 +1370,23 @@ body.nav-open {
   font-size: 1.6rem;
   margin-bottom: 14px;
   border: 1px solid var(--color-gold-border);
+  flex-shrink: 0;
 }
 
 .location-shop-title {
-  font-family: var(--font-royal);
-  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
   font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 12px;
 }
 
 .address-text {
-  font-size: 1rem;
+  font-size: clamp(0.92rem, 1.8vw, 1rem);
   color: var(--color-text-dark);
   margin-bottom: 22px;
   line-height: 1.65;
+  word-break: break-word;
 }
 
 .location-detail-list {
@@ -1444,21 +1405,25 @@ body.nav-open {
   gap: 12px;
   font-size: 0.94rem;
   color: var(--color-text-muted);
+  flex-wrap: wrap;
 }
 
 .detail-row a {
   color: var(--color-gold);
   font-weight: 600;
+  word-break: break-all;
 }
 
 .detail-row .icon {
   font-size: 1.15rem;
+  flex-shrink: 0;
 }
 
 .location-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  margin-top: auto;
 }
 
 .map-wrapper {
@@ -1466,17 +1431,22 @@ body.nav-open {
   overflow: hidden;
   border: 4px solid #FFFFFF;
   box-shadow: var(--shadow-md);
-  height: 400px;
+  height: 100%;
+  min-height: clamp(280px, 45vw, 400px);
 }
 
 .map-wrapper iframe {
   width: 100%;
   height: 100%;
+  border: 0;
 }
 
-/* 7. Contact Section */
+/* ==========================================================================
+   7. Contact Section
+   ========================================================================== */
+
 .contact-section {
-  padding: 95px 0;
+  padding: clamp(60px, 8vw, 95px) 0;
   background: #FFFFFF;
 }
 
@@ -1484,11 +1454,11 @@ body.nav-open {
   background: var(--color-bg);
   border: 2px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 48px;
+  padding: clamp(26px, 4vw, 48px);
   box-shadow: var(--shadow-md);
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 45px;
+  gap: clamp(28px, 4vw, 45px);
 }
 
 .contact-text .section-title {
@@ -1496,9 +1466,10 @@ body.nav-open {
 }
 
 .contact-lead {
-  font-size: 1.02rem;
+  font-size: clamp(0.94rem, 1.8vw, 1.02rem);
   color: var(--color-text-muted);
   margin-bottom: 26px;
+  line-height: 1.65;
 }
 
 .contact-channels {
@@ -1571,9 +1542,10 @@ body.nav-open {
 }
 
 .channel-info .value {
-  font-size: 1.05rem;
+  font-size: clamp(0.96rem, 2vw, 1.05rem);
   font-weight: 700;
   color: var(--color-text-dark);
+  word-break: break-word;
 }
 
 .channel-info a.value:hover {
@@ -1591,7 +1563,7 @@ body.nav-open {
   background: #FFFFFF;
   border: 1.5px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 32px;
+  padding: clamp(24px, 3.5vw, 32px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1604,8 +1576,8 @@ body.nav-open {
 }
 
 .connect-logo-ring {
-  width: 68px;
-  height: 68px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   padding: 3px;
   background: var(--color-gold-gradient);
@@ -1622,8 +1594,8 @@ body.nav-open {
 }
 
 .connect-title {
-  font-family: var(--font-royal);
-  font-size: 1.35rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.2vw, 1.35rem);
   font-weight: 700;
   color: var(--color-text-dark);
   margin-bottom: 4px;
@@ -1648,9 +1620,10 @@ body.nav-open {
   background: var(--color-bg);
   border: 1.5px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: 14px 20px;
+  padding: 14px 18px;
   transition: var(--transition);
   box-shadow: var(--shadow-sm);
+  min-height: 60px;
 }
 
 .social-action-card:hover {
@@ -1676,8 +1649,8 @@ body.nav-open {
 .ig-card-icon {
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
   color: #FFFFFF;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -1688,8 +1661,8 @@ body.nav-open {
 .fb-card-icon {
   background: #1877F2;
   color: #FFFFFF;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -1700,11 +1673,12 @@ body.nav-open {
 .social-card-text {
   flex-grow: 1;
   margin-left: 14px;
+  min-width: 0;
 }
 
 .social-platform {
   display: block;
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -1713,15 +1687,19 @@ body.nav-open {
 
 .social-handle {
   display: block;
-  font-size: 0.98rem;
+  font-size: clamp(0.88rem, 1.8vw, 0.98rem);
   font-weight: 700;
   color: var(--color-text-dark);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .social-arrow {
   font-size: 1.1rem;
   color: var(--color-gold);
   font-weight: bold;
+  flex-shrink: 0;
 }
 
 .visiting-note {
@@ -1755,19 +1733,22 @@ body.nav-open {
   border: 1px solid var(--color-gold-border);
 }
 
-/* 10. Footer */
+/* ==========================================================================
+   10. Footer
+   ========================================================================== */
+
 .main-footer {
   background: #1F1014;
   color: #E2D3D7;
-  padding: 70px 0 0 0;
+  padding: clamp(55px, 7vw, 75px) 0 0 0;
   border-top: 3px solid var(--color-gold-bright);
 }
 
 .footer-container {
   display: grid;
   grid-template-columns: 1.3fr 0.9fr 1.2fr;
-  gap: 45px;
-  padding-bottom: 50px;
+  gap: clamp(30px, 4vw, 45px);
+  padding-bottom: 45px;
 }
 
 .footer-brand-header {
@@ -1778,11 +1759,12 @@ body.nav-open {
 }
 
 .footer-logo-ring {
-  width: 58px;
-  height: 58px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
   padding: 2.5px;
   background: var(--color-gold-gradient);
+  flex-shrink: 0;
 }
 
 .footer-logo-img {
@@ -1794,8 +1776,8 @@ body.nav-open {
 }
 
 .footer-logo-name {
-  font-family: var(--font-royal);
-  font-size: 1.6rem;
+  font-family: var(--font-heading);
+  font-size: 1.55rem;
   font-weight: 700;
   background: var(--color-gold-gradient);
   -webkit-background-clip: text;
@@ -1804,9 +1786,9 @@ body.nav-open {
 }
 
 .footer-logo-sub {
-  font-family: var(--font-heading);
-  font-size: 0.72rem;
-  letter-spacing: 3px;
+  font-family: var(--font-accent);
+  font-size: 0.70rem;
+  letter-spacing: 2.5px;
   color: #E6C587;
   font-weight: 600;
 }
@@ -1839,6 +1821,8 @@ body.nav-open {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  min-height: 36px;
+  word-break: break-word;
 }
 
 .footer-social-item:hover {
@@ -1847,7 +1831,7 @@ body.nav-open {
 }
 
 .footer-title {
-  font-family: var(--font-royal);
+  font-family: var(--font-heading);
   font-size: 1.15rem;
   color: #FFFFFF;
   margin-bottom: 20px;
@@ -1866,12 +1850,15 @@ body.nav-open {
 }
 
 .footer-col ul li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .footer-col ul li a {
   font-size: 0.9rem;
   opacity: 0.85;
+  display: inline-block;
+  padding: 4px 0;
+  min-height: 32px;
 }
 
 .footer-col ul li a:hover {
@@ -1898,28 +1885,32 @@ body.nav-open {
   opacity: 0.75;
 }
 
-/* Floating Action Buttons */
+/* ==========================================================================
+   Floating Action Buttons
+   ========================================================================== */
+
 .floating-buttons {
   position: fixed;
-  bottom: 26px;
-  right: 26px;
+  bottom: clamp(16px, 3vw, 26px);
+  right: clamp(16px, 3vw, 26px);
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  z-index: 999;
+  gap: 12px;
+  z-index: 998;
 }
 
 .floating-btn {
-  width: 54px;
-  height: 54px;
+  width: clamp(48px, 12vw, 54px);
+  height: clamp(48px, 12vw, 54px);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.55rem;
+  font-size: 1.45rem;
   color: #FFFFFF;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
   transition: var(--transition);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .wa-btn {
@@ -1932,7 +1923,7 @@ body.nav-open {
 }
 
 .floating-btn:hover {
-  transform: scale(1.12);
+  transform: scale(1.1);
 }
 
 @keyframes pulse {
@@ -1948,134 +1939,52 @@ body.nav-open {
 }
 
 /* ==========================================================================
-   Responsive Media Queries
+   Responsive Breakpoints & Layout Adaptations
    ========================================================================== */
 
-/* 1. Standard Laptops (1201px - 1366px) */
-@media (max-width: 1366px) {
-  .nav-container,
-  .top-bar-content {
-    width: 95%;
-    padding: 0 10px;
+/* 1. Large Laptops / Desktops (1200px and down) */
+@media (max-width: 1200px) {
+  .nav-menu {
+    gap: 14px;
+  }
+  
+  .nav-link {
+    font-size: 0.86rem;
+  }
+  
+  .header-cta .btn {
+    padding: 7px 14px;
+    font-size: 0.82rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 2. Compact Laptops / Tablets Landscape (1024px and down) */
+@media (max-width: 1024px) {
+  .header-cta.desktop-only {
+    display: none; /* Hide top cta to make room for full navigation */
   }
 
   .nav-menu {
     gap: 16px;
   }
 
-  .nav-link {
-    font-size: 0.88rem;
-  }
-
-  .header-cta {
-    gap: 8px;
-  }
-
-  .header-cta .btn {
-    padding: 7px 15px;
-    font-size: 0.82rem;
-  }
-
-  .brand-logo {
-    gap: 11px;
-  }
-
-  .logo-ring {
-    width: 48px;
-    height: 48px;
-  }
-
-  .brand-name-gold {
-    font-size: 1.52rem;
+  .hero-container {
+    gap: 32px;
   }
 }
 
-/* 2. Medium Desktop / Small Laptop / Landscape Tablet (993px - 1200px) — including 1024px */
-@media (max-width: 1200px) {
-  .main-header {
-    height: var(--header-height-laptop); /* 74px */
-  }
-
-  .nav-container,
-  .top-bar-content {
-    width: 96%;
-    padding: 0 8px;
-  }
-
-  /* Top Announcement Bar: Clean 2-row centered presentation */
-  .top-bar {
-    padding: 6px 0;
-  }
-
-  .top-bar-content {
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    text-align: center;
-  }
-
-  .top-info {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 6px 12px;
-    font-size: 0.80rem;
-  }
-
-  .top-actions {
-    justify-content: center;
-    gap: 12px;
-    font-size: 0.80rem;
-  }
-
-  /* Desktop Navigation: Compact layout to guarantee ZERO collision */
-  .brand-logo {
-    gap: 10px;
-  }
-
-  .logo-ring {
-    width: 44px;
-    height: 44px;
-  }
-
-  .brand-name-gold {
-    font-size: 1.38rem;
-  }
-
-  .brand-tag-royal {
-    font-size: 0.58rem;
-    letter-spacing: 2px;
-  }
-
-  .nav-menu {
-    gap: 11px;
-  }
-
-  .nav-link {
-    font-size: 0.82rem;
-    padding: 6px 0;
-  }
-
-  .header-cta {
-    gap: 7px;
-  }
-
-  .header-cta .btn {
-    padding: 6px 12px;
-    font-size: 0.79rem;
-  }
-}
-
-/* 3. Tablets & Mobile Switch (max-width: 992px) */
+/* 3. Tablets & Mobile Switch (992px and down) */
 @media (max-width: 992px) {
-  /* Mobile Header Navigation System */
   .main-header {
-    height: var(--header-height-mobile); /* 68px */
+    height: var(--header-height-mobile);
   }
 
   .nav-container {
-    height: 100%;
-    width: 92%;
-    padding: 0 10px;
+    padding: 0 12px;
   }
 
   .desktop-only {
@@ -2084,43 +1993,31 @@ body.nav-open {
 
   .mobile-only {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 16px;
-    padding-top: 16px;
-    border-top: 1px solid var(--color-border-light);
-    width: 100%;
-  }
-
-  .mobile-only .btn {
-    width: 100%;
-    padding: 11px 16px;
-    font-size: 0.90rem;
-    justify-content: center;
   }
 
   .hamburger-btn {
     display: flex;
   }
 
+  /* Mobile Slide-Out Drawer Navigation */
   .nav-menu {
     position: fixed;
-    top: var(--header-height-mobile);
+    top: 0;
     left: -100%;
-    width: 84%;
-    max-width: 320px;
-    height: calc(100vh - var(--header-height-mobile));
-    height: calc(100dvh - var(--header-height-mobile));
+    width: min(84vw, 320px);
+    height: 100vh;
+    height: 100dvh;
     background: #FFFFFF;
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
-    padding: 22px 18px 30px 18px;
-    gap: 4px;
+    padding: 85px 20px 30px 20px;
+    gap: 6px;
     margin: 0;
-    box-shadow: 4px 0 24px rgba(107, 65, 78, 0.15);
+    box-shadow: 6px 0 25px rgba(107, 65, 78, 0.15);
     transition: left 0.32s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     z-index: 1001;
   }
 
@@ -2132,13 +2029,14 @@ body.nav-open {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 12px 14px;
-    font-size: 0.95rem;
+    padding: 12px 16px;
+    font-size: 0.96rem;
     font-weight: 500;
     color: var(--color-text-dark);
     border-radius: var(--radius-sm);
     border-left: 3px solid transparent;
     transition: var(--transition);
+    min-height: 44px;
   }
 
   .nav-link::after {
@@ -2150,323 +2048,227 @@ body.nav-open {
     background: var(--color-pink-soft);
     color: var(--color-pink-accent);
     border-left-color: var(--color-gold);
-    padding-left: 18px;
+    padding-left: 20px;
   }
 
-  .nav-highlight {
-    color: var(--color-pink-accent) !important;
-    font-weight: 600;
+  .nav-mobile-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--color-border-light);
+    width: 100%;
   }
 
+  .nav-mobile-cta .btn {
+    width: 100%;
+    min-height: 44px;
+    font-size: 0.90rem;
+    justify-content: center;
+  }
+
+  /* Hamburger transform animation */
   .hamburger-btn.active span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(7.5px) rotate(45deg);
   }
 
   .hamburger-btn.active span:nth-child(2) {
     opacity: 0;
+    transform: scale(0);
   }
 
   .hamburger-btn.active span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-7.5px) rotate(-45deg);
   }
 
-  .brand-logo {
-    gap: 10px;
-  }
-
-  .logo-ring {
-    width: 44px;
-    height: 44px;
-  }
-
-  .brand-name-gold {
-    font-size: 1.38rem;
-  }
-
-  .brand-tag-royal {
-    font-size: 0.58rem;
-    letter-spacing: 2px;
-  }
-
-  /* Section layouts for tablets */
+  /* Hero Section Stacking on Tablet */
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 40px;
   }
 
-  .name-priyanka {
-    font-size: 3.4rem;
-  }
-
-  .name-parlour {
-    font-size: 1.6rem;
-  }
-
-  .royal-crown-badge {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .royal-divider {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-description {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .hero-features {
-    justify-content: center;
-  }
-
+  .royal-crown-badge,
+  .royal-divider,
+  .hero-description,
+  .hero-buttons,
+  .hero-features,
   .hero-socials {
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
   }
 
   .hero-booking-card {
+    text-align: left;
     max-width: 480px;
     margin: 0 auto;
-    text-align: left;
   }
 
+  /* About Section Stacking */
   .about-grid {
     grid-template-columns: 1fr;
     gap: 45px;
   }
 
   .about-image-wrapper {
-    max-width: 440px;
-    margin: 0 auto;
+    max-width: 460px;
   }
 
-  .services-grid {
+  /* Location Section Stacking */
+  .location-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .map-wrapper {
+    height: 350px;
+  }
+
+  /* Contact Section Stacking */
+  .contact-card-box {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  /* Footer 2 Columns on Tablet */
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .footer-col.brand-col {
+    grid-column: 1 / -1;
+  }
+}
+
+/* 4. Portrait Tablets / Large Mobile (768px and down) */
+@media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 35px;
+  }
+
+  .about-floating-card {
+    /* Prevent horizontal overflow on screens <= 768px */
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    max-width: calc(100% - 24px);
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .services-cta-banner {
     flex-direction: column;
     text-align: center;
+    gap: 18px;
   }
 
   .cta-banner-buttons {
     justify-content: center;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .location-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-card-box {
-    grid-template-columns: 1fr;
+    width: 100%;
   }
 
   .footer-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer-col.brand-col {
+    grid-column: auto;
   }
 }
 
-/* 4. Mobile Devices (max-width: 768px) */
-@media (max-width: 768px) {
-  /* Announcement Bar for Mobile */
-  .top-bar {
-    padding: 6px 0 7px 0;
-    font-size: 0.77rem;
-  }
-
-  .top-bar-content {
-    flex-direction: column;
-    gap: 5px;
-    text-align: center;
-    padding: 0 8px;
-    width: 96%;
-  }
-
-  .top-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    width: 100%;
-    line-height: 1.3;
-  }
-
-  .top-pill {
-    font-size: 0.76rem;
-    white-space: normal;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .top-info .divider {
-    display: none;
-  }
-
-  .highlight-pill {
-    order: -1;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.74rem;
-    padding: 2px 10px;
-    margin: 0 auto 2px auto;
-  }
-
-  .top-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    padding-top: 5px;
-    border-top: 1px solid rgba(241, 212, 220, 0.6);
-    width: 100%;
-  }
-
-  .top-social-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 6px 10px;
-  }
-
-  .top-contact-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 6px 10px;
-  }
-
-  .top-social-link {
-    font-size: 0.76rem;
-    padding: 3px 7px;
-  }
-
-  .top-phone-link {
-    font-size: 0.78rem;
-    padding: 3px 8px;
-  }
-
-  .top-wa-badge {
-    font-size: 0.76rem;
-    padding: 3px 9px;
-  }
-
-  .name-priyanka {
-    font-size: 2.8rem;
-  }
-
-  .name-parlour {
-    font-size: 1.35rem;
-    letter-spacing: 4px;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
+/* 5. Mobile Phones (600px and down) */
+@media (max-width: 600px) {
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .gallery-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .contact-card-box {
-    padding: 24px;
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
   }
 
-  .hero-booking-card {
-    padding: 24px 18px;
+  .hero-buttons .btn {
+    width: 100%;
+    min-height: 48px;
   }
 
-  .footer-container {
-    grid-template-columns: 1fr;
+  .cta-banner-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .cta-banner-buttons .btn {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .location-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .location-buttons .btn {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .contact-cta-row {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .contact-cta-row .btn {
+    width: 100%;
+    min-height: 48px;
   }
 
   .floating-buttons {
-    bottom: 18px;
-    right: 18px;
+    bottom: 16px;
+    right: 16px;
+    gap: 10px;
+  }
+
+  .floating-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 1.35rem;
   }
 }
 
-/* Tablet top bar refinement (521px - 768px) */
-@media (min-width: 521px) and (max-width: 768px) {
-  .top-info {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 4px 8px;
-  }
-
-  .top-info .divider:first-of-type {
-    display: inline-block;
-  }
-
-  .highlight-pill {
-    order: 0;
-    margin: 0;
-  }
-
-  .top-actions {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 8px 14px;
-  }
-}
-
-/* 5. Ultra Compact Mobile Phones (360px - 400px) */
+/* 6. Ultra-Compact Mobile Phones (400px and down - including 320px) */
 @media (max-width: 400px) {
-  .nav-container {
-    width: 100%;
-    padding: 0 8px;
-    gap: 6px;
-  }
-
-  .top-bar {
-    font-size: 0.72rem;
-    padding: 5px 0 6px 0;
-  }
-
-  .top-info {
-    gap: 2px 4px;
-  }
-
-  .top-pill {
-    font-size: 0.71rem;
-  }
-
-  .top-actions {
-    gap: 4px 6px;
-  }
-
-  .top-social-group,
-  .top-contact-group {
-    gap: 6px;
-  }
-
-  .top-social-link,
-  .top-phone-link,
-  .top-wa-badge {
-    font-size: 0.71rem;
-    padding: 2px 5px;
+  .container {
+    width: 95%;
+    padding: 0 10px;
   }
 
   .brand-logo {
     gap: 8px;
-    min-width: 0;
+  }
+
+  .logo-ring {
+    width: 40px;
+    height: 40px;
   }
 
   .brand-name-gold {
@@ -2478,114 +2280,53 @@ body.nav-open {
     letter-spacing: 1.2px;
   }
 
-  .logo-ring {
-    width: 38px;
-    height: 38px;
+  .hamburger-btn {
+    width: 40px;
+    height: 40px;
+    padding: 8px 6px;
   }
 
-  .hamburger-btn {
-    width: 38px;
-    height: 38px;
-    padding: 8px 7px;
-    flex-shrink: 0;
+  .hero-booking-card {
+    padding: 20px 14px;
+    border-radius: var(--radius-md);
   }
 
   .royal-crown-badge {
-    padding: 5px 10px;
-    max-width: 96%;
+    padding: 5px 12px;
   }
 
-  .royal-crown-badge .badge-text {
-    font-size: 0.72rem;
+  .feature-card {
+    font-size: 0.76rem;
+    padding: 6px 12px;
   }
-}
 
-/* --- NEW ARRANGEMENT FIXES FOR TOP BAR & NAVBAR --- */
+  .social-pill {
+    font-size: 0.76rem;
+    padding: 6px 12px;
+  }
 
-.top-bar-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
+  .about-floating-card {
+    padding: 10px 14px;
+  }
 
-.top-info, .top-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
+  .floating-title {
+    font-size: 0.82rem;
+  }
 
-.top-social-group {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border-right: 1px solid rgba(221, 168, 182, 0.5);
-  padding-right: 12px;
-}
+  .floating-desc {
+    font-size: 0.70rem;
+  }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-
-.brand-name-gold {
-  font-size: 1.45rem; /* Resized for better fit */
-}
-
-.nav-menu {
-  display: flex;
-  gap: 18px; /* Reduced gap so items don't squash */
-}
-
-/* Responsive Fixes for Laptops & Tablets */
-@media (max-width: 1150px) {
-  .nav-menu {
+  .channel-box {
+    padding: 12px 14px;
     gap: 12px;
   }
-  .nav-link {
-    font-size: 0.85rem;
-  }
-  .header-cta.desktop-only {
-    display: none; /* Hide extra buttons on smaller desktops to save space */
-  }
-}
 
-/* Responsive Fixes for Mobiles */
-@media (max-width: 990px) {
-  .top-bar-content {
-    justify-content: center; /* Center top bar items on mobile */
+  .social-action-card {
+    padding: 12px 14px;
   }
-  .hide-mobile {
-    display: none !important; /* Hide extra info on mobile for clean look */
-  }
-  .top-social-group {
-    border-right: none;
-    padding-right: 0;
-  }
-  
-  /* Mobile Menu Styles */
-  .nav-menu {
-    position: fixed;
-    top: var(--header-height);
-    left: -100%;
-    width: 280px;
-    height: calc(100vh - var(--header-height));
-    background: #fff;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 30px 20px;
-    box-shadow: 4px 0 15px rgba(0,0,0,0.05);
-    transition: var(--transition);
-    z-index: 1000;
-  }
-  .nav-menu.active {
-    left: 0;
-  }
-  .hamburger-btn {
-    display: flex; /* Show hamburger button on mobile */
+
+  .social-handle {
+    font-size: 0.88rem;
   }
 }

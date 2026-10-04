@@ -50,16 +50,24 @@ document.addEventListener('DOMContentLoaded', () => {
       navBackdrop.addEventListener('click', () => toggleNav(false));
     }
 
-    // Close menu when clicking any navigation link
-    navLinks.forEach(link => {
+    // Close menu when clicking any navigation link or CTA button inside drawer
+    const allMenuLinks = navMenu.querySelectorAll('a');
+    allMenuLinks.forEach(link => {
       link.addEventListener('click', () => toggleNav(false));
+    });
+
+    // Close menu on Escape key press
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        toggleNav(false);
+      }
     });
   }
 
   // 2. Active Link Highlight on Scroll (ScrollSpy)
   const sections = document.querySelectorAll('section[id]');
   window.addEventListener('scroll', () => {
-    const scrollY = window.pageYOffset + 120;
+    const scrollY = window.pageYOffset + 95;
 
     sections.forEach(section => {
       const sectionHeight = section.offsetHeight;
