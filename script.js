@@ -31,24 +31,77 @@ document.addEventListener('DOMContentLoaded', () => {
   const hamburgerBtn = document.getElementById('hamburgerBtn');
   const navMenu = document.getElementById('navMenu');
   const navBackdrop = document.getElementById('navBackdrop');
+  const navCloseBtn = document.getElementById('navCloseBtn');
   const navLinks = document.querySelectorAll('.nav-link');
 
   if (hamburgerBtn && navMenu) {
+    const isMobileView = () => window.innerWidth <= 992;
+
+    const setAriaState = (isOpen) => {
+      hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      hamburgerBtn.setAttribute('aria-label', isOpen ? 'Close Navigation' : 'Open Navigation');
+      if (isMobileView()) {
+        navMenu.setAttribute('aria-hidden', isOpen ? 'false' : 'true');
+      } else {
+        navMenu.removeAttribute('aria-hidden');
+      }
+    };
+
+    // Initialize aria attributes
+    setAriaState(false);
+
     const toggleNav = (isOpen) => {
-      const shouldOpen = isOpen !== undefined ? isOpen : !navMenu.classList.contains('active');
+      const currentlyOpen = navMenu.classList.contains('active');
+      const shouldOpen = isOpen !== undefined ? isOpen : !currentlyOpen;
+
       hamburgerBtn.classList.toggle('active', shouldOpen);
       navMenu.classList.toggle('active', shouldOpen);
       if (navBackdrop) {
         navBackdrop.classList.toggle('active', shouldOpen);
       }
       document.body.classList.toggle('nav-open', shouldOpen);
+      setAriaState(shouldOpen);
+
+      if (shouldOpen) {
+        // Focus first actionable element inside drawer
+        if (navCloseBtn) {
+          navCloseBtn.focus();
+        } else {
+          const firstLink = navMenu.querySelector('a');
+          if (firstLink) firstLink.focus();
+        }
+      } else if (currentlyOpen) {
+        // Restore focus to hamburger button if closing from menu
+        if (navMenu.contains(document.activeElement)) {
+          hamburgerBtn.focus();
+        }
+      }
     };
 
-    hamburgerBtn.addEventListener('click', () => toggleNav());
+    hamburgerBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleNav();
+    });
+
+    if (navCloseBtn) {
+      navCloseBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleNav(false);
+      });
+    }
 
     if (navBackdrop) {
       navBackdrop.addEventListener('click', () => toggleNav(false));
     }
+
+    // Close menu when tapping outside the panel
+    document.addEventListener('click', (e) => {
+      if (navMenu.classList.contains('active')) {
+        if (!navMenu.contains(e.target) && !hamburgerBtn.contains(e.target)) {
+          toggleNav(false);
+        }
+      }
+    });
 
     // Close menu when clicking any navigation link or CTA button inside drawer
     const allMenuLinks = navMenu.querySelectorAll('a');
@@ -60,6 +113,19 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && navMenu.classList.contains('active')) {
         toggleNav(false);
+        hamburgerBtn.focus();
+      }
+    });
+
+    // Handle orientation changes and window resizes cleanly
+    window.addEventListener('resize', () => {
+      if (!isMobileView()) {
+        if (navMenu.classList.contains('active')) {
+          toggleNav(false);
+        }
+        navMenu.removeAttribute('aria-hidden');
+      } else if (!navMenu.classList.contains('active')) {
+        navMenu.setAttribute('aria-hidden', 'true');
       }
     });
   }
