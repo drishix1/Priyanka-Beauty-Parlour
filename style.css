@@ -3021,3 +3021,153 @@ button:focus-visible, a:focus-visible { outline: 2px solid #D7B98E; outline-offs
 
 /* Shared call and WhatsApp hints; overlays do not affect page layout. */
 .call-btn { position: relative; }
+/* Mobile-first collections: shared across Home, Services, Bridal and Gallery. */
+.services-section .section-header,
+.home-page .section-header,
+.service-category-header,
+.home-page .service-category-header { text-align: center; }
+.home-page .section-header .section-title,
+.home-page .section-header .section-subtitle,
+.home-page .service-category-intro { margin-inline: auto; }
+.service-category-header h3::after,
+.occasion-intro h3::after {
+  content: ''; display: block; width: 56px; height: 2px;
+  margin: 14px auto 0; background: linear-gradient(90deg, transparent, #D7B98E, transparent);
+}
+.home-page .service-category-nav { justify-content: center; }
+.service-content, .home-page .service-content { text-align: center; align-items: center; }
+.occasion-intro { text-align: center; flex-direction: column; align-items: center; gap: 20px; }
+.occasion-intro p { margin-inline: auto; }
+.occasion-look figcaption { text-align: center; }
+@media (min-width: 601px) and (max-width: 900px) {
+  .category-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .category-grid--pair { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 660px; }
+  .category-grid > .service-card:last-child:nth-child(odd) { grid-column: auto; width: 100%; }
+  .service-content, .home-page .service-content { padding: 18px 14px; }
+  .occasion-grid, .mehendi-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px 16px; }
+  .occasion-grid .occasion-look, .occasion-grid .occasion-look:nth-child(-n+2), .occasion-grid .occasion-look:last-child { grid-column: auto; width: 100%; }
+}
+@media (max-width: 600px) {
+  .container, .home-page .container { padding-inline: 14px; }
+  .home-page main > section:not(.hero-section):not(.achievements-section) { padding-block: 40px; }
+  .section-header, .home-page .section-header { margin-bottom: 26px; }
+  .section-title, .home-page .section-header .section-title { font-size: clamp(1.65rem, 7vw, 2.1rem); }
+  .service-category-header, .home-page .service-category-header { margin-bottom: 20px; }
+  .service-category-header h3, .home-page .service-category-header h3 { font-size: 1.65rem; }
+  .service-category-intro, .home-page .service-category-intro { font-size: .9rem; line-height: 1.6; }
+  .service-category-eyebrow { font-size: .7rem; letter-spacing: .055em; }
+  .service-categories { gap: 30px; }
+  .service-category, .home-page .service-category { margin-bottom: 28px; }
+  .service-category + .service-category, .home-page .service-category + .service-category { padding-top: 28px; }
+  .service-category-nav a, .home-page .service-category-nav a { min-height: 44px; display: inline-flex; align-items: center; font-size: .8rem; }
+  .category-grid, .category-grid--pair { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; max-width: none; }
+  .category-grid > .service-card:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc((100% - 12px) / 2); justify-self: center; }
+  .service-card, .home-page .service-card { border-radius: 12px; }
+  .service-media, .home-page .service-media, .home-page #bridal .service-media { aspect-ratio: 4 / 5; }
+  .service-content, .home-page .service-content { padding: 14px 10px; }
+  .service-tag { font-size: .65rem; letter-spacing: .045em; margin-bottom: 7px; }
+  .service-name, .home-page .service-name { font-size: 1.12rem; line-height: 1.3; margin-bottom: 10px; overflow-wrap: break-word; }
+  .service-desc, .home-page .service-desc { font-size: .875rem; line-height: 1.55; margin-bottom: 16px; }
+  .service-book-link, .home-page .service-book-link { width: 100%; min-height: 44px; padding: 10px 6px; gap: 8px; font-size: .8rem; }
+  .photo-zoom { right: 6px; bottom: 8px; padding: 7px; gap: 4px; font-size: 10px; }
+  .photo-zoom svg { width: 16px; height: 16px; }
+  .occasion-grid, .mehendi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 12px; }
+  .occasion-grid .occasion-look, .occasion-grid .occasion-look:nth-child(-n+2) { grid-column: auto; width: 100%; }
+  .occasion-grid .occasion-look:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc((100% - 12px) / 2); justify-self: center; }
+  .occasion-grid .occasion-look:last-child:nth-child(even) { grid-column: auto; width: 100%; }
+  .occasion-intro { align-items: center; gap: 18px; margin-bottom: 24px; }
+  .occasion-intro h3 { font-size: 1.75rem; }
+  .occasion-intro p { font-size: .95rem; line-height: 1.7; }
+  .occasion-intro .btn { width: auto; max-width: 100%; }
+  .occasion-photo { border-radius: 12px; }
+  .occasion-view { font-size: .65rem; padding: 5px 7px; bottom: 7px; right: 7px; }
+  .occasion-look figcaption { font-size: .875rem; line-height: 1.5; padding-top: 10px; }
+  .occasion-look figcaption span { margin-right: 4px; }
+  .mehendi-caption { font-size: .85rem; line-height: 1.6; }
+  .mehendi-topic { margin-top: 36px; padding-top: 32px; }
+  .gallery-grid, .home-page #gallery .gallery-grid, .home-page #bridal-gallery .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; grid-auto-rows: auto; }
+  .gallery-item, .home-page #gallery .gallery-item, .home-page #bridal-gallery .gallery-item { height: auto; display: flex; flex-direction: column; }
+  .gallery-item img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+  .gallery-overlay, .home-page .gallery-overlay { position: static; opacity: 1; background: #281D2A; padding: 12px 8px; flex: 1; transform: none; text-align: center; }
+  .gallery-overlay h4, .home-page .gallery-overlay h4 { font-size: 1rem; }
+  .gallery-overlay p, .home-page .gallery-overlay p { font-size: .8rem; }
+  .gallery-overlay .zoom-icon { display: none; }
+  .achievements-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 100%; gap: 12px; }
+  .achievement-card { flex-direction: column; padding: 16px 8px; gap: 8px; text-align: center; border-radius: 14px; }
+  .achievement-icon { width: 26px; height: 26px; }
+  .achievement-metric { font-size: 2rem; }
+  .achievement-label { font-size: .8rem; }
+  .home-page .hero-buttons { flex-direction: row; flex-wrap: wrap; gap: 10px; }
+  .home-page .hero-buttons .btn { flex: 1 1 140px; padding-inline: 12px; }
+  .home-page .contact-channels { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .home-page .channel-box { flex-direction: column; text-align: center; padding: 16px 10px; overflow-wrap: anywhere; }
+}
+/* Extremely narrow windows and high zoom retain a readable fallback. */
+@media (max-width: 339px) {
+  .category-grid, .occasion-grid, .mehendi-grid, .gallery-grid, .home-page #gallery .gallery-grid, .home-page #bridal-gallery .gallery-grid { grid-template-columns: minmax(0, 1fr); }
+  .category-grid > .service-card:last-child:nth-child(odd), .occasion-grid .occasion-look:last-child:nth-child(odd) { grid-column: auto; width: 100%; }
+}
+/* Home bridal collection: one coherent portfolio with eight complete looks. */
+.home-page #bridal.bridal-collection { background: radial-gradient(ellipse at top, #4A2C3D 0, #30202D 55%, #251B27 100%); padding-block: clamp(44px, 6vw, 80px); }
+.home-page #bridal.bridal-collection .section-title { max-width: none; font-size: clamp(2.2rem, 5vw, 4rem); }
+.bridal-collection .section-header::after { content: ''; display: block; height: 1px; width: 110px; margin: 26px auto 0; background: linear-gradient(90deg, transparent, #D7B98E, transparent); }
+.bridal-occasion-list { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; padding: 0; margin: 0 0 28px; }
+.bridal-occasion-list li { color: #E7CFAD; border: 1px solid #8E6F68; border-radius: 999px; padding: 8px 16px; font-size: .85rem; }
+.bridal-anchor { display: block; scroll-margin-top: calc(var(--header-height, 90px) + 20px); }
+.bridal-collection-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 20px; }
+.home-page #bridal .bridal-look { border-color: #765653; box-shadow: 0 10px 28px #140D1933; }
+.home-page #bridal .bridal-look-photo { aspect-ratio: 4 / 5; background: #211824; }
+.bridal-look-photo img { object-fit: contain; object-position: center; }
+.home-page .bridal-look .service-content { padding: 22px 16px; border-top: 1px solid #765653; }
+.home-page .bridal-look .service-name { font-size: 1.35rem; }
+.bridal-consultation { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 30px; margin-top: 36px; border: 1px solid #765653; border-radius: 16px; background: #382533; }
+.bridal-consultation h3 { font: 500 clamp(1.5rem, 3vw, 2rem)/1.3 var(--font-heading); color: #FFF8F0; margin-bottom: 12px; }
+.bridal-consultation p { max-width: 60ch; color: #DED0D7; line-height: 1.7; }
+.bridal-consultation .btn { flex-shrink: 0; }
+@media (max-width: 1000px) {
+ .bridal-collection-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .bridal-consultation { flex-direction: column; text-align: center; }
+}
+@media (max-width: 600px) {
+ .bridal-collection-grid { gap: 16px 12px; }
+ .home-page .bridal-look .service-content { padding: 14px 10px; }
+ .home-page .bridal-look .service-name { font-size: 1.12rem; }
+ .bridal-occasion-list { gap: 8px; margin-bottom: 22px; }
+ .bridal-occasion-list li { font-size: .8rem; padding: 7px 12px; }
+ .bridal-consultation { padding: 22px 16px; gap: 20px; }
+ .bridal-consultation .btn { width: 100%; white-space: normal; }
+}
+@media (max-width: 339px) { .bridal-collection-grid { grid-template-columns: minmax(0, 1fr); } }
+
+/* Bridal typography and champagne underline interactions. */
+.home-page #bridal.bridal-collection .section-title {
+  display: table; position: relative; padding-bottom: 16px; margin-inline: auto;
+  font-weight: 600; letter-spacing: -.025em;
+}
+.bridal-collection .section-header::after { display: none; }
+.home-page #bridal.bridal-collection .section-title::after {
+  content: ''; position: absolute; left: 10%; right: 10%; bottom: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, #D7B98E 20%, #EDD4AC 50%, #D7B98E 80%, transparent);
+  transform: scaleX(.35); transition: transform 350ms ease;
+}
+.home-page #bridal.bridal-collection .section-title:hover::after,
+.bridal-collection:focus-within .section-title::after { transform: scaleX(1); }
+.home-page #bridal.bridal-collection .section-subtitle {
+  font-family: Georgia, 'Times New Roman', serif; font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  line-height: 1.85; letter-spacing: .01em; color: #EADDDC; max-width: 64ch;
+}
+.bridal-look .service-name { position: relative; padding-bottom: 12px; }
+.bridal-look .service-name::after {
+  content: ''; position: absolute; bottom: 0; left: 15%; right: 15%; height: 2px;
+  background: #D7B98E; transform: scaleX(0); transform-origin: center; transition: transform 300ms ease;
+}
+.bridal-look:hover .service-name::after,
+.bridal-look:focus-within .service-name::after { transform: scaleX(1); }
+.home-page #bridal .bridal-look:focus-within { border-color: #D7B98E; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+ .home-page #bridal .bridal-look:hover { transform: translateY(-5px); border-color: #D7B98E; box-shadow: 0 16px 32px #140D1955; }
+}
+@media (hover: none) { .bridal-look .service-name::after { transform: scaleX(.45); } }
+@media (prefers-reduced-motion: reduce) {
+ .home-page #bridal.bridal-collection .section-title::after, .bridal-look .service-name::after { transition: none; }
+}

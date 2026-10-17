@@ -363,7 +363,7 @@ function initPageMotion() {
   const targets = [];
   const add = (selector, direction = 'up') => {
     document.querySelectorAll(selector).forEach((element, i) => {
-      const horizontal = direction === 'alternate' ? (i % 2 ? 42 : -42) : direction === 'left' ? -42 : direction === 'right' ? 42 : 0;
+      const horizontal = window.matchMedia('(max-width: 600px)').matches ? 0 : direction === 'alternate' ? (i % 2 ? 42 : -42) : direction === 'left' ? -42 : direction === 'right' ? 42 : 0;
       element.classList.add('reveal');
       element.style.setProperty('--reveal-x', `${horizontal}px`);
       element.style.setProperty('--reveal-y', horizontal ? '0px' : '24px');
