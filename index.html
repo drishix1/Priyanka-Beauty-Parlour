@@ -7,10 +7,10 @@
   <meta name="description" content="Priyanka Beauty Parlour by Priyanka Gupta in Ashram Road, Raxaul. Specializing in royal bridal makeovers, facials, haircuts, waxing, mehendi, and personal care.">
   <link rel="icon" type="image/jpeg" href="images/logo.jpg">
   
-  <!-- Editorial serif headings and a clean, readable sans-serif body. -->
+  <!-- Ivory & Rose Theme Typography: Playfair Display headings & Inter body text -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="style.css">
 </head>
@@ -20,7 +20,7 @@
   <header class="main-header" id="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo" title="Priyanka Beauty Parlour">
-        <div class="logo-ring"><img src="images/logo.jpg" alt="" class="brand-logo-img" width="48" height="48"></div>
+        <div class="logo-ring"><img src="images/logo.jpg" alt="" class="brand-logo-img" width="72" height="72"></div>
         <div class="brand-text-block"><span class="brand-name-gold">Priyanka</span><span class="brand-tag-royal">BEAUTY PARLOUR</span></div>
       </a>
       <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
@@ -34,8 +34,9 @@
         <a href="bridal.html" class="nav-link">Bridal</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
         <a href="contact.html" class="nav-link">Reach Us</a>
-        <a href="index.html#booking" class="btn header-book">Book Appointment</a>
+        <a href="index.html#booking" class="btn header-book nav-mobile-book">Book Appointment</a>
       </nav>
+      <a href="index.html#booking" class="btn header-book header-book-desktop">Book Appointment <span aria-hidden="true">&#8599;</span></a>
       <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open Navigation" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -519,207 +520,34 @@
     </div>
   </section>
 
-<section class="booking-section" id="booking" aria-labelledby="bookingTitle">
-    <div class="container">
-      <div class="booking-wrapper">
-        <div class="booking-header text-center">
-          <span class="section-badge">04 / A little time for you</span>
-          <h2 class="section-title" id="bookingTitle">Book an Appointment</h2>
-          <p class="section-subtitle">Choose a service and send your appointment request to Priyanka Ji on WhatsApp.</p>
+<section class="visit-section" id="booking" aria-labelledby="visitTitle">
+    <span class="visit-anchor" id="location" aria-hidden="true"></span>
+    <span class="visit-anchor" id="contact" aria-hidden="true"></span>
+    <div class="container visit-layout">
+      <div class="visit-info">
+        <h2 id="visitTitle">Visit Us</h2>
+        <address>
+          Ashram Road, in front of Middle School,<br>
+          Raxaul, East Champaran,<br>
+          Bihar &ndash; 845305
+        </address>
+        <p class="visit-opening">Open every day, 9:00 AM &ndash; 9:00 PM</p>
+        <div class="visit-actions">
+          <a id="visitBookingLink" href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment.%20Please%20let%20me%20know%20your%20availability." target="_blank" rel="noopener noreferrer" class="btn btn-royal-gold">Book on WhatsApp</a>
+          <a href="tel:9523262455" class="btn btn-gold-outline">Call 9523262455</a>
+          <a href="https://maps.google.com/?q=Ashram+Road,+Raxaul,+Bihar" target="_blank" rel="noopener noreferrer" class="btn btn-gold-outline">Get Directions</a>
         </div>
-        
-        <div class="booking-card">
-          <form id="appointmentForm" class="appointment-form">
-            <div class="form-group">
-              <label for="clientName">Your Name / आपका नाम</label>
-              <div class="input-wrapper">
-                <input type="text" id="clientName" placeholder="Enter full name" required>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="clientPhone">Phone Number / मोबाइल नंबर</label>
-              <div class="input-wrapper">
-                <input type="tel" id="clientPhone" placeholder="10-digit mobile number" required>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="serviceSelect">Service Desired / सेवा चुनें</label>
-              <div class="input-wrapper">
-                <select id="serviceSelect" required>
-                  <option value="" disabled selected>-- Select a Service --</option>
-                  <option value="Bridal Makeup">Bridal Makeup / ब्राइडल मेकअप</option>
-                  <option value="Party Makeup">Party Makeup / पार्टी मेकअप</option>
-                  <option value="Facial & Skin Glow">Facial & Skin Glow / फेशियल</option>
-                  <option value="Haircut & Styling">Haircut & Styling / हेयरकट</option>
-                  <option value="Mehendi">Mehendi / मेहंदी</option>
-                  <option value="Waxing">Waxing / वैक्सिंग</option>
-                  <option value="Threading">Threading / थ्रेडिंग</option>
-                  <option value="Manicure & Pedicure">Manicure & Pedicure</option>
-                  <option value="Face Cleanup">Face Cleanup / फेस क्लीनअप</option>
-                  <option value="Occasion Hairstyling">Occasion Hairstyling / हेयर स्टाइलिंग</option>
-                  <option value="Manicure">Manicure / मैनीक्योर</option>
-                  <option value="Pedicure">Pedicure / पेडीक्योर</option>
-                  <option value="Nail Polish">Nail Polish / नेल पॉलिश</option>
-                  <option value="Special Package">Special Package / अन्य पूछताछ</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="clientDate">Preferred Date / तारीख (Optional)</label>
-              <div class="input-wrapper">
-                <input type="date" id="clientDate">
-              </div>
-            </div>
-
-            <button type="submit" class="btn btn-whatsapp btn-block btn-booking-submit">
-              <span>Send Booking on WhatsApp</span>
-            </button>
-          </form>
-          
-          <div class="booking-guarantee">
-            <span>Direct confirmation with parlour owner • No advance fee</span>
-          </div>
-        </div>
+      </div>
+      <div class="visit-map">
+        <iframe
+          title="Map of Ashram Road, Raxaul ? Priyanka Beauty Parlour area"
+          src="https://maps.google.com/maps?q=Ashram%20Road%2C%20Raxaul%2C%20Bihar&amp;output=embed"
+          width="600" height="360" loading="lazy" allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </section>
-
-<section class="location-section" id="location">
-    <div class="container">
-      <div class="section-header text-center">
-        <span class="section-badge">05 / Find us in Raxaul</span>
-        <h2 class="section-title">Parlour Location & Timings</h2>
-        <p class="section-subtitle">Conveniently located in the heart of Raxaul</p>
-      </div>
-
-      <div class="location-grid">
-        <div class="location-card">
-          <div class="location-icon-badge">📍</div>
-          
-          <h3 class="location-shop-title">Priyanka Beauty Parlour</h3>
-          
-          <p class="address-text">
-            <strong>Address:</strong><br>
-            Ashram Road, in front of Middle School,<br>
-            Raxaul, East Champaran, Bihar - 845305
-          </p>
-
-          <div class="location-detail-list">
-            <div class="detail-row">
-              <span class="icon">👤</span>
-              <span><strong>Owner:</strong> Priyanka Gupta</span>
-            </div>
-            <div class="detail-row">
-              <span class="icon">⏰</span>
-              <span><strong>Opening Hours:</strong> 9:00 AM – 9:00 PM (Daily)</span>
-            </div>
-            <div class="detail-row">
-              <span class="icon">📞</span>
-              <span><strong>Phone:</strong> <a href="tel:9523262455">9523262455</a></span>
-            </div>
-            <div class="detail-row">
-              <span class="icon">💬</span>
-              <span><strong>WhatsApp:</strong> <a href="https://wa.me/919523262455" target="_blank">9523262455</a></span>
-            </div>
-          </div>
-
-          <div class="location-buttons">
-            <a href="https://maps.google.com/?q=Ashram+Road,+Raxaul,+Bihar" target="_blank" class="btn btn-royal-gold btn-sm">🗺️ Open in Google Maps</a>
-            <a href="tel:9523262455" class="btn btn-white-glass btn-sm">📞 Call for Directions</a>
-          </div>
-        </div>
-
-        <div class="map-wrapper">
-          <!-- Google Map Embed for Ashram Road, Raxaul -->
-          <iframe 
-            title="Priyanka Beauty Parlour Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14217.20235959957!2d84.851944!3d26.983889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399335f60b0e77d3%3A0x6b772c37e96b3490!2sRaxaul%2C%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-            width="100%" 
-            height="380" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<section class="contact-section" id="contact">
-    <div class="container">
-      <div class="contact-card-box">
-        <div class="contact-text">
-          <span class="section-badge">Get in Touch</span>
-          <h2 class="section-title">Reach Out to Us</h2>
-          <p class="contact-lead">
-            Whether you want to enquire about wedding dates, daily grooming, or skincare advice, Priyanka Gupta is always happy to assist you!
-          </p>
-
-          <div class="contact-channels">
-            <div class="channel-box">
-              <div class="channel-icon-pill">📞</div>
-              <div class="channel-info">
-                <span class="label">Call Directly</span>
-                <a href="tel:9523262455" class="value">9523262455</a>
-              </div>
-            </div>
-
-            <div class="channel-box">
-              <div class="channel-icon-pill wa-pill">💬</div>
-              <div class="channel-info">
-                <span class="label">WhatsApp Enquiries</span>
-                <a href="https://wa.me/919523262455?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20beauty%20parlour%20services." target="_blank" class="value">9523262455</a>
-              </div>
-            </div>
-
-            <!-- Instagram Channel with SVG Logo -->
-            <div class="channel-box">
-              <div class="channel-icon ig-channel-icon">
-                <svg class="social-svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                </svg>
-              </div>
-              <div class="channel-info">
-                <span class="label">Instagram Profile</span>
-                <a href="https://www.instagram.com/ruchi.raj.gupta/" target="_blank" class="value">@ruchi.raj.gupta</a>
-              </div>
-            </div>
-
-            <!-- Facebook Channel with SVG Logo -->
-            <div class="channel-box">
-              <div class="channel-icon fb-channel-icon">
-                <svg class="social-svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                </svg>
-              </div>
-              <div class="channel-info">
-                <span class="label">Facebook Profile</span>
-                <a href="https://www.facebook.com/ishikaraj.gupta.31" target="_blank" class="value">Ruchi Raj Gupta</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-cta-row">
-            <a href="tel:9523262455" class="btn btn-royal-gold btn-lg">
-              📞 Call: 9523262455
-            </a>
-            <a href="https://wa.me/919523262455?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20beauty%20parlour%20services." target="_blank" class="btn btn-whatsapp btn-lg">
-              💬 WhatsApp Now
-            </a>
-            <a href="index.html#booking" class="btn btn-white-glass btn-lg">
-              📅 Book Appointment
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
 
   </main>
 <dialog class="lightbox-modal" id="lightboxModal" aria-labelledby="lightboxCaption">

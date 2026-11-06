@@ -3,6 +3,14 @@
  */
 function selectService(serviceName) {
   const select = document.getElementById('serviceSelect');
+  const bookingLink = document.getElementById('visitBookingLink');
+  if (bookingLink) {
+    const message = serviceName
+      ? `Hello Priyanka Ji, I would like to book ${serviceName}. Please let me know your availability.`
+      : 'Hello Priyanka Ji, I would like to book an appointment. Please let me know your availability.';
+    bookingLink.href = 'https://wa.me/919523262455?text=' + encodeURIComponent(message);
+    return;
+  }
   if (!select) {
     window.location.assign('index.html?service=' + encodeURIComponent(serviceName) + '#booking');
     return;
@@ -12,7 +20,8 @@ function selectService(serviceName) {
 
 function applyBookingService() {
   const service = new URLSearchParams(window.location.search).get('service');
-  if (service && document.getElementById('serviceSelect')) selectService(service);
+  if (document.getElementById('visitBookingLink')) selectService(service || '');
+  else if (service && document.getElementById('serviceSelect')) selectService(service);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
