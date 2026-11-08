@@ -15,9 +15,12 @@
 
 ## Styles and scripts
 
+- Palette: Royal Rose & Gold (Option A), defined in `css/tokens.css`. Gold is decorative on light surfaces; use deep wine or the dark-gold text token where contrast requires it. Home uses four hero slides. Hero artwork is cropped in CSS so the supplied banner lettering is not used as content; the 236px haircut photo stays in a compact arch without upscaling.
+- Animate only transform, opacity and border-radius; keep hover effects inside hover-capable media queries and preserve the global reduced-motion overrides. FAQ uses native details with an opacity/transform entrance rather than animating layout height.
+
 - Load CSS in this order: `css/tokens.css`, `css/base.css`, `css/layout.css`, `css/components.css`, then the relevant `home.css`, `about.css`, `courses.css` or `gallery.css`. Keep rule order inside each file: later responsive/theme rules intentionally override earlier component defaults.
 - Tokens hold the existing colours, font families, spacing and type values. Base contains resets/typography; layout contains shared containers/grids; components contains shared controls, cards, navigation, footer, motion and photo viewer styles. Shared course steps and portfolio cards stay in components because Home also uses them.
-- Scripts are plain, deferred scripts with no build/runtime dependencies. Load `js/nav.js`, `js/motion.js` and `js/contact-hints.js` everywhere. Load `js/lightbox.js` only with photo triggers, `js/gallery.js` before lightbox on Gallery, and `js/achievements.js` plus `js/about.js` only on About. Each feature owns its DOM-ready handler; feature internals do not depend on script globals.
+- Scripts are plain, deferred scripts with no build/runtime dependencies. Load `js/nav.js`, `js/motion.js` and `js/contact-hints.js` everywhere. Load `js/hero-slider.js` only on Home, `js/lightbox.js` only with photo triggers, `js/gallery.js` before lightbox on Gallery, and `js/achievements.js` on Home and About, with `js/about.js` only on About. Each feature owns its DOM-ready handler; feature internals do not depend on script globals.
 - About's inline `--portrait-image` URLs are root-relative so moving the consuming stylesheet into `css/` does not break the blurred image backgrounds.
 - Reduced-motion and About's `[hidden]` overrides retain necessary `!important` declarations. Do not remove these accessibility overrides without checking animated/hidden states.
 

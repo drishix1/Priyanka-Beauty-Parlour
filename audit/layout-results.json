@@ -8,6 +8,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -23,6 +24,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -38,6 +40,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {
       "navOpen": true,
       "navReverseTrap": true,
@@ -46,7 +49,16 @@
       "lightboxOpen": true,
       "lightboxEscape": true,
       "faqOpen": true,
-      "faqClose": true
+      "faqClose": true,
+      "heroDot": true,
+      "heroNext": true,
+      "heroWrap": true,
+      "heroReverse": true,
+      "heroStableHeight": true,
+      "heroSwipe": true,
+      "heroFocusPause": true,
+      "heroFocusOutline": true,
+      "heroReducedPause": true
     },
     "reduced": true,
     "activeAnimations": 0,
@@ -62,7 +74,22 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
-    "interactions": {},
+    "contrast": [],
+    "interactions": {
+      "lightboxOpen": true,
+      "lightboxEscape": true,
+      "faqOpen": true,
+      "faqClose": true,
+      "heroDot": true,
+      "heroNext": true,
+      "heroWrap": true,
+      "heroReverse": true,
+      "heroStableHeight": true,
+      "heroSwipe": true,
+      "heroFocusPause": true,
+      "heroFocusOutline": true,
+      "heroReducedPause": true
+    },
     "reduced": true,
     "activeAnimations": 0,
     "animationDetails": [],
@@ -77,6 +104,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -92,12 +120,8 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
-    "interactions": {
-      "lightboxOpen": true,
-      "lightboxEscape": true,
-      "faqOpen": true,
-      "faqClose": true
-    },
+    "contrast": [],
+    "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
     "animationDetails": [],
@@ -112,7 +136,22 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
-    "interactions": {},
+    "contrast": [],
+    "interactions": {
+      "lightboxOpen": true,
+      "lightboxEscape": true,
+      "faqOpen": true,
+      "faqClose": true,
+      "heroDot": true,
+      "heroNext": true,
+      "heroWrap": true,
+      "heroReverse": true,
+      "heroStableHeight": true,
+      "heroSwipe": true,
+      "heroFocusPause": true,
+      "heroFocusOutline": true,
+      "heroReducedPause": true
+    },
     "reduced": true,
     "activeAnimations": 0,
     "animationDetails": [],
@@ -127,6 +166,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -142,6 +182,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -157,6 +198,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -172,6 +214,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {
       "navOpen": true,
       "navReverseTrap": true,
@@ -195,36 +238,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
-    "interactions": {},
-    "reduced": true,
-    "activeAnimations": 0,
-    "animationDetails": [],
-    "errors": []
-  },
-  {
-    "page": "about",
-    "width": 1024,
-    "innerWidth": 1024,
-    "scrollWidth": 1009,
-    "outside": [],
-    "clipped": [],
-    "smallText": [],
-    "smallTargets": [],
-    "interactions": {},
-    "reduced": true,
-    "activeAnimations": 0,
-    "animationDetails": [],
-    "errors": []
-  },
-  {
-    "page": "about",
-    "width": 1280,
-    "innerWidth": 1280,
-    "scrollWidth": 1265,
-    "outside": [],
-    "clipped": [],
-    "smallText": [],
-    "smallTargets": [],
+    "contrast": [],
     "interactions": {
       "lightboxOpen": true,
       "lightboxEscape": true,
@@ -237,6 +251,38 @@
   },
   {
     "page": "about",
+    "width": 1024,
+    "innerWidth": 1024,
+    "scrollWidth": 1009,
+    "outside": [],
+    "clipped": [],
+    "smallText": [],
+    "smallTargets": [],
+    "contrast": [],
+    "interactions": {},
+    "reduced": true,
+    "activeAnimations": 0,
+    "animationDetails": [],
+    "errors": []
+  },
+  {
+    "page": "about",
+    "width": 1280,
+    "innerWidth": 1280,
+    "scrollWidth": 1265,
+    "outside": [],
+    "clipped": [],
+    "smallText": [],
+    "smallTargets": [],
+    "contrast": [],
+    "interactions": {},
+    "reduced": true,
+    "activeAnimations": 0,
+    "animationDetails": [],
+    "errors": []
+  },
+  {
+    "page": "about",
     "width": 1440,
     "innerWidth": 1440,
     "scrollWidth": 1425,
@@ -244,7 +290,12 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
-    "interactions": {},
+    "contrast": [],
+    "interactions": {
+      "lightboxOpen": true,
+      "lightboxEscape": true,
+      "carouselNext": true
+    },
     "reduced": true,
     "activeAnimations": 0,
     "animationDetails": [],
@@ -259,6 +310,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -274,6 +326,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -289,6 +342,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -304,6 +358,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {
       "navOpen": true,
       "navReverseTrap": true,
@@ -326,7 +381,11 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
-    "interactions": {},
+    "contrast": [],
+    "interactions": {
+      "lightboxOpen": true,
+      "lightboxEscape": true
+    },
     "reduced": true,
     "activeAnimations": 0,
     "animationDetails": [],
@@ -341,6 +400,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -356,10 +416,8 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
-    "interactions": {
-      "lightboxOpen": true,
-      "lightboxEscape": true
-    },
+    "contrast": [],
+    "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
     "animationDetails": [],
@@ -374,7 +432,11 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
-    "interactions": {},
+    "contrast": [],
+    "interactions": {
+      "lightboxOpen": true,
+      "lightboxEscape": true
+    },
     "reduced": true,
     "activeAnimations": 0,
     "animationDetails": [],
@@ -389,6 +451,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -403,7 +466,49 @@
     "outside": [],
     "clipped": [],
     "smallText": [],
-    "smallTargets": [],
+    "smallTargets": [
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 271,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 271,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 271,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 271,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 271,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 271,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 271,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 271,
+        "height": 12
+      }
+    ],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -418,7 +523,49 @@
     "outside": [],
     "clipped": [],
     "smallText": [],
-    "smallTargets": [],
+    "smallTargets": [
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 311,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 311,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 311,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 311,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 311,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 311,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 311,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 311,
+        "height": 12
+      }
+    ],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -433,7 +580,49 @@
     "outside": [],
     "clipped": [],
     "smallText": [],
-    "smallTargets": [],
+    "smallTargets": [
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 341,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 341,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 341,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 341,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 341,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 341,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 341,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 341,
+        "height": 12
+      }
+    ],
+    "contrast": [],
     "interactions": {
       "navOpen": true,
       "navReverseTrap": true,
@@ -455,8 +644,53 @@
     "outside": [],
     "clipped": [],
     "smallText": [],
-    "smallTargets": [],
-    "interactions": {},
+    "smallTargets": [
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 334,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 334,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 334,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 334,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 334,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 334,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 334,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 334,
+        "height": 12
+      }
+    ],
+    "contrast": [],
+    "interactions": {
+      "lightboxOpen": true,
+      "lightboxEscape": true
+    },
     "reduced": true,
     "activeAnimations": 0,
     "animationDetails": [],
@@ -470,7 +704,49 @@
     "outside": [],
     "clipped": [],
     "smallText": [],
-    "smallTargets": [],
+    "smallTargets": [
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 461,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 461,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 461,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 461,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 461,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 461,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 461,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 461,
+        "height": 12
+      }
+    ],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -485,11 +761,50 @@
     "outside": [],
     "clipped": [],
     "smallText": [],
-    "smallTargets": [],
-    "interactions": {
-      "lightboxOpen": true,
-      "lightboxEscape": true
-    },
+    "smallTargets": [
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      }
+    ],
+    "contrast": [],
+    "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
     "animationDetails": [],
@@ -503,8 +818,53 @@
     "outside": [],
     "clipped": [],
     "smallText": [],
-    "smallTargets": [],
-    "interactions": {},
+    "smallTargets": [
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      }
+    ],
+    "contrast": [],
+    "interactions": {
+      "lightboxOpen": true,
+      "lightboxEscape": true
+    },
     "reduced": true,
     "activeAnimations": 0,
     "animationDetails": [],
@@ -518,7 +878,49 @@
     "outside": [],
     "clipped": [],
     "smallText": [],
-    "smallTargets": [],
+    "smallTargets": [
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      },
+      {
+        "element": "button.service-media.bridal-look-photo.photo-trigger.morph-photo: View look \u2197",
+        "width": 267,
+        "height": 12
+      }
+    ],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -534,6 +936,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -549,6 +952,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -564,6 +968,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {
       "navOpen": true,
       "navReverseTrap": true,
@@ -586,7 +991,11 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
-    "interactions": {},
+    "contrast": [],
+    "interactions": {
+      "lightboxOpen": true,
+      "lightboxEscape": true
+    },
     "reduced": true,
     "activeAnimations": 0,
     "animationDetails": [],
@@ -601,6 +1010,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -616,10 +1026,8 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
-    "interactions": {
-      "lightboxOpen": true,
-      "lightboxEscape": true
-    },
+    "contrast": [],
+    "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
     "animationDetails": [],
@@ -634,7 +1042,11 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
-    "interactions": {},
+    "contrast": [],
+    "interactions": {
+      "lightboxOpen": true,
+      "lightboxEscape": true
+    },
     "reduced": true,
     "activeAnimations": 0,
     "animationDetails": [],
@@ -649,6 +1061,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -664,6 +1077,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -679,6 +1093,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -694,6 +1109,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {
       "navOpen": true,
       "navReverseTrap": true,
@@ -717,36 +1133,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
-    "interactions": {},
-    "reduced": true,
-    "activeAnimations": 0,
-    "animationDetails": [],
-    "errors": []
-  },
-  {
-    "page": "gallery",
-    "width": 1024,
-    "innerWidth": 1024,
-    "scrollWidth": 1009,
-    "outside": [],
-    "clipped": [],
-    "smallText": [],
-    "smallTargets": [],
-    "interactions": {},
-    "reduced": true,
-    "activeAnimations": 0,
-    "animationDetails": [],
-    "errors": []
-  },
-  {
-    "page": "gallery",
-    "width": 1280,
-    "innerWidth": 1280,
-    "scrollWidth": 1265,
-    "outside": [],
-    "clipped": [],
-    "smallText": [],
-    "smallTargets": [],
+    "contrast": [],
     "interactions": {
       "lightboxOpen": true,
       "lightboxEscape": true,
@@ -759,6 +1146,38 @@
   },
   {
     "page": "gallery",
+    "width": 1024,
+    "innerWidth": 1024,
+    "scrollWidth": 1009,
+    "outside": [],
+    "clipped": [],
+    "smallText": [],
+    "smallTargets": [],
+    "contrast": [],
+    "interactions": {},
+    "reduced": true,
+    "activeAnimations": 0,
+    "animationDetails": [],
+    "errors": []
+  },
+  {
+    "page": "gallery",
+    "width": 1280,
+    "innerWidth": 1280,
+    "scrollWidth": 1265,
+    "outside": [],
+    "clipped": [],
+    "smallText": [],
+    "smallTargets": [],
+    "contrast": [],
+    "interactions": {},
+    "reduced": true,
+    "activeAnimations": 0,
+    "animationDetails": [],
+    "errors": []
+  },
+  {
+    "page": "gallery",
     "width": 1440,
     "innerWidth": 1440,
     "scrollWidth": 1425,
@@ -766,7 +1185,12 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
-    "interactions": {},
+    "contrast": [],
+    "interactions": {
+      "lightboxOpen": true,
+      "lightboxEscape": true,
+      "galleryFilter": true
+    },
     "reduced": true,
     "activeAnimations": 0,
     "animationDetails": [],
@@ -781,6 +1205,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -796,6 +1221,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -811,6 +1237,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -826,6 +1253,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {
       "navOpen": true,
       "navReverseTrap": true,
@@ -846,6 +1274,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -861,6 +1290,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -876,6 +1306,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -891,6 +1322,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -906,6 +1338,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -921,6 +1354,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -936,6 +1370,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -951,6 +1386,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {
       "navOpen": true,
       "navReverseTrap": true,
@@ -971,6 +1407,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -986,6 +1423,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -1001,6 +1439,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -1016,6 +1455,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,
@@ -1031,6 +1471,7 @@
     "clipped": [],
     "smallText": [],
     "smallTargets": [],
+    "contrast": [],
     "interactions": {},
     "reduced": true,
     "activeAnimations": 0,

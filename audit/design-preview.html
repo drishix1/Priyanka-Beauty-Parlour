@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Design preview</title>
+<style>body{margin:0;background:#ddd}iframe{display:block;border:0}</style><body><script>
+const q=new URLSearchParams(location.search),f=document.createElement('iframe');
+f.width=q.get('width')||390;f.height=q.get('height')||1100;f.src='../'+(q.get('page')||'index')+'.html';document.body.append(f);
+const timer=setInterval(()=>{const d=f.contentDocument;if(!d||d.readyState==='loading'||!d.querySelector('main'))return;clearInterval(timer);
+  const s=d.createElement('style');s.textContent='*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.motion-ready .reveal{opacity:1!important;transform:none!important}';d.head.append(s);
+  d.querySelectorAll('.reveal').forEach(e=>e.classList.add('is-visible'));
+  setTimeout(()=>{if(q.has('slide'))d.querySelectorAll('[data-hero-dot]')[Number(q.get('slide'))]?.click();const target=d.getElementById(q.get('section'))||(q.get('section')==='footer'?d.querySelector('footer'):null);if(target)f.contentWindow.scrollTo({top:target.offsetTop-90,behavior:'instant'});},1000);
+},100);
+</script></body></html>

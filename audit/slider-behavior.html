@@ -1,0 +1,31 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Slider behavior audit</title><body><pre id="results">RUNNING</pre>
+<iframe id="site" src="../index.html" width="1440" height="900" style="border:0"></iframe><script>
+const frame=document.getElementById('site'),results={};
+const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+const ready=setInterval(async()=>{
+ const d=frame.contentDocument,w=frame.contentWindow,root=d?.querySelector('[data-hero-slider].is-slider-ready');
+ if(!root)return;clearInterval(ready);
+ const active=()=>[...root.querySelectorAll('[data-hero-slide]')].findIndex(s=>s.classList.contains('is-active'));
+ const publish=()=>document.getElementById('results').textContent=JSON.stringify(results);
+ const height=root.offsetHeight, top=d.querySelector('.home-experience').getBoundingClientRect().top;
+
+ root.dispatchEvent(new w.PointerEvent('pointerleave',{pointerType:'mouse'}));
+ const reduced=w.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ const start=active(); await wait(5700);
+ results.reduced=reduced;
+ results.autoplay=reduced?active()===start:active()===(start+1)%root.querySelectorAll('[data-hero-slide]').length; publish();
+ if(!reduced){
+   root.dispatchEvent(new w.PointerEvent('pointerenter',{pointerType:'mouse'}));
+   const hovered=active();await wait(5700);results.hoverContinues=active()!==hovered;publish();
+   root.dispatchEvent(new w.PointerEvent('pointerleave',{pointerType:'mouse'}));
+   await wait(5700);results.hoverResume=active()!==hovered;publish();
+   root.querySelector('[data-hero-next]').focus();const focused=active();
+   await wait(5700);results.focusPause=active()===focused;publish();
+
+ }
+ const beforeManual=active();root.querySelector('[data-hero-next]').click();results.manualControl=active()===(beforeManual+1)%root.querySelectorAll('[data-hero-slide]').length;
+ results.stableHeroHeight=root.offsetHeight===height;
+ results.stableFollowingSection=d.querySelector('.home-experience').getBoundingClientRect().top===top;
+ results.errors=w.auditErrors;publish();document.title='SLIDER AUDIT COMPLETE';
+},100);
+</script></body></html>

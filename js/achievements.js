@@ -3,7 +3,7 @@
   function initAchievements() {
     const section = document.querySelector('[data-achievements]');
     if (!section) return;
-    const cards = Array.from(section.querySelectorAll('.achievement-card'));
+    const cards = Array.from(section.querySelectorAll('.achievement-card, .trust-count-card'));
     const counters = cards.map(card => card.querySelector('[data-count]'));
     if (cards.length !== 2 || counters.some(counter => !counter)) return;
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -61,10 +61,9 @@
       const paint = () => {
         currentX += (targetX - currentX) * .18;
         currentY += (targetY - currentY) * .18;
-        card.style.setProperty('--highlight-x', (50 + currentX * 45).toFixed(2) + '%');
-        card.style.setProperty('--highlight-y', (50 + currentY * 45).toFixed(2) + '%');
-        card.style.setProperty('--shadow-x', (currentX * 5).toFixed(2) + 'px');
-        card.style.setProperty('--shadow-y', (12 + currentY * 3).toFixed(2) + 'px');
+        // Pointer motion only changes a composited transform, never repaints shadows.
+        card.style.setProperty('--card-tilt-x', (-currentY * 2).toFixed(2) + 'deg');
+        card.style.setProperty('--card-tilt-y', (currentX * 2).toFixed(2) + 'deg');
         if (Math.abs(targetX - currentX) + Math.abs(targetY - currentY) > .005) frame = requestAnimationFrame(paint);
         else frame = null;
       };
@@ -72,7 +71,7 @@
         if (frame !== null) cancelAnimationFrame(frame);
         frame = null;
         currentX = currentY = targetX = targetY = 0;
-        ['--highlight-x', '--highlight-y', '--shadow-x', '--shadow-y'].forEach(name => card.style.removeProperty(name));
+        ['--card-tilt-x', '--card-tilt-y'].forEach(name => card.style.removeProperty(name));
       };
       hoverResets.push(reset);
       card.addEventListener('pointermove', event => {

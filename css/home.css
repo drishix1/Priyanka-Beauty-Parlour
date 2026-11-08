@@ -1,961 +1,307 @@
-/* Home styles. Preserve rule order within this file. */
-
-.home-page main > section:not(.hero-section):not(.achievements-section) {
-  padding-block: clamp(56px, 7vw, 92px);
-}
-
-.hero-details {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 20px 28px;
-  padding-top: var(--space-24);
-  margin-top: 30px;
-  border-top: 1px solid var(--color-border);
-}
-
-.hero-details p {
-  margin: 0;
-  font-size: .8rem;
-  color: var(--color-text-dark);
-  line-height: 1.6;
-}
-
-.hero-detail-label {
-  display: block;
-  margin-bottom: 5px;
-  font-size: var(--text-xs);
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  color: var(--color-text-muted);
-}
-
-.hero-call {
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--color-primary);
-  font-size: .86rem;
-  font-weight: 600;
-}
-
-.home-page .section-header {
-  margin-bottom: 38px;
-}
-
-.home-page .section-header .section-title {
-  max-width: 23ch;
-  font-size: clamp(2.1rem, 4.2vw, 3.2rem);
-}
-
-.home-page #services {
-  background: var(--color-bg);
-}
-
-.home-page .service-category-header {
-  max-width: none;
-  margin-bottom: var(--space-24);
-}
-
-.home-page .service-category-header :is(h2, h3) {
-  font-size: clamp(1.6rem, 2.5vw, 2rem);
-  color: var(--color-text-dark);
-}
-
-.home-page .service-card {
-  background: #FFFFFF;
-  border: 1px solid var(--color-border);
-  border-radius: 14px;
-  box-shadow: var(--shadow-sm);
-}
-
-.home-page .service-media {
-  aspect-ratio: 4 / 3;
-  background: var(--color-pink-soft);
-}
-
-.home-page .service-content {
-  padding: var(--space-24);
-}
-
-.home-page .service-name {
-  font-size: 1.45rem;
-  color: var(--color-text-dark);
-}
-
-.home-page .service-tag {
-  color: var(--color-primary);
-}
-
-.home-page .service-desc {
-  font-size: .9rem;
-  line-height: 1.7;
-  margin-bottom: var(--space-20);
-  color: var(--color-text-muted);
-}
-
-.home-page .service-book-link {
-  min-height: 44px;
-  font-size: .84rem;
-  border-radius: var(--radius-full);
-}
-
-.home-page .services-cta-banner {
-  padding: 28px;
-  border-radius: 14px;
-  gap: var(--space-20);
-  background: var(--color-panel);
-  border: 1px solid var(--color-border);
-}
-
-.home-page #bridal {
-  background: var(--color-bg-alt);
-  border-top: 1px solid var(--color-border);
-  padding-bottom: 36px;
-}
-
-.home-page #bridal .section-title {
-  max-width: 16ch;
-}
-
-.home-page #bridal .service-media {
-  aspect-ratio: 4 / 5;
-}
-
-.home-page #bridal .service-card {
-  background: #FFFFFF;
-  border: 1px solid var(--color-border);
-}
-
-.home-page #gallery {
-  background: var(--color-bg);
-}
-
-.home-page #booking {
-  background: var(--color-bg-alt);
-  border-block: 1px solid var(--color-border);
-}
-
-.home-page #location {
-  background: var(--color-bg);
-  padding-bottom: 36px;
-}
-
-.home-page .location-card {
-  background: #FFFFFF;
-  border-radius: 14px;
-  border: 1px solid var(--color-border);
-}
-
-.home-page .map-wrapper {
-  border-radius: 14px;
-  border: 1px solid var(--color-border);
-}
-
-.home-page #contact {
-  background: var(--color-bg-alt);
-  padding-top: var(--space-24);
-}
-
-.home-page .contact-card-box {
-  max-width: none;
-  padding: clamp(24px, 4vw, 40px);
-  border: 1px solid var(--color-border);
-  border-radius: 14px;
-  background: #FFFFFF;
-  box-shadow: var(--shadow-sm);
-}
-
-@media (max-width: 600px) {
-  .hero-details {
-    gap: 18px;
-    margin-top: var(--space-24);
-    padding-top: var(--space-20);
-  }
-
-  .hero-details p {
-    font-size: .78rem;
-  }
-
-  .home-page .services-cta-banner {
-    padding: 22px;
-  }
-
-  .home-page .contact-card-box {
-    padding: 24px 18px;
-  }
-}
-
-.home-page .section-header, .home-page .service-category-header {
-  text-align: center;
-}
-
-.home-page .section-header .section-title {
-  margin-inline: auto;
-}
-
-.home-page .service-content {
-  text-align: center;
-  align-items: center;
-}
-
-@media (min-width: 601px) and (max-width: 900px) {
-  .home-page .service-content {
-    padding: 18px 14px;
-  }
-}
-
-@media (max-width: 600px) {
-  .home-page main > section:not(.hero-section):not(.achievements-section) {
-    padding-block: var(--space-40);
-  }
-
-  .home-page .section-header {
-    margin-bottom: 26px;
-  }
-
-  .home-page .section-header .section-title {
-    font-size: clamp(1.65rem, 7vw, 2.1rem);
-  }
-
-  .home-page .service-category-header {
-    margin-bottom: var(--space-20);
-  }
-
-  .home-page .service-category-header :is(h2, h3) {
-    font-size: 1.65rem;
-  }
-
-  .home-page .service-card {
-    border-radius: 12px;
-  }
-
-  .home-page .service-media, .home-page #bridal .service-media {
-    aspect-ratio: 4 / 5;
-  }
-
-  .home-page .service-content {
-    padding: 14px 10px;
-  }
-
-  .home-page .service-name {
-    font-size: 1.12rem;
-    line-height: 1.3;
-    margin-bottom: 10px;
-    overflow-wrap: break-word;
-  }
-
-  .home-page .service-desc {
-    font-size: .875rem;
-    line-height: 1.55;
-    margin-bottom: var(--space-16);
-  }
-
-  .home-page .service-book-link {
-    width: 100%;
-    min-height: 44px;
-    padding: 10px 6px;
-    gap: var(--space-8);
-    font-size: .8rem;
-  }
-}
-
-.home-page #bridal .bridal-look {
-  border: 1px solid var(--color-border);
-  background: #FFFFFF;
-  box-shadow: var(--shadow-sm);
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.home-page #bridal .bridal-look-photo {
-  aspect-ratio: 4 / 5;
-  background: var(--color-panel);
-}
-
-.home-page .bridal-look .service-content {
-  padding: 22px 16px;
-  border-top: 1px solid var(--color-border);
-  background: #FFFFFF;
-}
-
-.home-page .bridal-look .service-name {
-  font-size: var(--text-lg);
-  color: var(--color-text-dark);
-}
-
-@media (max-width: 600px) {
-  .home-page .bridal-look .service-content {
-    padding: 14px 10px;
-  }
-
-  .home-page .bridal-look .service-name {
-    font-size: 1.12rem;
-  }
-}
-
-.home-page #booking.visit-section {
-  position: relative;
-  padding-block: clamp(44px, 6vw, 80px);
-  background: var(--color-bg);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 0;
-}
-
-.visit-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  align-items: start;
-  gap: clamp(28px, 4vw, 64px);
-}
-
-.visit-info {
-  min-width: 0;
-}
-
-.visit-info h2 {
-  margin: 0 0 26px;
-  font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 3vw, 2.4rem);
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--color-text-dark);
-}
-
-.visit-info address {
-  font-style: normal;
-  font-size: clamp(1rem, 1.4vw, 1.15rem);
-  line-height: 1.8;
-  color: var(--color-text-dark);
-}
-
-.visit-opening {
-  margin: 26px 0 28px;
-  font-size: .98rem;
-  color: var(--color-text-muted);
-}
-
-.visit-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-12);
-  align-items: center;
-}
-
-.visit-actions .btn {
-  min-height: 50px;
-  padding: 12px 18px;
-  font-size: .84rem;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.visit-actions a:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 4px;
-}
-
-.visit-map {
-  min-width: 0;
-  overflow: hidden;
-  border-radius: 16px;
-  background: var(--color-panel);
-}
-
-.visit-map iframe {
-  display: block;
-  width: 100%;
-  height: 360px;
-  border: 0;
-}
-
-.home-page .visit-section .visit-anchor {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 0;
-  background: none;
-  scroll-margin-top: var(--nav-offset);
-}
-
-@media (min-width: 901px) and (max-width: 1100px) {
-  .visit-layout {
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-    gap: var(--space-24);
-  }
-
-  .visit-actions {
-    gap: var(--space-8);
-  }
-
-  .visit-actions .btn {
-    font-size: .78rem;
-    padding-inline: var(--space-12);
-  }
-}
-
-@media (max-width: 900px) {
-  .visit-layout {
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--space-32);
-  }
-
-  .visit-map iframe {
-    height: 330px;
-  }
-}
-
-@media (max-width: 600px) {
-  .visit-info h2 {
-    margin-bottom: var(--space-20);
-  }
-
-  .visit-opening {
-    margin: 22px 0;
-  }
-
-  .visit-actions {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-  }
-
-  .visit-actions .btn {
-    white-space: normal;
-    padding-inline: 10px;
-  }
-
-  .visit-actions .btn:first-child {
-    grid-column: 1 / -1;
-  }
-
-  .visit-map iframe {
-    height: 280px;
-  }
-}
-
-.home-page .home-campaign-hero {
-  --campaign-height: clamp(430px, 38vw, 580px);
-  position: relative;
-  padding: 0;
-  background: var(--color-bg);
-  overflow: hidden;
-}
-
-.campaign-stage {
-  position: relative;
-  isolation: isolate;
-  min-height: var(--campaign-height);
-}
-
-.campaign-images {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  background: var(--color-bg);
-}
-
-.campaign-images img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 28%;
-}
-
-.campaign-stage::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: linear-gradient(90deg, rgba(28,15,14,.87) 0%, rgba(28,15,14,.72) 32%, rgba(28,15,14,.22) 57%, transparent 76%);
-}
-
-.campaign-content {
-  min-height: inherit;
-  display: flex;
-  align-items: center;
-  padding-block: var(--space-24);
-}
-
-@media (min-width: 701px) and (max-width: 1000px) {
-  .home-page .home-campaign-hero {
-    --campaign-height: 480px;
-  }
-}
-
-.campaign-copy {
-  width: 46%;
-  max-width: 550px;
-  padding: 0;
-}
-
-.campaign-copy h1 {
-  font: 700 clamp(2.5rem, 3.5vw, 3.25rem)/1.12 var(--font-heading);
-  letter-spacing: -.035em;
-  color: #fff8f3;
-  margin: 0 0 16px;
-}
-
-.campaign-copy h1 em {
-  font-style: normal;
-  color: #efb6bd;
-}
-
-.campaign-description {
-  max-width: 43ch;
-  font-size: .94rem;
-  line-height: 1.65;
-  color: #f5e6e0;
-  margin-bottom: var(--space-20);
-}
-
-.campaign-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-12);
-}
-
-.campaign-buttons .btn {
-  min-height: 44px;
-  font-size: .86rem;
-  padding: 10px 18px;
-  border-radius: 10px;
-}
-
-.campaign-buttons .btn-gold-outline {
-  background: transparent;
-  color: #fff8f3;
-  border-color: #e9bbb9;
-}
-
-.campaign-buttons .btn-gold-outline:hover {
-  background: rgba(155,82,97,.45);
-}
-
-.campaign-copy .hero-details {
-  gap: 10px 20px;
-  margin-top: var(--space-20);
-  padding-top: 14px;
-  border-color: rgba(255,248,243,.3);
-}
-
-.campaign-copy .hero-details p {
-  color: #fff8f3;
-}
-
-.campaign-copy .hero-detail-label {
-  color: #ead2ca;
-}
-
-.campaign-copy .hero-call {
-  color: #efb6bd;
-}
-
-.campaign-copy a:focus-visible {
-  outline: 2px solid #fff8f3;
-  outline-offset: 4px;
-}
-
-.home-page main > section.home-experience:not(.hero-section):not(.achievements-section) {
-  padding-block: 18px;
-  background: #2e2025;
-  border-bottom: 1px solid #50373f;
-}
-
-.campaign-proof ul {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  padding: 4px 0;
-}
-
-.campaign-proof li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  min-width: 0;
-  min-height: 72px;
-  padding: 4px 16px;
-  color: #fff8f3;
-}
-
-.campaign-proof li + li {
-  border-left: 1px solid rgba(239,182,189,.28);
-}
-
-.campaign-proof p {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  min-width: 0;
-  margin: 0;
-}
-
-.campaign-proof strong {
-  display: block;
-  font-size: 2.4rem;
-  line-height: 1.1;
-  font-weight: 700;
-  letter-spacing: -.025em;
-}
-
-.campaign-proof .proof-label {
-  color: #e6d2d8;
-  font-size: .9rem;
-  line-height: 1.4;
-}
-
-.campaign-proof svg {
-  width: 36px;
-  height: 36px;
-  flex-shrink: 0;
-  color: #efb6bd;
-}
-
-@media (min-width: 701px) and (max-width: 1200px) {
-  .campaign-copy {
-    width: 52%;
-  }
-
-  .campaign-copy h1 {
-    font-size: clamp(2rem, 3.6vw, 2.8rem);
-  }
-
-  .campaign-description {
-    font-size: .9rem;
-  }
-
-  .campaign-buttons .btn {
-    padding-inline: var(--space-12);
-    font-size: .8rem;
-  }
-}
-
-@media (max-width: 700px) {
-  .home-page .home-campaign-hero {
-    --campaign-height: 520px;
-  }
-
-  .campaign-stage {
-    min-height: var(--campaign-height);
-  }
-
-  .campaign-images img {
-    object-position: 48% center;
-  }
-
-  .home-page .campaign-content {
-    padding-block: 22px;
-  }
-
-  .campaign-stage::after {
-    background: linear-gradient(90deg, rgba(28,15,14,.9), rgba(28,15,14,.72) 45%, rgba(28,15,14,.1) 85%);
-  }
-
-  .campaign-copy {
-    width: 62%;
-    max-width: 330px;
-    padding: 8px 4px;
-  }
-
-  .campaign-copy h1 {
-    font-size: clamp(1.35rem, 5.5vw, 2.1rem);
-    margin-bottom: 14px;
-    line-height: 1.15;
-  }
-
-  .campaign-description {
-    font-size: .8rem;
-    line-height: 1.6;
-    margin-bottom: var(--space-16);
-  }
-
-  .campaign-buttons {
-    flex-direction: column;
-    align-items: stretch;
-    gap: var(--space-8);
-  }
-
-  .campaign-buttons .btn {
-    min-height: 44px;
-    padding: 10px 6px;
-    font-size: var(--text-xs);
-    gap: 5px;
-  }
-
-  .campaign-copy .hero-details {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: var(--space-16);
-    padding-top: 14px;
-    gap: 10px;
-  }
-
-  .campaign-copy .hero-details p {
-    font-size: var(--text-xs);
-  }
-
-  .campaign-copy .hero-detail-label {
-    font-size: var(--text-xs);
-    letter-spacing: .06em;
-    margin-bottom: 2px;
-  }
-
-  .campaign-copy .hero-call {
-    font-size: .76rem;
-    min-height: 36px;
-  }
-
-  .home-page main > section.home-experience:not(.hero-section):not(.achievements-section) {
-    padding-block: var(--space-16);
-  }
-
-  .campaign-proof ul {
-    padding: 0;
-  }
-
-  .campaign-proof li {
-    padding-inline: var(--space-8);
-    gap: 10px;
-  }
-
-  .campaign-proof p {
-    min-width: 0;
-  }
-
-  .campaign-proof strong {
-    font-size: 1.85rem;
-  }
-
-  .campaign-proof .proof-label {
-    font-size: var(--text-xs);
-  }
-
-  .campaign-proof svg {
-    width: 26px;
-    height: 26px;
-  }
-}
-
-.home-page #bridal .bridal-look:focus-within {
-  border-color: var(--color-primary);
+/* Royal Rose & Gold — home sections. Shared controls remain in components.css. */
+.home-page main > section:not(.hero-section) { padding-block: clamp(56px, 7vw, 92px); }
+.home-page #services, .home-page #gallery { background: var(--color-bg); }
+.home-page #learn, .home-page #booking { background: #fff; }
+.home-page #meet-priyanka { background: var(--color-bg-alt); }
+.home-page .section-header { margin-bottom: 38px; text-align: center; }
+.home-page .section-header .section-title { max-width: 24ch; margin-inline: auto; font-size: clamp(2rem, 4vw, 3rem); }
+.section-eyebrow { font: 600 .75rem/1.6 var(--font-body); letter-spacing: .16em; text-transform: uppercase; color: var(--color-deep); margin-bottom: 12px; }
+.home-page .section-title::after { content: ''; display: block; width: 60px; height: 2px; background: var(--color-gold); margin-top: 20px; }
+.home-page .text-center .section-title::after { margin-inline: auto; }
+.home-section-link { text-align: center; margin-top: 32px; }
+.home-section-link .btn { max-width: 100%; white-space: normal; }
+
+/* All slides share the same grid cell. Inactive content still reserves height. */
+.home-page .home-campaign-hero { padding: 0; background: var(--color-bg); overflow: clip; }
+.campaign-stage { display: grid; position: relative; isolation: isolate; touch-action: pan-y; }
+.hero-slide { grid-area: 1 / 1; min-width: 0; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 700ms ease; }
+.hero-slide.is-active { opacity: 1; visibility: visible; pointer-events: auto; z-index: 1; }
+.hero-slide.is-leaving { visibility: visible; }
+.hero-slide-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); align-items: center; gap: clamp(24px, 5vw, 72px); min-height: 570px; padding-block: 46px 28px; }
+.campaign-copy { min-width: 0; padding-block: 20px; }
+.hero-eyebrow { color: var(--color-deep); font-size: .75rem; font-weight: 600; text-transform: uppercase; letter-spacing: .14em; margin-bottom: 22px; }
+.campaign-copy h1, .campaign-copy h2 { font: 700 clamp(2.8rem, 4.7vw, 4.35rem)/1.08 var(--font-heading); letter-spacing: -.04em; margin-bottom: 24px; color: var(--color-ink); }
+.campaign-copy em { color: var(--color-primary); font-weight: 500; }
+.campaign-description { max-width: 40ch; font-size: 1rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 28px; }
+.campaign-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+.campaign-buttons .btn { padding-inline: 20px; min-height: 48px; font-size: .85rem; }
+.hero-art { position: relative; aspect-ratio: 10 / 11; width: 100%; max-width: 440px; justify-self: end; border-radius: 24px; background: var(--color-bg); overflow: hidden; }
+
+/* The real haircut photo is only 236px wide; even the zoom stays below that. */
+.hero-art--hair { width: 230px; max-width: 100%; aspect-ratio: 230 / 420; justify-self: center; border: 2px solid var(--color-gold); padding: 9px; border-radius: 130px 130px 24px 24px; box-shadow: 10px 12px 0 var(--color-panel); }
+
+.hero-image-motion { width: 100%; height: 100%; position: relative; overflow: hidden; border-radius: inherit; transform-origin: center; }
+.hero-image-motion picture { position: absolute; inset: 0; display: block; overflow: hidden; }
+.hero-art img { width: 100%; height: 100%; object-fit: cover; object-position: 60% center; }
+/* Crop the supplied artwork to its portrait only; lettering never becomes slide copy. */
+.hero-art--wedding img { position: absolute; width: 329.9%; max-width: none; height: 100%; left: -229.9%; top: 0; object-fit: fill; }
+.hero-art--services img { position: absolute; width: 400%; max-width: none; height: 121.14%; left: -300%; top: 0; object-fit: fill; }
+.hero-bottom { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px 32px; padding-block: 24px 30px; }
+.hero-details { display: flex; flex-wrap: wrap; align-items: center; gap: 18px 32px; }
+.hero-details p { color: var(--color-text-dark); font-size: .8rem; }
+.hero-detail-label { display: block; color: var(--color-text-muted); font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 3px; }
+.hero-call { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; color: var(--color-deep); font-weight: 600; font-size: .85rem; }
+.hero-controls { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.hero-controls[hidden] { display: none; }
+.hero-controls button { min-width: 44px; min-height: 44px; border: 1px solid var(--color-border); background: #fff; color: var(--color-deep); font: 600 .8rem var(--font-body); cursor: pointer; border-radius: 50%; }
+.hero-controls .hero-arrow { font-size: 1.25rem; }
+.hero-controls .hero-pause { border-radius: 24px; padding-inline: 14px; }
+.hero-pause:disabled { cursor: default; background: var(--color-panel); }
+.hero-dots { display: flex; gap: 4px; }
+.hero-dots button { position: relative; overflow: hidden; border-color: transparent; background: transparent; border-radius: 6px; }
+.hero-dots button[aria-current] { background: var(--color-deep); color: #fff; }
+.hero-dots button::after { content: ''; position: absolute; inset: auto 0 0; height: 3px; background: var(--color-gold-bright); transform: scaleX(0); transform-origin: left; }
+.is-timing .hero-dots button[aria-current]::after { animation: hero-progress 5500ms linear forwards; animation-play-state: paused; }
+.is-playing .hero-dots button[aria-current]::after { animation-play-state: running; }
+.is-slider-ready .hero-slide.is-active .hero-image-motion { animation: hero-zoom 5500ms linear forwards; animation-play-state: paused; }
+.is-playing .hero-slide.is-active .hero-image-motion { animation-play-state: running; }
+.is-slider-ready .hero-slide.is-active .campaign-copy > * { animation: hero-copy 650ms both; }
+.hero-slide.is-active .campaign-copy > :nth-child(2) { animation-delay: 80ms; }
+.hero-slide.is-active .campaign-copy > :nth-child(3) { animation-delay: 160ms; }
+.hero-slide.is-active .campaign-copy > :nth-child(4) { animation-delay: 240ms; }
+@keyframes hero-progress { to { transform: scaleX(1); } }
+@keyframes hero-zoom { from { transform: scale(1); } to { transform: scale(1.06); } }
+@keyframes hero-copy { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+
+/* Dark bands give the gold accents an accessible, high-contrast backdrop. */
+.home-page main > section.home-experience { padding-block: 22px; background: var(--color-deep); }
+.campaign-proof ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.campaign-proof li { display: flex; align-items: center; justify-content: center; min-width: 0; gap: 18px; padding: 12px 20px; color: #fff; }
+.campaign-proof li + li { border-left: 1px solid var(--color-gold); }
+.campaign-proof p { display: flex; flex-direction: column; gap: 4px; }
+.campaign-proof strong { font: 700 2.6rem/1.15 var(--font-heading); color: var(--color-gold-bright); }
+.campaign-proof .proof-daily { font-size: 1.7rem; }
+.campaign-proof .proof-label { font-size: .85rem; color: #fff; }
+.campaign-proof svg { width: 32px; height: 32px; flex-shrink: 0; color: var(--color-gold-bright); }
+.home-popular-grid, .home-course-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.home-bridal-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+.home-page .service-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--color-border); border-radius: 18px; box-shadow: var(--shadow-sm); }
+.home-popular-grid .service-card { border-top: 4px solid var(--color-primary); }
+.home-popular-grid .service-card:nth-child(even) { border-top-color: var(--color-gold); }
+.home-page .service-media { aspect-ratio: 4 / 3; background: var(--color-panel); }
+.home-page .service-content { display: flex; flex: 1; flex-direction: column; align-items: center; text-align: center; padding: 24px 20px; }
+.home-page .service-name { font-size: 1.4rem; }
+.home-page .service-tag { color: var(--color-deep); }
+.home-page .service-desc { font-size: .9rem; line-height: 1.75; color: var(--color-text-muted); margin-bottom: 20px; }
+.home-page .service-book-link { margin-top: auto; min-height: 44px; font-size: .84rem; }
+.service-book-link span { transition: transform 220ms ease; }
+.home-page #bridal { background: var(--color-deep-gradient); }
+.home-page #bridal .section-title, .home-page #how-to-book .section-title { color: #fff; }
+.home-page #bridal .section-eyebrow { color: #fff; }
+.home-page #how-to-book .section-eyebrow { color: var(--color-gold-light); }
+.home-page #bridal .bridal-look { border: 2px solid var(--color-gold); overflow: hidden; }
+.home-page #bridal .bridal-look-photo { aspect-ratio: 4 / 5; }
+.home-page #bridal .service-content { padding: 20px 14px; }
+.home-page #bridal .service-name { font-size: 1.25rem; }
+.home-page #bridal .home-section-link .btn { background: var(--color-gold-light); color: var(--color-deep); border-color: var(--color-gold); }
+.home-course-grid article { padding: 30px 26px; background: #fff; border: 2px solid var(--color-border); border-radius: 22px; transition: transform 260ms ease; }
+.course-icon { display: grid; place-items: center; width: 56px; height: 56px; background: var(--color-panel); color: var(--color-deep); border-radius: 16px; margin-bottom: 24px; }
+.course-icon svg { width: 28px; height: 28px; }
+.home-course-grid h3 { font-size: 1.45rem; margin-bottom: 14px; }
+.home-course-grid p, .home-owner p { color: var(--color-text-muted); font-size: 1rem; line-height: 1.8; }
+
+/* Meet Priyanka: existing portrait and facts, framed as the signature section. */
+.home-owner { position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); align-items: center; gap: clamp(30px, 5vw, 72px); padding: clamp(26px, 5vw, 64px); border: 2px solid var(--color-gold); border-radius: 32px; background: linear-gradient(135deg, var(--color-bg), var(--color-panel)); box-shadow: var(--shadow-lg); overflow: clip; }
+.owner-circle { position: absolute; right: -90px; top: -100px; width: 320px; height: 320px; border-radius: 50%; background: var(--color-primary); opacity: .06; z-index: -1; animation: owner-float 9s ease-in-out infinite alternate; pointer-events: none; }
+.owner-ring { position: absolute; left: -50px; bottom: -100px; width: 290px; height: 290px; border: 1px solid var(--color-gold); border-radius: 50%; opacity: .4; z-index: -1; pointer-events: none; }
+.owner-portrait { position: relative; min-width: 0; margin: 14px 14px 28px 0; }
+.owner-frame { position: absolute; inset: -12px 12px 12px -12px; border: 3px solid var(--color-gold); border-radius: 220px 220px 24px 24px; transform-origin: bottom left; }
+.owner-photo { position: relative; border-radius: 220px 220px 24px 24px; overflow: hidden; background: var(--color-panel); transition: transform 300ms ease; }
+.owner-photo img { width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; object-position: 52% center; }
+.owner-badge { position: absolute; right: -12px; bottom: -24px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 130px; min-height: 94px; padding: 16px; border: 1px solid var(--color-gold); border-radius: 20px 20px 20px 4px; color: var(--color-gold-bright); background: var(--color-deep); font: 700 2rem/1.1 var(--font-heading); box-shadow: var(--shadow-md); }
+.owner-badge span { font: 500 .75rem/1.6 var(--font-body); color: #fff; margin-top: 6px; }
+.owner-copy { min-width: 0; }
+.owner-copy .section-title { font-size: clamp(1.85rem, 3vw, 2.7rem); }
+.owner-copy p { margin-block: 16px; }
+.owner-copy .section-eyebrow { color: var(--color-deep); font-size: .75rem; }
+.owner-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0; }
+.owner-chips li { padding: 7px 12px; border: 1px solid var(--color-gold); border-radius: 24px; font-size: .75rem; color: var(--color-deep); background: var(--color-bg); }
+.owner-portrait.is-visible .owner-frame { animation: frame-in 850ms both; }
+.owner-portrait.is-visible .owner-badge { animation: badge-in 700ms 250ms both; }
+.owner-copy.is-visible .owner-chips li { animation: hero-copy 550ms both; }
+.owner-copy.is-visible .owner-chips li:nth-child(2) { animation-delay: 100ms; }
+.owner-copy.is-visible .owner-chips li:nth-child(3) { animation-delay: 200ms; }
+@keyframes frame-in { from { opacity: 0; transform: scale(.85); } to { opacity: 1; transform: scale(1); } }
+@keyframes badge-in { 0% { opacity: 0; transform: scale(.8) translateY(12px); } 65% { opacity: 1; transform: scale(1.06) translateY(-3px); } 100% { opacity: 1; transform: none; } }
+@keyframes owner-float { from { transform: translate3d(0,0,0); } to { transform: translate3d(-16px,20px,0); } }
+.home-gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+.home-gallery-grid .portfolio-item { margin: 0; border: 2px solid var(--color-gold); border-radius: 20px; overflow: hidden; }
+.home-gallery-grid .portfolio-photo { overflow: hidden; }
+.home-gallery-grid figcaption { font-size: .85rem; padding: 14px; }
+.home-gallery-grid .course-photo-hint { opacity: 0; transform: translateY(8px); transition: opacity 220ms ease, transform 220ms ease; }
+.home-gallery-grid .photo-trigger:focus-visible .course-photo-hint { opacity: 1; transform: none; }
+
+.home-page #how-to-book { background: var(--color-deep); }
+.home-page #how-to-book .course-steps { position: relative; isolation: isolate; gap: 24px; }
+.home-page #how-to-book .course-steps::before { content: ''; position: absolute; top: 52px; left: 8%; right: 8%; border-top: 1px dashed var(--color-gold); z-index: -1; }
+.home-page #how-to-book .course-steps li { background: rgba(255,255,255,.08); border: 1px solid var(--color-gold); padding: 28px 24px; border-radius: 20px; }
+.home-page #how-to-book .course-steps li > span { display: grid; place-items: center; width: 48px; height: 48px; border: 1px solid var(--color-gold); border-radius: 50%; color: var(--color-deep); background: var(--color-gold-bright); font-size: .95rem; font-weight: 700; position: relative; margin-bottom: 24px; }
+.home-page #how-to-book .course-steps li.is-visible > span { animation: badge-once 650ms 180ms both; }
+.home-page #how-to-book .course-steps h3 { color: #fff; font-size: 1.2rem; }
+@keyframes badge-once { 0%,100% { transform: scale(1); } 50% { transform: scale(1.12); } }
+.home-faq { max-width: 820px; margin: 56px auto 0; }
+.home-faq > h3 { font-size: 1.8rem; color: #fff; margin-bottom: 24px; }
+.home-faq details { background: var(--color-bg); border: 1px solid var(--color-gold); border-left: 4px solid transparent; border-radius: 14px; margin-top: 12px; overflow: hidden; }
+.home-faq details[open] { border-left-color: var(--color-gold); }
+.home-faq summary { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px; min-height: 44px; font-weight: 600; cursor: pointer; list-style: none; line-height: 1.5; }
+.home-faq summary::-webkit-details-marker { display: none; }
+.home-faq summary::after { content: '+'; flex-shrink: 0; font: 400 1.5rem/1 var(--font-body); color: var(--color-primary); transition: transform 200ms ease; }
+.home-faq details[open] summary::after { content: '−'; transform: rotate(180deg); }
+/* Native details remains the no-JS fallback. Only opacity/transform are animated. */
+.home-faq details[open] p { animation: hero-copy 250ms ease; }
+.home-faq details p { padding: 0 20px 22px; color: var(--color-text-muted); font-size: .95rem; line-height: 1.8; }
+.home-faq a { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-deep); text-decoration: underline; }
+.home-faq summary:focus-visible { outline: 3px solid var(--color-primary); outline-offset: -5px; }
+.visit-section { position: relative; }
+.visit-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(30px, 5vw, 64px); align-items: center; }
+.visit-info { min-width: 0; }
+.visit-info h2 { font-size: clamp(2rem, 3vw, 2.7rem); margin-bottom: 28px; }
+.visit-info address { font-style: normal; line-height: 1.9; font-size: 1rem; }
+.visit-opening { margin: 24px 0; color: var(--color-text-muted); }
+.visit-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.visit-actions .btn { min-height: 48px; padding-inline: 16px; font-size: .8rem; }
+.visit-map { border: 2px solid var(--color-gold); border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-lg); background: var(--color-panel); min-width: 0; }
+.visit-map iframe { display: block; width: 100%; height: 380px; border: 0; }
+.home-page .visit-section .visit-anchor { position: absolute; top: 0; left: 0; padding: 0; background: none; scroll-margin-top: var(--nav-offset); }
+
+@media (hover: hover) {
+  .hero-controls button:not(:disabled):hover { background: var(--color-deep); color: #fff; }
+  .home-page .service-card:hover { box-shadow: var(--shadow-lg); }
+  .home-page #bridal .bridal-look:hover { box-shadow: 0 0 28px rgba(201,162,75,.30); }
+  .home-course-grid article:hover { border-color: var(--color-gold); }
+  .home-gallery-grid .photo-trigger:hover .course-photo-hint { opacity: 1; transform: none; }
 }
-
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .home-page #bridal .bridal-look:hover {
-    transform: translateY(-5px);
-    border-color: var(--color-primary);
-    box-shadow: var(--shadow-lg);
-  }
+  .home-page .service-card.reveal-complete:hover, .home-page .service-card:not(.reveal):hover, .home-course-grid article.reveal-complete:hover, .home-course-grid article:not(.reveal):hover, .home-page #how-to-book .course-steps li.reveal-complete:hover { transform: translateY(-6px); }
+  .home-page .photo-trigger:hover img { transform: scale(1.06); }
+  .home-page .service-book-link:hover span { transform: translateX(4px); }
+  .visit-actions .btn:hover { transform: translateY(-3px); }
 }
-
-.home-popular-grid, .home-course-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-24);
+@media (hover: none) { .home-gallery-grid .course-photo-hint { opacity: 1; transform: none; } }
+@media (max-width: 1100px) {
+  .home-bridal-grid, .home-popular-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hero-bottom { justify-content: center; }
+  .hero-slide-layout { min-height: 520px; gap: 28px; }
+  .campaign-copy h1, .campaign-copy h2 { font-size: clamp(2.5rem, 4.5vw, 3.5rem); }
+  .home-course-grid article { padding: 24px 18px; }
 }
-
-.home-bridal-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-24);
+@media (max-width: 900px) {
+  .home-owner, .visit-layout { grid-template-columns: minmax(0, 1fr); }
+  .owner-portrait { width: min(100% - 14px, 380px); justify-self: center; }
+  .home-gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .home-course-grid { grid-template-columns: minmax(0, 1fr); }
+  .campaign-buttons .btn { padding-inline: 12px; }
+  .campaign-proof li { gap: 12px; padding-inline: 12px; }
+  .campaign-proof strong { font-size: 2.1rem; }
 }
-
-.home-popular-grid .service-card, .home-bridal-grid .service-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.home-popular-grid .service-content, .home-bridal-grid .service-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.home-popular-grid .service-book-link, .home-bridal-grid .service-book-link {
-  margin-top: auto;
-  min-height: 44px;
-}
-
-.home-section-link {
-  text-align: center;
-  margin-top: var(--space-32);
-}
-
-.home-course-grid article {
-  padding: var(--space-24);
-  border: 1px solid var(--color-border);
-  border-radius: 14px;
-  background: var(--color-panel);
-}
-
-.home-course-grid h3 {
-  font-size: 1.45rem;
-  margin-bottom: var(--space-12);
-}
-
-.home-course-grid p, .home-owner p {
-  font-size: var(--text-base);
-  line-height: 1.75;
-  color: var(--color-text-muted);
-}
-
-.home-owner {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(24px, 5vw, 64px);
-  align-items: center;
-}
-
-.home-owner > img {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-}
-
-.home-owner p {
-  margin: 16px 0;
-}
-
-.home-gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: var(--space-16);
-  align-items: start;
-}
-
-.home-gallery-grid .portfolio-item {
-  margin: 0;
-}
-
-.home-gallery-grid figcaption {
-  font-size: .8rem;
-  padding: var(--space-12);
-}
-
-.home-faq {
-  max-width: 820px;
-  margin: 36px auto 0;
-}
-
-.home-faq h3 {
-  font-size: 1.6rem;
-  margin-bottom: var(--space-20);
-}
-
-.home-faq details {
-  border-bottom: 1px solid var(--color-border);
-}
-
-.home-faq summary {
-  padding: 16px 8px;
-  min-height: 44px;
-  cursor: pointer;
-  font-weight: 600;
-  line-height: 1.5;
-}
-
-.home-faq details p {
-  padding: 0 8px 20px;
-  font-size: var(--text-base);
-  line-height: 1.75;
-}
-
-.home-faq a {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  color: var(--color-primary);
-  text-decoration: underline;
-}
-
-.home-faq summary:focus-visible {
-  outline: 3px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
-.campaign-proof .proof-daily {
-  font-size: 1.65rem;
-}
-
-@media (max-width: 1000px) {
-  .home-popular-grid, .home-bridal-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .home-gallery-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 700px) {
-  .campaign-copy {
-    width: 100%;
-    max-width: 420px;
-    padding: 8px 0;
-  }
+  .hero-slide-layout { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto 1fr; gap: 24px; padding-block: 24px 12px; min-height: 820px; }
+  .campaign-copy { padding: 0; text-align: center; }
+  .hero-eyebrow { font-size: .75rem; letter-spacing: .08em; margin-bottom: 18px; }
+  .campaign-copy h1, .campaign-copy h2 { font-size: clamp(2.2rem, 8.5vw, 3.2rem); margin-bottom: 18px; }
+  .campaign-description { margin: 0 auto 22px; font-size: .9rem; }
+  .campaign-buttons { flex-direction: column; gap: 10px; }
+  .campaign-buttons .btn { width: 100%; font-size: .85rem; padding-inline: 12px; }
+  .hero-art { grid-row: 1; width: min(100%, 400px, 41svh); justify-self: center; }
 
-  .campaign-copy h1 {
-    font-size: clamp(2rem, 7vw, 2.5rem);
-  }
-
-  .campaign-description {
-    font-size: .9rem;
-  }
-
-  .campaign-stage::after {
-    background: linear-gradient(90deg, rgba(28,15,14,.9), rgba(28,15,14,.7));
-  }
-
-  .campaign-buttons {
-    flex-direction: row;
-  }
-
-  .campaign-buttons .btn {
-    flex: 1;
-    font-size: .8rem;
-  }
-
-  .campaign-copy .hero-call {
-    min-height: 44px;
-  }
-
-  .home-owner, .home-course-grid, .campaign-proof ul {
-    grid-template-columns: 1fr;
-  }
-
-  .campaign-proof li {
-    justify-content: flex-start;
-    padding: var(--space-16);
-    min-height: 64px;
-  }
-
-  .campaign-proof li + li {
-    border-left: 0;
-    border-top: 1px solid rgba(239,182,189,.28);
-  }
-
-  .campaign-proof p {
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: var(--space-12);
-  }
+  .hero-art--hair { width: min(230px, 100%); max-height: 45svh; }
+  .hero-art--wedding img { width: 167.08%; height: 202.52%; left: -49.23%; top: -79.72%; }
+  .hero-art--services img { width: 249.08%; height: 301.67%; left: -149.08%; top: -120%; }
+  .hero-bottom { gap: 18px; padding-block: 18px 24px; }
+  .hero-details { justify-content: center; text-align: center; gap: 12px 24px; }
+  .hero-controls { justify-content: center; }
+  .campaign-proof ul { grid-template-columns: 1fr; }
+  .campaign-proof li { justify-content: flex-start; padding: 20px 12px; }
+  .campaign-proof p { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .campaign-proof li + li { border-left: 0; border-top: 1px solid var(--color-gold); }
+  .home-page #how-to-book .course-steps { grid-template-columns: 1fr; }
+  .home-page #how-to-book .course-steps::before { top: 20px; bottom: 20px; left: 49px; right: auto; border-top: 0; border-left: 1px dashed var(--color-gold); }
+  .home-page #how-to-book .course-steps li { display: grid; grid-template-columns: 48px minmax(0, 1fr); align-items: center; gap: 20px; }
+  .home-page #how-to-book .course-steps li > span { margin: 0; }
+  .home-page #how-to-book .course-steps h3 { margin: 0; font-size: 1.1rem; }
 }
-
 @media (max-width: 600px) {
-  .home-popular-grid, .home-bridal-grid, .home-gallery-grid {
-    grid-template-columns: 1fr;
-    max-width: 420px;
-    margin-inline: auto;
-  }
-
-  .home-section-link .btn {
-    max-width: 100%;
-    white-space: normal;
-    min-height: 44px;
-  }
+  .home-page main > section:not(.hero-section) { padding-block: 48px; }
+  .home-page main > section.home-experience { padding-block: 12px; }
+  .home-popular-grid, .home-bridal-grid { grid-template-columns: minmax(0, 1fr); }
+  .home-page .section-header { margin-bottom: 28px; }
+  .home-page .section-header .section-title { font-size: 2rem; }
+  .home-page .service-media { aspect-ratio: 4 / 5; }
+  .home-page .service-content { padding: 22px 20px; }
+  .home-owner { padding: 28px 22px; gap: 30px; }
+  .owner-copy .section-title { font-size: 1.85rem; }
+  .owner-copy p { font-size: .95rem; }
+  .owner-chips { gap: 6px; }
+  .owner-chips li { padding: 7px 10px; }
+  .home-gallery-grid { gap: 12px; }
+  .home-gallery-grid figcaption { font-size: .75rem; padding: 10px; }
+  .home-gallery-grid .course-photo-hint { right: 6px; bottom: 6px; padding: 6px 8px; font-size: .75rem; }
+  .visit-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .visit-actions .btn { white-space: normal; padding-inline: 10px; }
+  .visit-actions .btn:first-child { grid-column: 1 / -1; }
+  .visit-map iframe { height: 300px; }
 }
+@media (prefers-reduced-motion: reduce) {
+  .hero-slide, .hero-image-motion, .campaign-copy > *, .owner-frame, .owner-badge, .owner-circle, .owner-chips li, .home-faq details p { animation: none !important; transition: none !important; }
+  .hero-slide.is-active .campaign-copy > * { opacity: 1; transform: none; }
+  .hero-dots button[aria-current]::after { animation: none !important; transform: scaleX(1); }
+
+.owner-photo { transform: none !important; }
+@media (hover: hover) {
+.home-page .photo-trigger:hover img { transform: none !important; }
+}
+
+}
+
+/* Sharp framed arches. The only offset layer is solid rose, never a photo. */
+.hero-art { width: 440px; max-width: 100%; height: 520px; aspect-ratio: auto; border-radius: 999px 999px 28px 28px; background: var(--color-gold-light); padding: 10px; border: 2px solid var(--color-gold); box-shadow: 0 18px 40px rgba(107,31,58,.15), 18px 18px 0 rgba(184,59,94,.12); }
+.hero-image-motion { border-radius: 999px 999px 16px 16px; }
+.hero-slide.is-active .hero-art { animation: arch-enter 700ms both; }
+.hero-art--hair { width: 230px; height: 420px; }
+@keyframes arch-enter { from { opacity: 0; transform: translateY(14px) scale(.96); } to { opacity: 1; transform: none; } }
+.home-campaign-hero { position: relative; }
+.hero-controls { justify-content: center; }
+.hero-bottom { flex-direction: column; }
+.home-campaign-hero .hero-arrow { min-width: 44px; min-height: 44px; border: 1px solid var(--color-gold); border-radius: 50%; color: var(--color-deep); font-size: 1.25rem; position: absolute; z-index: 3; top: 50%; transform: translateY(-50%); background: var(--color-bg); border-color: var(--color-gold); }
+.home-campaign-hero [data-hero-prev] { left: 8px; }
+.home-campaign-hero [data-hero-next] { right: 8px; }
+.hero-dots button { border-radius: 50%; background: transparent; position: relative; }
+.hero-dots button::before { content: ''; position: absolute; width: 10px; height: 10px; inset: 17px; border-radius: 50%; background: var(--color-border); border: 1px solid var(--color-deep); }
+.hero-dots button[aria-current] { background: transparent; }
+.hero-dots button[aria-current]::before { background: var(--color-deep); }
+.hero-dots button::after { display: none; }
+.owner-photo { padding: 10px; border: 2px solid var(--color-gold); background: var(--color-gold-light); box-shadow: 0 18px 40px rgba(107,31,58,.15); }
+.owner-photo img { border-radius: 999px 999px 16px 16px; }
+.owner-frame { inset: 0; border: 0; background: rgba(184,59,94,.12); transform: translate(18px,18px); }
+.owner-portrait.is-visible .owner-frame { animation: none; }
+.home-page main > section.home-experience { background: var(--color-bg); padding-block: 24px; }
+.campaign-proof { background: var(--color-deep); border: 2px solid var(--color-gold); border-radius: 20px; box-shadow: var(--shadow-lg); width: calc(100% - 2 * var(--container-pad)); }
+.campaign-proof svg { width: 44px; height: 44px; padding: 9px; border: 1px solid var(--color-gold); border-radius: 50%; }
+.campaign-proof [data-count] { font-variant-numeric: tabular-nums; display: inline-block; min-width: 2ch; }
+.campaign-proof [data-count="300"] { min-width: 3ch; }
+@media (max-width: 768px) {
+ .hero-slide-layout { grid-template-columns: minmax(0,1fr); grid-template-rows: auto 1fr; min-height: 0; padding: 20px 32px 12px; gap: 20px; }
+ .hero-art { grid-row: 1; justify-self: center; width: min(62vw,260px); height: min(54vw,300px); }
+ .hero-art--hair { width: min(230px,62vw); }
+ .campaign-copy { text-align: center; padding: 0; }
+ .campaign-copy h1, .campaign-copy h2 { font-size: clamp(1.8rem,6vw,2.5rem); margin-bottom: 12px; }
+ .hero-eyebrow { margin-bottom: 10px; }
+ .campaign-description { font-size: .85rem; margin: 0 auto 14px; }
+ .campaign-buttons { flex-direction: row; flex-wrap: nowrap; gap: 8px; }
+ .campaign-buttons .btn { width: auto; flex: 1; min-width: 0; white-space: normal; font-size: .75rem; padding: 10px 8px; }
+ .hero-bottom { padding-block: 12px; gap: 6px; }
+ .hero-details { justify-content: center; gap: 8px 16px; font-size: .75rem; }
+ .home-campaign-hero .hero-arrow { top: calc(20px + min(27vw,150px)); }
+ .hero-art--wedding img { width: 167.08%; height: 202.52%; left: -49.23%; top: -79.72%; }
+ .hero-art--services img { width: 249.08%; height: 301.67%; left: -149.08%; top: -120%; }
+}
+@media (prefers-reduced-motion: reduce) { .hero-slide.is-active .hero-art { animation: none; transform: none; } }
+
+.campaign-proof strong { display: block; white-space: nowrap; }
+
+@media (max-width: 768px) {
+ .hero-art--services img { height: auto; aspect-ratio: 3 / 4; top: 0; transform: translateY(-39.78%); }
+ .hero-art--wedding img { height: auto; aspect-ratio: 3 / 4; top: 0; transform: translateY(-39.36%); }
+}
+
+.home-page .home-gallery-grid .portfolio-item { border: 0; overflow: visible; }

@@ -1,0 +1,14 @@
+{
+  "counters": [
+    "15+",
+    "300+"
+  ],
+  "heroBlur": 0,
+  "focusMorph": {
+    "radius": "50%",
+    "zoom": "matrix(1.1, 0, 0, 1.1, 0, 0)"
+  },
+  "hoverMorph": "50%",
+  "filterVisible": true,
+  "errors": []
+}

@@ -1,0 +1,326 @@
+[
+  {
+    "page": "index",
+    "width": 360,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "faqEnter": true,
+    "faqClose": true,
+    "sliderReverse": true,
+    "sliderWrap": true,
+    "sliderDotEnter": true,
+    "focusOutline": true,
+    "errors": []
+  },
+  {
+    "page": "about",
+    "width": 360,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "services",
+    "width": 360,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "bridal",
+    "width": 360,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "courses",
+    "width": 360,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "gallery",
+    "width": 360,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "filterEnter": true,
+    "errors": []
+  },
+  {
+    "page": "contact",
+    "width": 360,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "errors": []
+  },
+  {
+    "page": "404",
+    "width": 360,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "errors": []
+  },
+  {
+    "page": "index",
+    "width": 390,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "faqEnter": true,
+    "faqClose": true,
+    "sliderReverse": true,
+    "sliderWrap": true,
+    "sliderDotEnter": true,
+    "focusOutline": true,
+    "errors": []
+  },
+  {
+    "page": "about",
+    "width": 390,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "services",
+    "width": 390,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "bridal",
+    "width": 390,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "courses",
+    "width": 390,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "gallery",
+    "width": 390,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "filterEnter": true,
+    "errors": []
+  },
+  {
+    "page": "contact",
+    "width": 390,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "errors": []
+  },
+  {
+    "page": "404",
+    "width": 390,
+    "navEnter": true,
+    "navShiftTab": true,
+    "navTab": true,
+    "navEscape": true,
+    "errors": []
+  },
+  {
+    "page": "index",
+    "width": 768,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "faqEnter": true,
+    "faqClose": true,
+    "sliderReverse": true,
+    "sliderWrap": true,
+    "sliderDotEnter": true,
+    "focusOutline": true,
+    "errors": []
+  },
+  {
+    "page": "about",
+    "width": 768,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "services",
+    "width": 768,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "bridal",
+    "width": 768,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "courses",
+    "width": 768,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "gallery",
+    "width": 768,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "filterEnter": true,
+    "errors": []
+  },
+  {
+    "page": "contact",
+    "width": 768,
+    "errors": []
+  },
+  {
+    "page": "404",
+    "width": 768,
+    "errors": []
+  },
+  {
+    "page": "index",
+    "width": 1440,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "faqEnter": true,
+    "faqClose": true,
+    "sliderReverse": true,
+    "sliderWrap": true,
+    "sliderDotEnter": true,
+    "focusOutline": true,
+    "errors": []
+  },
+  {
+    "page": "about",
+    "width": 1440,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "services",
+    "width": 1440,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "bridal",
+    "width": 1440,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "courses",
+    "width": 1440,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "errors": []
+  },
+  {
+    "page": "gallery",
+    "width": 1440,
+    "lightboxEnter": true,
+    "lightboxTab": true,
+    "lightboxEscape": true,
+    "filterEnter": true,
+    "errors": []
+  },
+  {
+    "page": "contact",
+    "width": 1440,
+    "errors": []
+  },
+  {
+    "page": "404",
+    "width": 1440,
+    "errors": []
+  }
+]

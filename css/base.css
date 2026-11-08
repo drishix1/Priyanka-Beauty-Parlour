@@ -78,8 +78,8 @@ body {
 }
 
 ::selection {
-  background: #E5CCC8;
-  color: #382B2B;
+  background: var(--color-border);
+  color: var(--color-text-dark);
 }
 
 body {

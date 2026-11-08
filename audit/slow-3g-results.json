@@ -1,0 +1,335 @@
+{
+  "settings": {
+    "width": 390,
+    "height": 844,
+    "dpr": 1,
+    "latencyMs": 400,
+    "downloadBytesPerSecond": 62500,
+    "uploadBytesPerSecond": 62500,
+    "cacheDisabled": true,
+    "cpuThrottle": false
+  },
+  "observations": [
+    {
+      "elapsed": 2433.699999999255,
+      "ready": "interactive",
+      "fonts": "loaded",
+      "heading": true,
+      "paint": [],
+      "images": [
+        {
+          "src": "http://127.0.0.1:8766/images/optimized/logo-144w.webp",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8766/images/optimized/hero-bridal-makeup-480w.webp",
+          "loaded": false
+        }
+      ],
+      "lcp": []
+    },
+    {
+      "elapsed": 5664.89999999851,
+      "ready": "interactive",
+      "fonts": "loading",
+      "heading": true,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 5608
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 5608
+        }
+      ],
+      "images": [
+        {
+          "src": "http://127.0.0.1:8766/images/optimized/logo-144w.webp",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8766/images/optimized/hero-bridal-makeup-480w.webp",
+          "loaded": true
+        }
+      ],
+      "lcp": [
+        {
+          "time": 5608,
+          "size": 68153,
+          "url": "http://127.0.0.1:8766/images/optimized/hero-bridal-makeup-480w.webp",
+          "tag": "IMG"
+        }
+      ]
+    },
+    {
+      "elapsed": 10433,
+      "ready": "complete",
+      "fonts": "loaded",
+      "heading": true,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 5608
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 5608
+        }
+      ],
+      "images": [
+        {
+          "src": "http://127.0.0.1:8766/images/optimized/logo-144w.webp",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8766/images/optimized/hero-bridal-makeup-480w.webp",
+          "loaded": true
+        }
+      ],
+      "lcp": [
+        {
+          "time": 5608,
+          "size": 68153,
+          "url": "http://127.0.0.1:8766/images/optimized/hero-bridal-makeup-480w.webp",
+          "tag": "IMG"
+        }
+      ]
+    },
+    {
+      "elapsed": 20433.39999999851,
+      "ready": "complete",
+      "fonts": "loaded",
+      "heading": true,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 5608
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 5608
+        }
+      ],
+      "images": [
+        {
+          "src": "http://127.0.0.1:8766/images/optimized/logo-144w.webp",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8766/images/optimized/hero-priyanka-services-mobile.webp",
+          "loaded": true
+        }
+      ],
+      "lcp": [
+        {
+          "time": 5608,
+          "size": 68153,
+          "url": "http://127.0.0.1:8766/images/optimized/hero-bridal-makeup-480w.webp",
+          "tag": "IMG"
+        },
+        {
+          "time": 13524,
+          "size": 68448,
+          "url": "http://127.0.0.1:8766/images/optimized/hero-priyanka-wedding-mobile.webp",
+          "tag": "IMG"
+        }
+      ]
+    },
+    {
+      "elapsed": 30433.300000000745,
+      "ready": "complete",
+      "fonts": "loaded",
+      "heading": true,
+      "paint": [
+        {
+          "name": "first-paint",
+          "time": 5608
+        },
+        {
+          "name": "first-contentful-paint",
+          "time": 5608
+        }
+      ],
+      "images": [
+        {
+          "src": "http://127.0.0.1:8766/images/optimized/logo-144w.webp",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8766/images/optimized/hero-priyanka-wedding-mobile.webp",
+          "loaded": true
+        }
+      ],
+      "lcp": [
+        {
+          "time": 5608,
+          "size": 68153,
+          "url": "http://127.0.0.1:8766/images/optimized/hero-bridal-makeup-480w.webp",
+          "tag": "IMG"
+        },
+        {
+          "time": 13524,
+          "size": 68448,
+          "url": "http://127.0.0.1:8766/images/optimized/hero-priyanka-wedding-mobile.webp",
+          "tag": "IMG"
+        }
+      ]
+    }
+  ],
+  "resources": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap",
+      "type": "link",
+      "start": 453.5,
+      "duration": 623.6999999992549,
+      "transfer": 1289,
+      "body": 989
+    },
+    {
+      "url": "http://127.0.0.1:8766/css/tokens.css",
+      "type": "link",
+      "start": 453.80000000074506,
+      "duration": 575.8000000007451,
+      "transfer": 2654,
+      "body": 2354
+    },
+    {
+      "url": "http://127.0.0.1:8766/css/base.css",
+      "type": "link",
+      "start": 453.8999999985099,
+      "duration": 599.9000000022352,
+      "transfer": 1802,
+      "body": 1502
+    },
+    {
+      "url": "http://127.0.0.1:8766/css/layout.css",
+      "type": "link",
+      "start": 453.8999999985099,
+      "duration": 647.2000000029802,
+      "transfer": 1866,
+      "body": 1566
+    },
+    {
+      "url": "http://127.0.0.1:8766/css/home.css",
+      "type": "link",
+      "start": 454,
+      "duration": 2015.1000000014901,
+      "transfer": 22681,
+      "body": 22381
+    },
+    {
+      "url": "http://127.0.0.1:8766/css/components.css",
+      "type": "link",
+      "start": 454,
+      "duration": 5014.89999999851,
+      "transfer": 67315,
+      "body": 67015
+    },
+    {
+      "url": "http://127.0.0.1:8766/images/optimized/hero-bridal-makeup-480w.webp",
+      "type": "link",
+      "start": 501.30000000074506,
+      "duration": 3023.599999997765,
+      "transfer": 29672,
+      "body": 29372
+    },
+    {
+      "url": "http://127.0.0.1:8766/images/optimized/logo-144w.webp",
+      "type": "img",
+      "start": 501.5,
+      "duration": 1415.199999999255,
+      "transfer": 5466,
+      "body": 5166
+    },
+    {
+      "url": "http://127.0.0.1:8766/js/nav.js",
+      "type": "script",
+      "start": 2325.60000000149,
+      "duration": 1007.2999999970198,
+      "transfer": 5188,
+      "body": 4888
+    },
+    {
+      "url": "http://127.0.0.1:8766/js/hero-slider.js",
+      "type": "script",
+      "start": 2325.699999999255,
+      "duration": 1031.9000000022352,
+      "transfer": 5231,
+      "body": 4931
+    },
+    {
+      "url": "http://127.0.0.1:8766/js/lightbox.js",
+      "type": "script",
+      "start": 2325.699999999255,
+      "duration": 1367.5,
+      "transfer": 8531,
+      "body": 8231
+    },
+    {
+      "url": "http://127.0.0.1:8766/js/motion.js",
+      "type": "script",
+      "start": 2325.800000000745,
+      "duration": 1487.0999999977648,
+      "transfer": 6737,
+      "body": 6437
+    },
+    {
+      "url": "http://127.0.0.1:8766/js/contact-hints.js",
+      "type": "script",
+      "start": 2325.800000000745,
+      "duration": 1656.5,
+      "transfer": 1972,
+      "body": 1672
+    },
+    {
+      "url": "http://127.0.0.1:8766/images/optimized/hero-priyanka-services-mobile.webp",
+      "type": "img",
+      "start": 5582.10000000149,
+      "duration": 7738.699999999255,
+      "transfer": 153408,
+      "body": 153108
+    },
+    {
+      "url": "http://127.0.0.1:8766/images/optimized/hero-priyanka-wedding-mobile.webp",
+      "type": "img",
+      "start": 5582.10000000149,
+      "duration": 7909.29999999702,
+      "transfer": 164024,
+      "body": 163724
+    },
+    {
+      "url": "http://127.0.0.1:8766/images/optimized/party-makeup-rose-eyes-480w.webp",
+      "type": "img",
+      "start": 5582.199999999255,
+      "duration": 4077.5,
+      "transfer": 44036,
+      "body": 43736
+    },
+    {
+      "url": "http://127.0.0.1:8766/images/optimized/gallery-3-480w.webp",
+      "type": "img",
+      "start": 5582.199999999255,
+      "duration": 4570.300000000745,
+      "transfer": 54364,
+      "body": 54064
+    },
+    {
+      "url": "http://127.0.0.1:8766/images/optimized/service-facial-480w.webp",
+      "type": "img",
+      "start": 5582.300000000745,
+      "duration": 3982.5,
+      "transfer": 42284,
+      "body": 41984
+    },
+    {
+      "url": "http://127.0.0.1:8766/images/optimized/logo-144w.webp",
+      "type": "other",
+      "start": 6031,
+      "duration": 961.8999999985099,
+      "transfer": 5466,
+      "body": 5166
+    }
+  ],
+  "errors": []
+}
