@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /images/originals/
+
+Sitemap: https://priyanka-beauty-parlour.vercel.app/sitemap.xml

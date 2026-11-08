@@ -4,15 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Services | Priyanka Beauty Parlour, Raxaul</title>
-  <meta name="description" content="Priyanka Beauty Parlour by Priyanka Gupta in Ashram Road, Raxaul. Specializing in royal bridal makeovers, facials, haircuts, waxing, mehendi, and personal care.">
-  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
-  
+  <meta name="description" content="Explore facials, hair styling, nail care, waxing, threading and makeup at Priyanka Beauty Parlour on Ashram Road, Raxaul. Book your service on WhatsApp.">
+  <link rel="icon" type="image/webp" href="images/optimized/logo-144w.webp">
+
   <!-- Ivory & Rose Theme Typography: Playfair Display headings & Inter body text -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="canonical" href="https://priyanka-beauty-parlour.vercel.app/services.html">
+  <meta property="og:title" content="Services | Priyanka Beauty Parlour, Raxaul">
+  <meta property="og:description" content="Explore facials, hair styling, nail care, waxing, threading and makeup at Priyanka Beauty Parlour on Ashram Road, Raxaul. Book your service on WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://priyanka-beauty-parlour.vercel.app/services.html">
+  <meta property="og:image" content="https://priyanka-beauty-parlour.vercel.app/images/social-preview.jpg">
+  <meta property="og:image:alt" content="Bridal makeup being applied at a salon">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Services | Priyanka Beauty Parlour, Raxaul">
+  <meta name="twitter:description" content="Explore facials, hair styling, nail care, waxing, threading and makeup at Priyanka Beauty Parlour on Ashram Road, Raxaul. Book your service on WhatsApp.">
+  <meta name="twitter:image" content="https://priyanka-beauty-parlour.vercel.app/images/social-preview.jpg">
+  <meta name="theme-color" content="#FFF8F3">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -20,7 +36,7 @@
   <header class="main-header" id="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo" title="Priyanka Beauty Parlour">
-        <div class="logo-ring"><img src="images/logo.jpg" alt="" class="brand-logo-img" width="72" height="72"></div>
+        <div class="logo-ring"><img src="images/optimized/logo-144w.webp" alt="" class="brand-logo-img" width="144" height="144"></div>
         <div class="brand-text-block"><span class="brand-name-gold">Priyanka</span><span class="brand-tag-royal">BEAUTY PARLOUR</span></div>
       </a>
       <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
@@ -32,8 +48,9 @@
         <a href="about.html" class="nav-link">About</a>
         <a href="services.html" class="nav-link" aria-current="page">Services</a>
         <a href="bridal.html" class="nav-link">Bridal</a>
+        <a href="courses.html" class="nav-link">Courses</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="contact.html" class="nav-link">Reach Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
         <a href="index.html#booking" class="btn header-book nav-mobile-book">Book Appointment</a>
       </nav>
       <a href="index.html#booking" class="btn header-book header-book-desktop">Book Appointment <span aria-hidden="true">&#8599;</span></a>
@@ -46,7 +63,7 @@
     <div class="container">
       <div class="section-header text-center">
         <span class="section-badge">What We Offer</span>
-        <h1 class="section-title">Beauty Services, Personalised for You</h1>
+        <h1 class="section-title">Beauty Services, Personalised for You</h1><div class="service-quote-note"><p>Prices vary by service and look. Message us on WhatsApp for a quote.</p><a class="btn btn-gold-outline" href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20a%20quote%20for%20a%20beauty%20service.%20Please%20share%20the%20details." target="_blank" rel="noopener noreferrer">Ask for a Quote on WhatsApp <span aria-hidden="true">&#8599;</span></a></div>
         <p class="section-subtitle">From everyday grooming to bridal beauty, discover thoughtful care for every occasion.</p>
       </div>
 
@@ -62,47 +79,47 @@
         <div class="service-category" id="services-makeup" role="region" aria-labelledby="makeup-title">
           <div class="service-category-header">
             <p class="service-category-eyebrow"><span aria-hidden="true">01</span> For your special moments</p>
-            <h3 id="makeup-title">Makeup &amp; Mehendi</h3>
+            <h2 id="makeup-title">Makeup &amp; Mehendi</h2>
             <p class="service-category-intro">From bridal traditions to evening celebrations, find a look that feels like you.</p>
           </div>
           <div class="category-grid">
             <article class="service-card">
-              <button type="button" class="service-media service-media--bridal photo-trigger" data-photo data-gallery="services" data-full="./images/gallery-3.jpg" data-title="Bridal eye makeup and jewellery styling" aria-label="View photo: Bridal eye makeup and jewellery styling">
-                <img src="./images/gallery-3.jpg" alt="Bridal eye makeup and jewellery styling" width="1024" height="1024" loading="lazy" decoding="async">
-              
+              <button type="button" class="service-media service-media--bridal photo-trigger" data-photo data-gallery="services" data-full="images/optimized/gallery-3-full.webp" data-title="Bridal eye makeup and jewellery styling" aria-label="View photo: Bridal eye makeup and jewellery styling">
+                <img src="images/optimized/gallery-3-960w.webp" alt="Bridal eye makeup and jewellery styling" width="960" height="960" loading="lazy" decoding="async" srcset="images/optimized/gallery-3-480w.webp 480w, images/optimized/gallery-3-960w.webp 960w, images/optimized/gallery-3-full.webp 1024w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 363px">
+
                 <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
               </button>
               <div class="service-content">
                 <p class="service-tag">Bridal beauty</p>
-                <h4 class="service-name">Bridal Makeup</h4>
+                <h3 class="service-name">Bridal Makeup</h3>
                 <p class="service-desc">A complete bridal look with makeup, hairstyle setting and saree draping, considered around your outfit and occasion.</p>
-                <a href="index.html?service=Bridal%20Makeup#booking" class="service-book-link" data-service="Bridal Makeup" aria-label="Book Bridal Makeup">Book Now <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Bridal%20Makeup.%20Please%20let%20me%20know%20your%20availability." class="service-book-link" data-service="Bridal Makeup" aria-label="Book Bridal Makeup" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
               </div>
             </article>
             <article class="service-card">
-              <button type="button" class="service-media service-media--mehendi photo-trigger" data-photo data-gallery="services" data-full="./images/service-mehendi.jpg" data-title="Detailed bridal mehendi designs on hands" aria-label="View photo: Detailed bridal mehendi designs on hands">
-                <img src="./images/service-mehendi.jpg" alt="Detailed bridal mehendi designs on hands" width="736" height="1127" loading="lazy" decoding="async">
-              
+              <button type="button" class="service-media service-media--mehendi photo-trigger" data-photo data-gallery="services" data-full="images/optimized/service-mehendi-full.webp" data-title="Detailed bridal mehendi designs on hands" aria-label="View photo: Detailed bridal mehendi designs on hands">
+                <img src="images/optimized/service-mehendi-736w.webp" alt="Detailed bridal mehendi designs on hands" width="736" height="1127" loading="lazy" decoding="async" srcset="images/optimized/service-mehendi-480w.webp 480w, images/optimized/service-mehendi-full.webp 736w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 363px">
+
                 <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
               </button>
               <div class="service-content">
                 <p class="service-tag">Celebration ready</p>
-                <h4 class="service-name">Bridal &amp; Festive Mehendi</h4>
+                <h3 class="service-name">Bridal &amp; Festive Mehendi</h3>
                 <p class="service-desc">Delicate motifs and detailed bridal patterns for weddings, festivals and celebrations, chosen to suit your style.</p>
-                <a href="index.html?service=Mehendi#booking" class="service-book-link" data-service="Mehendi" aria-label="Book Bridal &amp; Festive Mehendi">Book Now <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Mehendi.%20Please%20let%20me%20know%20your%20availability." class="service-book-link" data-service="Mehendi" aria-label="Book Bridal &amp; Festive Mehendi" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
               </div>
             </article>
             <article class="service-card">
-              <button type="button" class="service-media service-media--party-makeup photo-trigger" data-photo data-gallery="services" data-full="./images/service-party-makeup.webp" data-title="Soft-glam party makeup with rose lips and loose waves" aria-label="View photo: Soft-glam party makeup with rose lips and loose waves">
-                <img src="./images/service-party-makeup.webp" alt="Illustrative soft-glam party makeup with rose lips and loose waves" width="1122" height="1402" loading="lazy" decoding="async" data-generated="true">
-              
+              <button type="button" class="service-media service-media--party-makeup photo-trigger" data-photo data-gallery="services" data-full="images/optimized/party-makeup-rose-eyes-full.webp" data-title="Soft rose elegance" aria-label="View photo: Rose eye makeup with winged liner and pearl hair accents">
+                <img src="images/optimized/party-makeup-rose-eyes-960w.webp" alt="Rose eye makeup with winged liner and pearl hair accents" width="960" height="1280" loading="lazy" decoding="async" srcset="images/optimized/party-makeup-rose-eyes-480w.webp 480w, images/optimized/party-makeup-rose-eyes-960w.webp 960w, images/optimized/party-makeup-rose-eyes-full.webp 1086w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 363px">
+
                 <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
               </button>
               <div class="service-content">
                 <p class="service-tag">Your occasion</p>
-                <h4 class="service-name">Party &amp; Occasion Makeup</h4>
+                <h3 class="service-name">Party &amp; Occasion Makeup</h3>
                 <p class="service-desc">Soft glam or a more defined evening look, with makeup that complements your features, outfit and celebration.</p>
-                <a href="index.html?service=Party%20Makeup#booking" class="service-book-link" data-service="Party Makeup" aria-label="Book Party &amp; Occasion Makeup">Book Now <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Party%20Makeup.%20Please%20let%20me%20know%20your%20availability." class="service-book-link" data-service="Party Makeup" aria-label="Book Party &amp; Occasion Makeup" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
               </div>
             </article>
           </div>
@@ -111,34 +128,34 @@
         <div class="service-category" id="services-skin" role="region" aria-labelledby="skin-title">
           <div class="service-category-header">
             <p class="service-category-eyebrow"><span aria-hidden="true">02</span> A little time for your skin</p>
-            <h3 id="skin-title">Skin Care</h3>
+            <h2 id="skin-title">Skin Care</h2>
             <p class="service-category-intro">Cleansing and facial care for a fresh, well-cared-for feeling.</p>
           </div>
           <div class="category-grid category-grid--pair">
             <article class="service-card">
-              <button type="button" class="service-media service-media--facial photo-trigger" data-photo data-gallery="services" data-full="./images/service-facial.jpg" data-title="Facial cleansing and skincare treatments" aria-label="View photo: Facial cleansing and skincare treatments">
-                <img src="./images/service-facial.jpg" alt="Facial cleansing and skincare treatments" width="736" height="1104" loading="lazy" decoding="async">
-              
+              <button type="button" class="service-media service-media--facial photo-trigger" data-photo data-gallery="services" data-full="images/optimized/service-facial-full.webp" data-title="Facial cleansing and skincare treatments" aria-label="View photo: Facial cleansing and skincare treatments">
+                <img src="images/optimized/service-facial-736w.webp" alt="Facial cleansing and skincare treatments" width="736" height="1104" loading="lazy" decoding="async" srcset="images/optimized/service-facial-480w.webp 480w, images/optimized/service-facial-full.webp 736w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 363px">
+
                 <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
               </button>
               <div class="service-content">
                 <p class="service-tag">Facial care</p>
-                <h4 class="service-name">Facial &amp; Glow Care</h4>
+                <h3 class="service-name">Facial &amp; Glow Care</h3>
                 <p class="service-desc">Explore fruit, herbal, gold and other facial options, with cleansing and care selected around your skin preferences.</p>
-                <a href="index.html?service=Facial%20%26%20Skin%20Glow#booking" class="service-book-link" data-service="Facial &amp; Skin Glow" aria-label="Book Facial &amp; Glow Care">Book Now <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Facial%20%26%20Skin%20Glow.%20Please%20let%20me%20know%20your%20availability." class="service-book-link" data-service="Facial &amp; Skin Glow" aria-label="Book Facial &amp; Glow Care" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
               </div>
             </article>
             <article class="service-card">
-              <button type="button" class="service-media service-media--face-cleanup photo-trigger" data-photo data-gallery="services" data-full="./images/service-face-cleanup.webp" data-title="Gentle facial cleanup with a cotton pad" aria-label="View photo: Gentle facial cleanup with a cotton pad">
-                <img src="./images/service-face-cleanup.webp" alt="Illustrative gentle facial cleanup with a cotton pad" width="1122" height="1402" loading="lazy" decoding="async" data-generated="true">
-              
+              <button type="button" class="service-media service-media--face-cleanup photo-trigger" data-photo data-gallery="services" data-full="images/optimized/service-face-cleanup-full.webp" data-title="Gentle facial cleanup with a cotton pad" aria-label="View photo: Gentle facial cleanup with a cotton pad">
+                <img src="images/optimized/service-face-cleanup-960w.webp" alt="Illustrative gentle facial cleanup with a cotton pad" width="960" height="1200" loading="lazy" decoding="async" data-generated="true" srcset="images/optimized/service-face-cleanup-480w.webp 480w, images/optimized/service-face-cleanup-960w.webp 960w, images/optimized/service-face-cleanup-full.webp 1122w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 363px">
+
                 <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
               </button>
               <div class="service-content">
                 <p class="service-tag">Fresh &amp; cared for</p>
-                <h4 class="service-name">Face Cleanup</h4>
+                <h3 class="service-name">Face Cleanup</h3>
                 <p class="service-desc">A focused refresh with gentle cleansing and finishing care, ideal when you want a simple skincare appointment.</p>
-                <a href="index.html?service=Face%20Cleanup#booking" class="service-book-link" data-service="Face Cleanup" aria-label="Book Face Cleanup">Book Now <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Face%20Cleanup.%20Please%20let%20me%20know%20your%20availability." class="service-book-link" data-service="Face Cleanup" aria-label="Book Face Cleanup" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
               </div>
             </article>
           </div>
@@ -147,34 +164,34 @@
         <div class="service-category" id="services-hair" role="region" aria-labelledby="hair-title">
           <div class="service-category-header">
             <p class="service-category-eyebrow"><span aria-hidden="true">03</span> A style that feels like you</p>
-            <h3 id="hair-title">Haircut &amp; Styling</h3>
+            <h2 id="hair-title">Haircut &amp; Styling</h2>
             <p class="service-category-intro">From everyday shape to occasion-ready finishing touches.</p>
           </div>
           <div class="category-grid category-grid--pair">
             <article class="service-card">
-              <button type="button" class="service-media service-media--haircut photo-trigger" data-photo data-gallery="services" data-full="./images/service-haircut.jpg" data-title="Long layered haircut and styling" aria-label="View photo: Long layered haircut and styling">
-                <img src="./images/service-haircut.jpg" alt="Long layered haircut and styling" width="236" height="420" loading="lazy" decoding="async">
-              
+              <button type="button" class="service-media service-media--haircut photo-trigger" data-photo data-gallery="services" data-full="images/optimized/service-haircut-full.webp" data-title="Long layered haircut and styling" aria-label="View photo: Long layered haircut and styling">
+                <img src="images/optimized/service-haircut-236w.webp" alt="Long layered haircut and styling" width="236" height="420" loading="lazy" decoding="async" srcset="images/optimized/service-haircut-full.webp 236w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 363px">
+
                 <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
               </button>
               <div class="service-content">
                 <p class="service-tag">Everyday style</p>
-                <h4 class="service-name">Haircut &amp; Styling</h4>
+                <h3 class="service-name">Haircut &amp; Styling</h3>
                 <p class="service-desc">Fresh trims, layers, feather cuts and blow-dry styling, shaped around your hair length and the look you have in mind.</p>
-                <a href="index.html?service=Haircut%20%26%20Styling#booking" class="service-book-link" data-service="Haircut &amp; Styling" aria-label="Book Haircut &amp; Styling">Book Now <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Haircut%20%26%20Styling.%20Please%20let%20me%20know%20your%20availability." class="service-book-link" data-service="Haircut &amp; Styling" aria-label="Book Haircut &amp; Styling" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
               </div>
             </article>
             <article class="service-card">
-              <button type="button" class="service-media service-media--occasion-hairstyle photo-trigger" data-photo data-gallery="services" data-full="./images/service-occasion-hairstyle.webp" data-title="Braided low bun with jasmine flowers" aria-label="View photo: Braided low bun with jasmine flowers">
-                <img src="./images/service-occasion-hairstyle.webp" alt="Illustrative braided low bun with jasmine flowers" width="1122" height="1402" loading="lazy" decoding="async" data-generated="true">
-              
+              <button type="button" class="service-media service-media--occasion-hairstyle photo-trigger" data-photo data-gallery="services" data-full="images/optimized/service-occasion-hairstyle-full.webp" data-title="Braided low bun with jasmine flowers" aria-label="View photo: Braided low bun with jasmine flowers">
+                <img src="images/optimized/service-occasion-hairstyle-960w.webp" alt="Illustrative braided low bun with jasmine flowers" width="960" height="1200" loading="lazy" decoding="async" data-generated="true" srcset="images/optimized/service-occasion-hairstyle-480w.webp 480w, images/optimized/service-occasion-hairstyle-960w.webp 960w, images/optimized/service-occasion-hairstyle-full.webp 1122w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 363px">
+
                 <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
               </button>
               <div class="service-content">
                 <p class="service-tag">Finishing touches</p>
-                <h4 class="service-name">Occasion Hairstyling</h4>
+                <h3 class="service-name">Occasion Hairstyling</h3>
                 <p class="service-desc">Elegant buns, soft curls and neatly finished styles to complement your outfit for weddings, parties and special days.</p>
-                <a href="index.html?service=Occasion%20Hairstyling#booking" class="service-book-link" data-service="Occasion Hairstyling" aria-label="Book Occasion Hairstyling">Book Now <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Occasion%20Hairstyling.%20Please%20let%20me%20know%20your%20availability." class="service-book-link" data-service="Occasion Hairstyling" aria-label="Book Occasion Hairstyling" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
               </div>
             </article>
           </div>
@@ -183,47 +200,47 @@
         <div class="service-category" id="services-hands-feet" role="region" aria-labelledby="hands-feet-title">
           <div class="service-category-header">
             <p class="service-category-eyebrow"><span aria-hidden="true">04</span> Care down to the details</p>
-            <h3 id="hands-feet-title">Hands &amp; Feet</h3>
+            <h2 id="hands-feet-title">Hands &amp; Feet</h2>
             <p class="service-category-intro">Relaxed grooming and polished finishing touches for your hands and feet.</p>
           </div>
           <div class="category-grid">
             <article class="service-card">
-              <button type="button" class="service-media service-media--manicure photo-trigger" data-photo data-gallery="services" data-full="./images/service-manicure.jpg" data-title="Nail detailing during a manicure" aria-label="View photo: Nail detailing during a manicure">
-                <img src="./images/service-manicure.jpg" alt="Nail detailing during a manicure" width="736" height="1318" loading="lazy" decoding="async">
-              
+              <button type="button" class="service-media service-media--manicure photo-trigger" data-photo data-gallery="services" data-full="images/optimized/service-manicure-full.webp" data-title="Nail detailing during a manicure" aria-label="View photo: Nail detailing during a manicure">
+                <img src="images/optimized/service-manicure-736w.webp" alt="Nail detailing during a manicure" width="736" height="1318" loading="lazy" decoding="async" srcset="images/optimized/service-manicure-480w.webp 480w, images/optimized/service-manicure-full.webp 736w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 363px">
+
                 <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
               </button>
               <div class="service-content">
                 <p class="service-tag">Hand care</p>
-                <h4 class="service-name">Manicure</h4>
+                <h3 class="service-name">Manicure</h3>
                 <p class="service-desc">A soothing hand soak, nail shaping, cuticle grooming and a gentle hand massage, finished with your preferred polish.</p>
-                <a href="index.html?service=Manicure#booking" class="service-book-link" data-service="Manicure" aria-label="Book Manicure">Book Now <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Manicure.%20Please%20let%20me%20know%20your%20availability." class="service-book-link" data-service="Manicure" aria-label="Book Manicure" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
               </div>
             </article>
             <article class="service-card">
-              <button type="button" class="service-media service-media--pedicure photo-trigger" data-photo data-gallery="services" data-full="./images/service-pedicure.jpg" data-title="Toenail shaping during a pedicure" aria-label="View photo: Toenail shaping during a pedicure">
-                <img src="./images/service-pedicure.jpg" alt="Toenail shaping during a pedicure" width="736" height="1308" loading="lazy" decoding="async">
-              
+              <button type="button" class="service-media service-media--pedicure photo-trigger" data-photo data-gallery="services" data-full="images/optimized/service-pedicure-full.webp" data-title="Toenail shaping during a pedicure" aria-label="View photo: Toenail shaping during a pedicure">
+                <img src="images/optimized/service-pedicure-736w.webp" alt="Toenail shaping during a pedicure" width="736" height="1308" loading="lazy" decoding="async" srcset="images/optimized/service-pedicure-480w.webp 480w, images/optimized/service-pedicure-full.webp 736w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 363px">
+
                 <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
               </button>
               <div class="service-content">
                 <p class="service-tag">Foot care</p>
-                <h4 class="service-name">Pedicure</h4>
+                <h3 class="service-name">Pedicure</h3>
                 <p class="service-desc">A refreshing foot soak, exfoliation, nail care and a relaxing foot massage for a neat, comfortable finish.</p>
-                <a href="index.html?service=Pedicure#booking" class="service-book-link" data-service="Pedicure" aria-label="Book Pedicure">Book Now <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Pedicure.%20Please%20let%20me%20know%20your%20availability." class="service-book-link" data-service="Pedicure" aria-label="Book Pedicure" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
               </div>
             </article>
             <article class="service-card">
-              <button type="button" class="service-media service-media--nail-polish photo-trigger" data-photo data-gallery="services" data-full="./images/service-nail-polish.webp" data-title="Dusty-rose nail polish with a subtle gold accent" aria-label="View photo: Dusty-rose nail polish with a subtle gold accent">
-                <img src="./images/service-nail-polish.webp" alt="Illustrative dusty-rose nail polish with a subtle gold accent" width="1122" height="1402" loading="lazy" decoding="async" data-generated="true">
-              
+              <button type="button" class="service-media service-media--nail-polish photo-trigger" data-photo data-gallery="services" data-full="images/optimized/service-nail-polish-full.webp" data-title="Dusty-rose nail polish with a subtle gold accent" aria-label="View photo: Dusty-rose nail polish with a subtle gold accent">
+                <img src="images/optimized/service-nail-polish-960w.webp" alt="Illustrative dusty-rose nail polish with a subtle gold accent" width="960" height="1200" loading="lazy" decoding="async" data-generated="true" srcset="images/optimized/service-nail-polish-480w.webp 480w, images/optimized/service-nail-polish-960w.webp 960w, images/optimized/service-nail-polish-full.webp 1122w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 363px">
+
                 <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
               </button>
               <div class="service-content">
                 <p class="service-tag">A polished finish</p>
-                <h4 class="service-name">Nail Polish &amp; Finishing</h4>
+                <h3 class="service-name">Nail Polish &amp; Finishing</h3>
                 <p class="service-desc">From understated neutrals to a favourite statement shade, complete your look with neatly shaped, freshly polished nails.</p>
-                <a href="index.html?service=Nail%20Polish#booking" class="service-book-link" data-service="Nail Polish" aria-label="Book Nail Polish &amp; Finishing">Book Now <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Nail%20Polish.%20Please%20let%20me%20know%20your%20availability." class="service-book-link" data-service="Nail Polish" aria-label="Book Nail Polish &amp; Finishing" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
               </div>
             </article>
           </div>
@@ -232,34 +249,34 @@
         <div class="service-category" id="services-grooming" role="region" aria-labelledby="grooming-title">
           <div class="service-category-header">
             <p class="service-category-eyebrow"><span aria-hidden="true">05</span> Your regular beauty essentials</p>
-            <h3 id="grooming-title">Everyday Grooming</h3>
+            <h2 id="grooming-title">Everyday Grooming</h2>
             <p class="service-category-intro">The small appointments that keep your routine feeling complete.</p>
           </div>
           <div class="category-grid category-grid--pair">
             <article class="service-card">
-              <button type="button" class="service-media service-media--threading photo-trigger" data-photo data-gallery="services" data-full="./images/service-threading.jpg" data-title="Eyebrow shaping with threading" aria-label="View photo: Eyebrow shaping with threading">
-                <img src="./images/service-threading.jpg" alt="Eyebrow shaping with threading" width="736" height="920" loading="lazy" decoding="async">
-              
+              <button type="button" class="service-media service-media--threading photo-trigger" data-photo data-gallery="services" data-full="images/optimized/service-threading-full.webp" data-title="Eyebrow shaping with threading" aria-label="View photo: Eyebrow shaping with threading">
+                <img src="images/optimized/service-threading-736w.webp" alt="Eyebrow shaping with threading" width="736" height="920" loading="lazy" decoding="async" srcset="images/optimized/service-threading-480w.webp 480w, images/optimized/service-threading-full.webp 736w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 363px">
+
                 <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
               </button>
               <div class="service-content">
                 <p class="service-tag">Precise shaping</p>
-                <h4 class="service-name">Threading</h4>
+                <h3 class="service-name">Threading</h3>
                 <p class="service-desc">Defined eyebrow shaping and upper-lip, chin or facial threading, with attention to the shape and finish you prefer.</p>
-                <a href="index.html?service=Threading#booking" class="service-book-link" data-service="Threading" aria-label="Book Threading">Book Now <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Threading.%20Please%20let%20me%20know%20your%20availability." class="service-book-link" data-service="Threading" aria-label="Book Threading" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
               </div>
             </article>
             <article class="service-card">
-              <button type="button" class="service-media service-media--waxing photo-trigger" data-photo data-gallery="services" data-full="./images/service-waxing.jpg" data-title="Arm waxing treatment" aria-label="View photo: Arm waxing treatment">
-                <img src="./images/service-waxing.jpg" alt="Arm waxing treatment" width="736" height="736" loading="lazy" decoding="async">
-              
+              <button type="button" class="service-media service-media--waxing photo-trigger" data-photo data-gallery="services" data-full="images/optimized/service-waxing-full.webp" data-title="Arm waxing treatment" aria-label="View photo: Arm waxing treatment">
+                <img src="images/optimized/service-waxing-736w.webp" alt="Arm waxing treatment" width="736" height="736" loading="lazy" decoding="async" srcset="images/optimized/service-waxing-480w.webp 480w, images/optimized/service-waxing-full.webp 736w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 363px">
+
                 <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
               </button>
               <div class="service-content">
                 <p class="service-tag">Smooth finish</p>
-                <h4 class="service-name">Waxing</h4>
+                <h3 class="service-name">Waxing</h3>
                 <p class="service-desc">Arm, underarm, leg and body waxing options, with a consultation to choose the area and wax type for your appointment.</p>
-                <a href="index.html?service=Waxing#booking" class="service-book-link" data-service="Waxing" aria-label="Book Waxing">Book Now <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Waxing.%20Please%20let%20me%20know%20your%20availability." class="service-book-link" data-service="Waxing" aria-label="Book Waxing" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
               </div>
             </article>
           </div>
@@ -275,32 +292,14 @@
         </div>
         <div class="cta-banner-buttons">
           <a href="index.html#booking" class="btn btn-royal-gold btn-sm">📅 Book Your Slot</a>
-          <a href="https://wa.me/919523262455?text=Hello%2C%20I%20would%20like%20to%20know%20about%20your%20services%20and%20bridal%20packages." target="_blank" class="btn btn-whatsapp btn-sm">💬 Chat on WhatsApp</a>
+          <a href="https://wa.me/919523262455?text=Hello%2C%20I%20would%20like%20to%20know%20about%20your%20services%20and%20bridal%20packages." target="_blank" class="btn btn-whatsapp btn-sm" rel="noopener noreferrer">💬 Chat on WhatsApp</a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <section class="achievements-section" aria-labelledby="achievementsTitle" data-achievements>
-    <h2 class="achievements-sr-only" id="achievementsTitle">Our experience</h2>
-    <ul class="achievements-strip">
-      <li class="achievement-card">
-        <svg class="achievement-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="16" cy="12" r="8"/><path d="m11 19-2 10 7-4 7 4-2-10M16 7l1.5 3 3.5.5-2.5 2.4.6 3.5-3.1-1.6-3.1 1.6.6-3.5-2.5-2.4 3.5-.5Z"/></svg>
-        <div class="achievement-details">
-          <p class="achievement-metric"><span class="achievements-sr-only">15+</span><span aria-hidden="true"><span class="achievement-number" data-count="15">15</span><span class="achievement-plus">+</span></span></p>
-          <p class="achievement-label">Years of Experience</p>
-        </div>
-      </li>
-      <li class="achievement-card">
-        <svg class="achievement-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 10 5 5 6-9 6 9 5-5-3 14H8ZM9 28h14"/><circle cx="5" cy="7" r="1.5"/><circle cx="16" cy="3" r="1.5"/><circle cx="27" cy="7" r="1.5"/></svg>
-        <div class="achievement-details">
-          <p class="achievement-metric"><span class="achievements-sr-only">300+</span><span aria-hidden="true"><span class="achievement-number" data-count="300">300</span><span class="achievement-plus">+</span></span></p>
-          <p class="achievement-label">Bridal Makeovers</p>
-        </div>
-      </li>
-    </ul>
-  </section>
+
   </main>
 <dialog class="lightbox-modal" id="lightboxModal" aria-labelledby="lightboxCaption">
     <div class="lightbox-toolbar">
@@ -311,7 +310,7 @@
       </div>
     </div>
     <div class="lightbox-stage" id="lightboxStage">
-      <img class="lightbox-img" id="lightboxImg" alt="">
+      <img class="lightbox-img" id="lightboxImg" alt="" width="1" height="1">
     </div>
     <p class="lightbox-caption" id="lightboxCaption" aria-live="polite">Photo preview</p>
     <div class="lightbox-navigation">
@@ -325,7 +324,7 @@
       <div class="footer-col brand-col">
         <a class="footer-brand-header" href="index.html#home" aria-label="Priyanka Beauty Parlour — home">
           <span class="footer-logo-ring">
-            <img src="images/logo.jpg" alt="" class="footer-logo-img" width="56" height="56" loading="lazy">
+            <img src="images/optimized/logo-144w.webp" alt="" class="footer-logo-img" width="144" height="144" loading="lazy">
           </span>
           <span class="footer-wordmark">
             <span class="footer-logo-name">Priyanka</span>
@@ -344,8 +343,9 @@
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="bridal.html">Bridal</a></li>
+          <li><a href="courses.html">Courses</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="index.html#booking">Book Appointment <span aria-hidden="true">↗</span></a></li>
         </ul>
       </nav>
@@ -357,14 +357,14 @@
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
             <span><span class="footer-contact-label">Address</span>Ashram Road, in front of Middle School,<br>Raxaul, Bihar – 845305</span>
           </a>
-          <a class="footer-contact-item" href="tel:9523262455">
+          <a class="footer-contact-item" href="tel:+919523262455">
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m7 3 3 5-3 2a16 16 0 0 0 7 7l2-3 5 3v3a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1Z"/></svg><span><span class="footer-contact-label">Phone</span>+91 95232 62455</span>
           </a>
           <a class="footer-contact-item" href="mailto:Pg525702@gmail.com">
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span><span class="footer-contact-label">Email</span>Pg525702@gmail.com</span>
           </a>
         </address>
-        
+
       </div>
     <div class="footer-col footer-follow">
           <h3 class="footer-follow-title">Follow Us</h3>
@@ -391,8 +391,8 @@
   </footer>
   <!-- Floating Mobile Action Buttons -->
   <div class="floating-buttons">
-    <a href="tel:9523262455" class="floating-btn call-btn" aria-label="Call Now">
-      📞
+    <a href="tel:+919523262455" class="floating-btn call-btn" aria-label="Call Now">
+      <svg class="wa-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m7 3 3 5-3 2a16 16 0 0 0 7 7l2-3 5 3v3a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1Z"/></svg>
     <span class="wa-tooltip" aria-hidden="true">Call us</span>
       </a>
     <a href="https://wa.me/919523262455?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20beauty%20parlour%20services." target="_blank" class="floating-btn wa-btn" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
@@ -404,6 +404,9 @@
   </div>
 
   <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" hidden>&#8593;</button>
-  <script src="script.js"></script>
+  <script src="js/nav.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
+  <script src="js/motion.js" defer></script>
+  <script src="js/contact-hints.js" defer></script>
 </body>
 </html>

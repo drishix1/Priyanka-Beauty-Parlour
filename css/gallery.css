@@ -1,0 +1,53 @@
+/* Gallery styles. Preserve rule order within this file. */
+
+.gallery-section {
+  padding: clamp(60px, 8vw, 95px) 0;
+  background: var(--color-card-bg);
+}
+
+.portfolio-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-12);
+  margin-bottom: var(--space-20);
+}
+
+.portfolio-filters button {
+  min-height: 44px;
+  font-size: .9rem;
+  padding: 10px 20px;
+}
+
+.portfolio-filters [aria-pressed="true"] {
+  background: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.portfolio-status {
+  text-align: center;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-24);
+}
+
+.portfolio-grid {
+  columns: 3;
+  column-gap: var(--space-24);
+}
+
+.portfolio-filters[hidden], .portfolio-status[hidden] {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .portfolio-grid {
+    columns: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-grid {
+    columns: 1;
+  }
+}

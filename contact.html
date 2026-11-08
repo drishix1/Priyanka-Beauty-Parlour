@@ -4,15 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Priyanka Beauty Parlour, Raxaul</title>
-  <meta name="description" content="Priyanka Beauty Parlour by Priyanka Gupta in Ashram Road, Raxaul. Specializing in royal bridal makeovers, facials, haircuts, waxing, mehendi, and personal care.">
-  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
-  
+  <meta name="description" content="Find Priyanka Beauty Parlour on Ashram Road, Raxaul. View opening hours, directions and contact details, or call and message us on WhatsApp for enquiries.">
+  <link rel="icon" type="image/webp" href="images/optimized/logo-144w.webp">
+
   <!-- Ivory & Rose Theme Typography: Playfair Display headings & Inter body text -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="canonical" href="https://priyanka-beauty-parlour.vercel.app/contact.html">
+  <meta property="og:title" content="Contact Us | Priyanka Beauty Parlour, Raxaul">
+  <meta property="og:description" content="Find Priyanka Beauty Parlour on Ashram Road, Raxaul. View opening hours, directions and contact details, or call and message us on WhatsApp for enquiries.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://priyanka-beauty-parlour.vercel.app/contact.html">
+  <meta property="og:image" content="https://priyanka-beauty-parlour.vercel.app/images/social-preview.jpg">
+  <meta property="og:image:alt" content="Bridal makeup being applied at a salon">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Us | Priyanka Beauty Parlour, Raxaul">
+  <meta name="twitter:description" content="Find Priyanka Beauty Parlour on Ashram Road, Raxaul. View opening hours, directions and contact details, or call and message us on WhatsApp for enquiries.">
+  <meta name="twitter:image" content="https://priyanka-beauty-parlour.vercel.app/images/social-preview.jpg">
+  <meta name="theme-color" content="#FFF8F3">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "@id": "https://priyanka-beauty-parlour.vercel.app/#beauty-salon",
+  "name": "Priyanka Beauty Parlour",
+  "url": "https://priyanka-beauty-parlour.vercel.app/",
+  "image": "https://priyanka-beauty-parlour.vercel.app/images/social-preview.jpg",
+  "telephone": "+919523262455",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ashram Road, in front of Middle School",
+    "addressLocality": "Raxaul, East Champaran",
+    "addressRegion": "Bihar",
+    "postalCode": "845305",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo-Su 09:00-21:00",
+  "founder": {
+    "@type": "Person",
+    "name": "Priyanka Gupta"
+  },
+  "sameAs": [
+    "https://www.instagram.com/ruchi.raj.gupta/",
+    "https://www.facebook.com/ishikaraj.gupta.31"
+  ]
+}
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -20,7 +64,7 @@
   <header class="main-header" id="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo" title="Priyanka Beauty Parlour">
-        <div class="logo-ring"><img src="images/logo.jpg" alt="" class="brand-logo-img" width="72" height="72"></div>
+        <div class="logo-ring"><img src="images/optimized/logo-144w.webp" alt="" class="brand-logo-img" width="144" height="144"></div>
         <div class="brand-text-block"><span class="brand-name-gold">Priyanka</span><span class="brand-tag-royal">BEAUTY PARLOUR</span></div>
       </a>
       <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
@@ -32,8 +76,9 @@
         <a href="about.html" class="nav-link">About</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="bridal.html" class="nav-link">Bridal</a>
+        <a href="courses.html" class="nav-link">Courses</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="contact.html" class="nav-link" aria-current="page">Reach Us</a>
+        <a href="contact.html" class="nav-link" aria-current="page">Contact</a>
         <a href="index.html#booking" class="btn header-book nav-mobile-book">Book Appointment</a>
       </nav>
       <a href="index.html#booking" class="btn header-book header-book-desktop">Book Appointment <span aria-hidden="true">&#8599;</span></a>
@@ -52,51 +97,52 @@
 
       <div class="location-grid">
         <div class="location-card">
-          <div class="location-icon-badge">📍</div>
-          
-          <h3 class="location-shop-title">Priyanka Beauty Parlour</h3>
-          
+          <div class="location-icon-badge"><svg class="contact-stroke-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+
+          <h2 class="location-shop-title">Priyanka Beauty Parlour</h2>
+
           <p class="address-text">
             <strong>Address:</strong><br>
             Ashram Road, in front of Middle School,<br>
             Raxaul, East Champaran, Bihar - 845305
           </p>
 
+          <div class="contact-hours"><h2>Opening hours</h2><p>Open daily, 9:00 AM - 9:00 PM.</p><a href="about.html#branch">Visit our Gamariya Chowk branch - see About <span aria-hidden="true">&#8599;</span></a></div>
           <div class="location-detail-list">
             <div class="detail-row">
-              <span class="icon">👤</span>
+              <span class="icon"><svg class="contact-stroke-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg></span>
               <span><strong>Owner:</strong> Priyanka Gupta</span>
             </div>
             <div class="detail-row">
-              <span class="icon">⏰</span>
+              <span class="icon"><svg class="contact-stroke-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
               <span><strong>Opening Hours:</strong> 9:00 AM – 9:00 PM (Daily)</span>
             </div>
             <div class="detail-row">
-              <span class="icon">📞</span>
-              <span><strong>Phone:</strong> <a href="tel:9523262455">9523262455</a></span>
+              <span class="icon"><svg class="contact-stroke-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m7 3 3 5-3 2a16 16 0 0 0 7 7l2-3 5 3v3a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1Z"/></svg></span>
+              <span><strong>Phone:</strong> <a href="tel:+919523262455">9523262455</a></span>
             </div>
             <div class="detail-row">
-              <span class="icon">💬</span>
-              <span><strong>WhatsApp:</strong> <a href="https://wa.me/919523262455" target="_blank">9523262455</a></span>
+              <span class="icon"><svg class="contact-stroke-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11a9 9 0 0 1-9 9H3l2-5a9 9 0 1 1 16-4Z"/></svg></span>
+              <span><strong>WhatsApp:</strong> <a href="https://wa.me/919523262455" target="_blank" rel="noopener noreferrer">9523262455</a></span>
             </div>
           </div>
 
           <div class="location-buttons">
-            <a href="https://maps.google.com/?q=Ashram+Road,+Raxaul,+Bihar" target="_blank" class="btn btn-royal-gold btn-sm">🗺️ Open in Google Maps</a>
-            <a href="tel:9523262455" class="btn btn-white-glass btn-sm">📞 Call for Directions</a>
+            <a href="https://maps.google.com/?q=Ashram+Road,+Raxaul,+Bihar" target="_blank" class="btn btn-royal-gold btn-sm" rel="noopener noreferrer"><svg class="contact-stroke-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2ZM9 3v16M15 5v16"/></svg> Open in Google Maps</a>
+            <a href="tel:+919523262455" class="btn btn-white-glass btn-sm"><svg class="contact-stroke-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m7 3 3 5-3 2a16 16 0 0 0 7 7l2-3 5 3v3a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1Z"/></svg> Call for Directions</a>
           </div>
         </div>
 
         <div class="map-wrapper">
           <!-- Google Map Embed for Ashram Road, Raxaul -->
-          <iframe 
+          <iframe
             title="Priyanka Beauty Parlour Location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14217.20235959957!2d84.851944!3d26.983889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399335f60b0e77d3%3A0x6b772c37e96b3490!2sRaxaul%2C%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-            width="100%" 
-            height="380" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14217.20235959957!2d84.851944!3d26.983889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399335f60b0e77d3%3A0x6b772c37e96b3490!2sRaxaul%2C%20Bihar!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            width="100%"
+            height="380"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
@@ -115,18 +161,18 @@
 
           <div class="contact-channels">
             <div class="channel-box">
-              <div class="channel-icon-pill">📞</div>
+              <div class="channel-icon-pill"><svg class="contact-stroke-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m7 3 3 5-3 2a16 16 0 0 0 7 7l2-3 5 3v3a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1Z"/></svg></div>
               <div class="channel-info">
                 <span class="label">Call Directly</span>
-                <a href="tel:9523262455" class="value">9523262455</a>
+                <a href="tel:+919523262455" class="value">9523262455</a>
               </div>
             </div>
 
             <div class="channel-box">
-              <div class="channel-icon-pill wa-pill">💬</div>
+              <div class="channel-icon-pill wa-pill"><svg class="contact-stroke-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11a9 9 0 0 1-9 9H3l2-5a9 9 0 1 1 16-4Z"/></svg></div>
               <div class="channel-info">
                 <span class="label">WhatsApp Enquiries</span>
-                <a href="https://wa.me/919523262455?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20beauty%20parlour%20services." target="_blank" class="value">9523262455</a>
+                <a href="https://wa.me/919523262455?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20beauty%20parlour%20services." target="_blank" class="value" rel="noopener noreferrer">9523262455</a>
               </div>
             </div>
 
@@ -139,7 +185,7 @@
               </div>
               <div class="channel-info">
                 <span class="label">Instagram Profile</span>
-                <a href="https://www.instagram.com/ruchi.raj.gupta/" target="_blank" class="value">@ruchi.raj.gupta</a>
+                <a href="https://www.instagram.com/ruchi.raj.gupta/" target="_blank" class="value" rel="noopener noreferrer">@ruchi.raj.gupta</a>
               </div>
             </div>
 
@@ -152,20 +198,20 @@
               </div>
               <div class="channel-info">
                 <span class="label">Facebook Profile</span>
-                <a href="https://www.facebook.com/ishikaraj.gupta.31" target="_blank" class="value">Ruchi Raj Gupta</a>
+                <a href="https://www.facebook.com/ishikaraj.gupta.31" target="_blank" class="value" rel="noopener noreferrer">Ruchi Raj Gupta</a>
               </div>
             </div>
           </div>
 
           <div class="contact-cta-row">
-            <a href="tel:9523262455" class="btn btn-royal-gold btn-lg">
-              📞 Call: 9523262455
+            <a href="tel:+919523262455" class="btn btn-royal-gold btn-lg">
+              <svg class="contact-stroke-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m7 3 3 5-3 2a16 16 0 0 0 7 7l2-3 5 3v3a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1Z"/></svg> Call: 9523262455
             </a>
-            <a href="https://wa.me/919523262455?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20beauty%20parlour%20services." target="_blank" class="btn btn-whatsapp btn-lg">
-              💬 WhatsApp Now
+            <a href="https://wa.me/919523262455?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20beauty%20parlour%20services." target="_blank" class="btn btn-whatsapp btn-lg" rel="noopener noreferrer">
+              <svg class="contact-stroke-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11a9 9 0 0 1-9 9H3l2-5a9 9 0 1 1 16-4Z"/></svg> WhatsApp Now
             </a>
             <a href="index.html#booking" class="btn btn-white-glass btn-lg">
-              📅 Book Appointment
+              <svg class="contact-stroke-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg> Book Appointment
             </a>
           </div>
         </div>
@@ -174,32 +220,14 @@
     </div>
   </section>
 
-  <section class="achievements-section" aria-labelledby="achievementsTitle" data-achievements>
-    <h2 class="achievements-sr-only" id="achievementsTitle">Our experience</h2>
-    <ul class="achievements-strip">
-      <li class="achievement-card">
-        <svg class="achievement-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="16" cy="12" r="8"/><path d="m11 19-2 10 7-4 7 4-2-10M16 7l1.5 3 3.5.5-2.5 2.4.6 3.5-3.1-1.6-3.1 1.6.6-3.5-2.5-2.4 3.5-.5Z"/></svg>
-        <div class="achievement-details">
-          <p class="achievement-metric"><span class="achievements-sr-only">15+</span><span aria-hidden="true"><span class="achievement-number" data-count="15">15</span><span class="achievement-plus">+</span></span></p>
-          <p class="achievement-label">Years of Experience</p>
-        </div>
-      </li>
-      <li class="achievement-card">
-        <svg class="achievement-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 10 5 5 6-9 6 9 5-5-3 14H8ZM9 28h14"/><circle cx="5" cy="7" r="1.5"/><circle cx="16" cy="3" r="1.5"/><circle cx="27" cy="7" r="1.5"/></svg>
-        <div class="achievement-details">
-          <p class="achievement-metric"><span class="achievements-sr-only">300+</span><span aria-hidden="true"><span class="achievement-number" data-count="300">300</span><span class="achievement-plus">+</span></span></p>
-          <p class="achievement-label">Bridal Makeovers</p>
-        </div>
-      </li>
-    </ul>
-  </section>
+
   </main>
 <footer class="main-footer">
     <div class="container footer-container">
       <div class="footer-col brand-col">
         <a class="footer-brand-header" href="index.html#home" aria-label="Priyanka Beauty Parlour — home">
           <span class="footer-logo-ring">
-            <img src="images/logo.jpg" alt="" class="footer-logo-img" width="56" height="56" loading="lazy">
+            <img src="images/optimized/logo-144w.webp" alt="" class="footer-logo-img" width="144" height="144" loading="lazy">
           </span>
           <span class="footer-wordmark">
             <span class="footer-logo-name">Priyanka</span>
@@ -218,8 +246,9 @@
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="bridal.html">Bridal</a></li>
+          <li><a href="courses.html">Courses</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="index.html#booking">Book Appointment <span aria-hidden="true">↗</span></a></li>
         </ul>
       </nav>
@@ -231,14 +260,14 @@
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
             <span><span class="footer-contact-label">Address</span>Ashram Road, in front of Middle School,<br>Raxaul, Bihar – 845305</span>
           </a>
-          <a class="footer-contact-item" href="tel:9523262455">
+          <a class="footer-contact-item" href="tel:+919523262455">
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m7 3 3 5-3 2a16 16 0 0 0 7 7l2-3 5 3v3a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1Z"/></svg><span><span class="footer-contact-label">Phone</span>+91 95232 62455</span>
           </a>
           <a class="footer-contact-item" href="mailto:Pg525702@gmail.com">
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg><span><span class="footer-contact-label">Email</span>Pg525702@gmail.com</span>
           </a>
         </address>
-        
+
       </div>
     <div class="footer-col footer-follow">
           <h3 class="footer-follow-title">Follow Us</h3>
@@ -265,8 +294,8 @@
   </footer>
   <!-- Floating Mobile Action Buttons -->
   <div class="floating-buttons">
-    <a href="tel:9523262455" class="floating-btn call-btn" aria-label="Call Now">
-      📞
+    <a href="tel:+919523262455" class="floating-btn call-btn" aria-label="Call Now">
+      <svg class="wa-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m7 3 3 5-3 2a16 16 0 0 0 7 7l2-3 5 3v3a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1Z"/></svg>
     <span class="wa-tooltip" aria-hidden="true">Call us</span>
       </a>
     <a href="https://wa.me/919523262455?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20beauty%20parlour%20services." target="_blank" class="floating-btn wa-btn" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
@@ -278,6 +307,8 @@
   </div>
 
   <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" hidden>&#8593;</button>
-  <script src="script.js"></script>
+  <script src="js/nav.js" defer></script>
+  <script src="js/motion.js" defer></script>
+  <script src="js/contact-hints.js" defer></script>
 </body>
 </html>

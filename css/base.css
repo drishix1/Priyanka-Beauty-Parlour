@@ -1,0 +1,89 @@
+/* Base styles. Preserve rule order within this file. */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  line-height: 1.65;
+  overflow-x: hidden;
+  max-width: 100%;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-dark);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+p {
+  font-family: var(--font-body);
+  line-height: 1.65;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  padding-top: var(--header-height);
+}
+
+@media (max-width: 992px) {
+  body {
+    padding-top: var(--header-height);
+  }
+}
+
+::selection {
+  background: #E5CCC8;
+  color: #382B2B;
+}
+
+body {
+  letter-spacing: .005em;
+  background-color: var(--color-bg);
+  color: var(--color-text-dark);
+}

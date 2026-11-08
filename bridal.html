@@ -4,23 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bridal | Priyanka Beauty Parlour, Raxaul</title>
-  <meta name="description" content="Priyanka Beauty Parlour by Priyanka Gupta in Ashram Road, Raxaul. Specializing in royal bridal makeovers, facials, haircuts, waxing, mehendi, and personal care.">
-  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+  <meta name="description" content="Explore bridal makeup, festive mehendi and occasion hairstyling at Priyanka Beauty Parlour on Ashram Road, Raxaul. Message us to discuss your bridal look.">
+  <link rel="icon" type="image/webp" href="images/optimized/logo-144w.webp">
   
   <!-- Ivory & Rose Theme Typography: Playfair Display headings & Inter body text -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="canonical" href="https://priyanka-beauty-parlour.vercel.app/bridal.html">
+  <meta property="og:title" content="Bridal | Priyanka Beauty Parlour, Raxaul">
+  <meta property="og:description" content="Explore bridal makeup, festive mehendi and occasion hairstyling at Priyanka Beauty Parlour on Ashram Road, Raxaul. Message us to discuss your bridal look.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://priyanka-beauty-parlour.vercel.app/bridal.html">
+  <meta property="og:image" content="https://priyanka-beauty-parlour.vercel.app/images/social-preview.jpg">
+  <meta property="og:image:alt" content="Bridal makeup being applied at a salon">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bridal | Priyanka Beauty Parlour, Raxaul">
+  <meta name="twitter:description" content="Explore bridal makeup, festive mehendi and occasion hairstyling at Priyanka Beauty Parlour on Ashram Road, Raxaul. Message us to discuss your bridal look.">
+  <meta name="twitter:image" content="https://priyanka-beauty-parlour.vercel.app/images/social-preview.jpg">
+  <meta name="theme-color" content="#FFF8F3">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 </head>
-<body>
+<body class="bridal-page">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <div class="scroll-progress" aria-hidden="true"></div>
   <header class="main-header" id="navbar">
     <div class="container nav-container">
       <a href="index.html" class="brand-logo" title="Priyanka Beauty Parlour">
-        <div class="logo-ring"><img src="images/logo.jpg" alt="" class="brand-logo-img" width="72" height="72"></div>
+        <div class="logo-ring"><img src="images/optimized/logo-144w.webp" alt="" class="brand-logo-img" width="144" height="144"></div>
         <div class="brand-text-block"><span class="brand-name-gold">Priyanka</span><span class="brand-tag-royal">BEAUTY PARLOUR</span></div>
       </a>
       <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
@@ -32,8 +48,9 @@
         <a href="about.html" class="nav-link">About</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="bridal.html" class="nav-link" aria-current="page">Bridal</a>
+        <a href="courses.html" class="nav-link">Courses</a>
         <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="contact.html" class="nav-link">Reach Us</a>
+        <a href="contact.html" class="nav-link">Contact</a>
         <a href="index.html#booking" class="btn header-book nav-mobile-book">Book Appointment</a>
       </nav>
       <a href="index.html#booking" class="btn header-book header-book-desktop">Book Appointment <span aria-hidden="true">&#8599;</span></a>
@@ -42,112 +59,136 @@
   </header>
   <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
   <main id="main-content" tabindex="-1">
-<section class="services-section" id="bridal">
-    <div class="container">
-      <div class="section-header text-center">
+<section class="services-section" id="bridal"><div class="container"><div class="section-header text-center">
         <span class="section-badge">Bridal Beauty</span>
         <h1 class="section-title">Royal Bridal Makeovers</h1>
         <p class="section-subtitle">Complete HD bridal look, jewelry setting, dupatta draping, and hair styling.</p>
       </div>
-      <div class="category-grid"><article class="service-card">
-              <button type="button" class="service-media service-media--bridal photo-trigger" data-photo data-gallery="services" data-full="./images/gallery-3.jpg" data-title="Bridal eye makeup and jewellery styling" aria-label="View photo: Bridal eye makeup and jewellery styling">
-                <img src="./images/gallery-3.jpg" alt="Bridal eye makeup and jewellery styling" width="1024" height="1024" loading="lazy" decoding="async">
-              
-                <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
-              </button>
-              <div class="service-content">
-                <p class="service-tag">Bridal beauty</p>
-                <h4 class="service-name">Bridal Makeup</h4>
-                <p class="service-desc">A complete bridal look with makeup, hairstyle setting and saree draping, considered around your outfit and occasion.</p>
-                <a href="index.html?service=Bridal%20Makeup#booking" class="service-book-link" data-service="Bridal Makeup" aria-label="Book Bridal Makeup">Book Now <span aria-hidden="true">&#8599;</span></a>
-              </div>
-            </article>
-<article class="service-card">
-              <button type="button" class="service-media service-media--mehendi photo-trigger" data-photo data-gallery="services" data-full="./images/service-mehendi.jpg" data-title="Detailed bridal mehendi designs on hands" aria-label="View photo: Detailed bridal mehendi designs on hands">
-                <img src="./images/service-mehendi.jpg" alt="Detailed bridal mehendi designs on hands" width="736" height="1127" loading="lazy" decoding="async">
+ <div class="bridal-includes"><h2>What a bridal look includes</h2><ul class="bridal-occasion-list"><li>Bridal makeup</li><li>Hairstyle setting</li><li>Saree/dupatta draping</li><li>Jewellery setting</li></ul></div>
+ <section aria-labelledby="looksTitle"><div class="section-header text-center"><h2 class="section-title" id="looksTitle">Bridal Looks</h2></div><div class="bridal-page-grid"><article class="service-card bridal-look">
+          <button type="button" class="service-media bridal-look-photo photo-trigger" data-photo data-gallery="bridal-page" data-full="images/optimized/bridal-magenta-gold-full.webp" data-title="Magenta &amp; Gold" aria-label="View bridal photo: Magenta &amp; Gold">
+            <img src="images/optimized/bridal-magenta-gold-960w.webp" alt="Golden eyes, defined lashes and a rich lip colour complement this magenta bridal outfit and green-accented jewellery." width="960" height="1280" loading="lazy" decoding="async" srcset="images/optimized/bridal-magenta-gold-480w.webp 480w, images/optimized/bridal-magenta-gold-full.webp 960w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 269px">
+            <span class="occasion-view" aria-hidden="true">View look &#8599;</span>
+          </button>
+          <div class="service-content">
+            <p class="service-tag">Bridal beauty</p>
+            <h3 class="service-name">Magenta &amp; Gold</h3>
+            <p class="service-desc">Golden eyes, defined lashes and a rich lip colour complement this magenta bridal outfit and green-accented jewellery.</p>
+            <a class="service-book-link" href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Bridal%20Makeup.%20Please%20let%20me%20know%20your%20availability." data-service="Bridal Makeup" aria-label="Book bridal makeup inspired by Magenta &amp; Gold" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </article>
+<article class="service-card bridal-look">
+          <button type="button" class="service-media bridal-look-photo photo-trigger" data-photo data-gallery="bridal-page" data-full="images/optimized/bridal-classic-red-full.webp" data-title="Classic Red Bridal" aria-label="View bridal photo: Classic Red Bridal">
+            <img src="images/optimized/bridal-classic-red-753w.webp" alt="Defined eyes and red lips sit beautifully alongside layered jewellery, a red veil and traditional bridal details." width="753" height="1192" loading="lazy" decoding="async" srcset="images/optimized/bridal-classic-red-480w.webp 480w, images/optimized/bridal-classic-red-full.webp 753w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 269px">
+            <span class="occasion-view" aria-hidden="true">View look &#8599;</span>
+          </button>
+          <div class="service-content">
+            <p class="service-tag">Bridal beauty</p>
+            <h3 class="service-name">Classic Red Bridal</h3>
+            <p class="service-desc">Defined eyes and red lips sit beautifully alongside layered jewellery, a red veil and traditional bridal details.</p>
+            <a class="service-book-link" href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Bridal%20Makeup.%20Please%20let%20me%20know%20your%20availability." data-service="Bridal Makeup" aria-label="Book bridal makeup inspired by Classic Red Bridal" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </article>
+<article class="service-card bridal-look">
+          <button type="button" class="service-media bridal-look-photo photo-trigger" data-photo data-gallery="bridal-page" data-full="images/optimized/bridal-soft-gold-full.webp" data-title="Soft Gold Definition" aria-label="View bridal photo: Soft Gold Definition">
+            <img src="images/optimized/bridal-soft-gold-960w.webp" alt="Warm gold eye makeup and softly defined brows balance a deep lip shade and delicate pearl-edged jewellery." width="960" height="1281" loading="lazy" decoding="async" srcset="images/optimized/bridal-soft-gold-480w.webp 480w, images/optimized/bridal-soft-gold-960w.webp 960w, images/optimized/bridal-soft-gold-full.webp 1100w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 269px">
+            <span class="occasion-view" aria-hidden="true">View look &#8599;</span>
+          </button>
+          <div class="service-content">
+            <p class="service-tag">Bridal beauty</p>
+            <h3 class="service-name">Soft Gold Definition</h3>
+            <p class="service-desc">Warm gold eye makeup and softly defined brows balance a deep lip shade and delicate pearl-edged jewellery.</p>
+            <a class="service-book-link" href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Bridal%20Makeup.%20Please%20let%20me%20know%20your%20availability." data-service="Bridal Makeup" aria-label="Book bridal makeup inspired by Soft Gold Definition" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </article>
+<article class="service-card bridal-look">
+          <button type="button" class="service-media bridal-look-photo photo-trigger" data-photo data-gallery="bridal-page" data-full="images/optimized/bridal-traditional-elegance-full.webp" data-title="Traditional Elegance" aria-label="View bridal photo: Traditional Elegance">
+            <img src="images/optimized/bridal-traditional-elegance-960w.webp" alt="Gold lids, softly blended colour and sculpted brows bring focus to the face, with red embroidery and green jewellery accents." width="960" height="960" loading="lazy" decoding="async" srcset="images/optimized/bridal-traditional-elegance-480w.webp 480w, images/optimized/bridal-traditional-elegance-960w.webp 960w, images/optimized/bridal-traditional-elegance-full.webp 1100w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 269px">
+            <span class="occasion-view" aria-hidden="true">View look &#8599;</span>
+          </button>
+          <div class="service-content">
+            <p class="service-tag">Bridal beauty</p>
+            <h3 class="service-name">Traditional Elegance</h3>
+            <p class="service-desc">Gold lids, softly blended colour and sculpted brows bring focus to the face, with red embroidery and green jewellery accents.</p>
+            <a class="service-book-link" href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Bridal%20Makeup.%20Please%20let%20me%20know%20your%20availability." data-service="Bridal Makeup" aria-label="Book bridal makeup inspired by Traditional Elegance" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </article>
+<article class="service-card bridal-look">
+          <button type="button" class="service-media bridal-look-photo photo-trigger" data-photo data-gallery="bridal-page" data-full="images/optimized/bridal-shimmer-portrait-full.webp" data-title="Golden Shimmer" aria-label="View bridal photo: Golden Shimmer">
+            <img src="images/optimized/bridal-shimmer-portrait-675w.webp" alt="Shimmering gold lids, winged liner and a deep red lip create a detailed look framed by an embroidered dupatta." width="675" height="1500" loading="lazy" decoding="async" srcset="images/optimized/bridal-shimmer-portrait-480w.webp 480w, images/optimized/bridal-shimmer-portrait-full.webp 675w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 269px">
+            <span class="occasion-view" aria-hidden="true">View look &#8599;</span>
+          </button>
+          <div class="service-content">
+            <p class="service-tag">Bridal beauty</p>
+            <h3 class="service-name">Golden Shimmer</h3>
+            <p class="service-desc">Shimmering gold lids, winged liner and a deep red lip create a detailed look framed by an embroidered dupatta.</p>
+            <a class="service-book-link" href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Bridal%20Makeup.%20Please%20let%20me%20know%20your%20availability." data-service="Bridal Makeup" aria-label="Book bridal makeup inspired by Golden Shimmer" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </article>
+<article class="service-card bridal-look">
+          <button type="button" class="service-media bridal-look-photo photo-trigger" data-photo data-gallery="bridal-page" data-full="images/optimized/bridal-burgundy-portrait-full.webp" data-title="Burgundy Bridal Elegance" aria-label="View bridal photo: Burgundy Bridal Elegance">
+            <img src="images/optimized/bridal-burgundy-portrait-960w.webp" alt="Defined eyes and red lips complement a burgundy bridal ensemble, with an embroidered veil and green-accented jewellery completing the look." width="960" height="1280" loading="lazy" decoding="async" srcset="images/optimized/bridal-burgundy-portrait-480w.webp 480w, images/optimized/bridal-burgundy-portrait-960w.webp 960w, images/optimized/bridal-burgundy-portrait-full.webp 1100w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 269px">
+            <span class="occasion-view" aria-hidden="true">View look &#8599;</span>
+          </button>
+          <div class="service-content">
+            <p class="service-tag">Bridal beauty</p>
+            <h3 class="service-name">Burgundy Bridal Elegance</h3>
+            <p class="service-desc">Defined eyes and red lips complement a burgundy bridal ensemble, with an embroidered veil and green-accented jewellery completing the look.</p>
+            <a class="service-book-link" href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Bridal%20Makeup.%20Please%20let%20me%20know%20your%20availability." data-service="Bridal Makeup" aria-label="Book bridal makeup inspired by Burgundy Bridal Elegance" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </article>
+<article class="service-card bridal-look">
+          <button type="button" class="service-media bridal-look-photo photo-trigger" data-photo data-gallery="bridal-page" data-full="images/optimized/bridal-red-veil-full.webp" data-title="The Complete Bridal Look" aria-label="View bridal photo: The Complete Bridal Look">
+            <img src="images/optimized/bridal-red-veil-960w.webp" alt="A red bridal ensemble, neatly arranged veil and coordinated jewellery come together with defined eyes and a classic red lip." width="960" height="1280" loading="lazy" decoding="async" srcset="images/optimized/bridal-red-veil-480w.webp 480w, images/optimized/bridal-red-veil-960w.webp 960w, images/optimized/bridal-red-veil-full.webp 1100w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 269px">
+            <span class="occasion-view" aria-hidden="true">View look &#8599;</span>
+          </button>
+          <div class="service-content">
+            <p class="service-tag">Bridal beauty</p>
+            <h3 class="service-name">The Complete Bridal Look</h3>
+            <p class="service-desc">A red bridal ensemble, neatly arranged veil and coordinated jewellery come together with defined eyes and a classic red lip.</p>
+            <a class="service-book-link" href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Bridal%20Makeup.%20Please%20let%20me%20know%20your%20availability." data-service="Bridal Makeup" aria-label="Book bridal makeup inspired by The Complete Bridal Look" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </article>
+<article class="service-card bridal-look">
+          <button type="button" class="service-media bridal-look-photo photo-trigger" data-photo data-gallery="bridal-page" data-full="images/optimized/bridal-berry-finish-full.webp" data-title="A Rich Berry Finish" aria-label="View bridal photo: A Rich Berry Finish">
+            <img src="images/optimized/bridal-berry-finish-960w.webp" alt="Rose-toned eyes and berry lips pair with a magenta outfit, offering a beautifully coordinated take on bridal colour." width="960" height="1280" loading="lazy" decoding="async" srcset="images/optimized/bridal-berry-finish-480w.webp 480w, images/optimized/bridal-berry-finish-960w.webp 960w, images/optimized/bridal-berry-finish-full.webp 1086w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 269px">
+            <span class="occasion-view" aria-hidden="true">View look &#8599;</span>
+          </button>
+          <div class="service-content">
+            <p class="service-tag">Bridal beauty</p>
+            <h3 class="service-name">A Rich Berry Finish</h3>
+            <p class="service-desc">Rose-toned eyes and berry lips pair with a magenta outfit, offering a beautifully coordinated take on bridal colour.</p>
+            <a class="service-book-link" href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Bridal%20Makeup.%20Please%20let%20me%20know%20your%20availability." data-service="Bridal Makeup" aria-label="Book bridal makeup inspired by A Rich Berry Finish" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
+          </div>
+        </article></div></section>
+ <section class="bridal-extras" aria-labelledby="finishingTitle"><div class="section-header text-center"><h2 class="section-title" id="finishingTitle">Mehendi &amp; Occasion Hairstyling</h2></div><div class="category-grid category-grid--pair"><article class="service-card">
+              <button type="button" class="service-media service-media--mehendi photo-trigger" data-photo data-gallery="services" data-full="images/optimized/service-mehendi-full.webp" data-title="Detailed bridal mehendi designs on hands" aria-label="View photo: Detailed bridal mehendi designs on hands">
+                <img src="images/optimized/service-mehendi-736w.webp" alt="Detailed bridal mehendi designs on hands" width="736" height="1127" loading="lazy" decoding="async" srcset="images/optimized/service-mehendi-480w.webp 480w, images/optimized/service-mehendi-full.webp 736w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 269px">
               
                 <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
               </button>
               <div class="service-content">
                 <p class="service-tag">Celebration ready</p>
-                <h4 class="service-name">Bridal &amp; Festive Mehendi</h4>
+                <h3 class="service-name">Bridal &amp; Festive Mehendi</h3>
                 <p class="service-desc">Delicate motifs and detailed bridal patterns for weddings, festivals and celebrations, chosen to suit your style.</p>
-                <a href="index.html?service=Mehendi#booking" class="service-book-link" data-service="Mehendi" aria-label="Book Bridal &amp; Festive Mehendi">Book Now <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Mehendi.%20Please%20let%20me%20know%20your%20availability." class="service-book-link" data-service="Mehendi" aria-label="Book Bridal &amp; Festive Mehendi" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
               </div>
             </article>
 <article class="service-card">
-              <button type="button" class="service-media service-media--occasion-hairstyle photo-trigger" data-photo data-gallery="services" data-full="./images/service-occasion-hairstyle.webp" data-title="Braided low bun with jasmine flowers" aria-label="View photo: Braided low bun with jasmine flowers">
-                <img src="./images/service-occasion-hairstyle.webp" alt="Illustrative braided low bun with jasmine flowers" width="1122" height="1402" loading="lazy" decoding="async" data-generated="true">
+              <button type="button" class="service-media service-media--occasion-hairstyle photo-trigger" data-photo data-gallery="services" data-full="images/optimized/service-occasion-hairstyle-full.webp" data-title="Braided low bun with jasmine flowers" aria-label="View photo: Braided low bun with jasmine flowers">
+                <img src="images/optimized/service-occasion-hairstyle-960w.webp" alt="Illustrative braided low bun with jasmine flowers" width="960" height="1200" loading="lazy" decoding="async" data-generated="true" srcset="images/optimized/service-occasion-hairstyle-480w.webp 480w, images/optimized/service-occasion-hairstyle-960w.webp 960w, images/optimized/service-occasion-hairstyle-full.webp 1122w" sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 1100px) calc((100vw - 64px) / 2), 269px">
               
                 <span class="photo-zoom"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg><span>View photo</span></span>
               </button>
               <div class="service-content">
                 <p class="service-tag">Finishing touches</p>
-                <h4 class="service-name">Occasion Hairstyling</h4>
+                <h3 class="service-name">Occasion Hairstyling</h3>
                 <p class="service-desc">Elegant buns, soft curls and neatly finished styles to complement your outfit for weddings, parties and special days.</p>
-                <a href="index.html?service=Occasion%20Hairstyling#booking" class="service-book-link" data-service="Occasion Hairstyling" aria-label="Book Occasion Hairstyling">Book Now <span aria-hidden="true">&#8599;</span></a>
+                <a href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20an%20appointment%20for%20Occasion%20Hairstyling.%20Please%20let%20me%20know%20your%20availability." class="service-book-link" data-service="Occasion Hairstyling" aria-label="Book Occasion Hairstyling" target="_blank" rel="noopener noreferrer">Book Now <span aria-hidden="true">&#8599;</span></a>
               </div>
-            </article></div>
-    </div>
-  </section>
-  <section class="gallery-section" id="bridal-gallery">
-    <div class="container">
-      <div class="section-header text-center">
-        <h2 class="section-title">Bridal &amp; Makeover Gallery</h2>
-        <p class="section-subtitle">Real makeover photographs captured right here at Priyanka Beauty Parlour</p>
-      </div>
-      <div class="gallery-grid">
-<div class="gallery-item photo-trigger" data-photo data-gallery="bridal" role="button" tabindex="0" data-full="images/gallery-3.jpg" aria-label="View photo: Detailed Eye Makeup">
-          <img src="images/gallery-3.jpg" alt="Bridal Eye Makeup and Jewelry" loading="lazy">
-          <div class="gallery-overlay">
-            <span class="zoom-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg></span>
-            <h4>Detailed Eye Makeup</h4>
-            <p>Flawless HD finish & gold shimmer</p>
-          </div>
-        </div>
-<div class="gallery-item photo-trigger" data-photo data-gallery="bridal" role="button" tabindex="0" data-full="images/gallery-4.jpg" aria-label="View photo: Classic Wedding Day">
-          <img src="images/gallery-4.jpg" alt="Full Wedding Bride Outfit and Makeup" loading="lazy">
-          <div class="gallery-overlay">
-            <span class="zoom-icon" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5M10.5 7.5v6m-3-3h6"/></svg></span>
-            <h4>Classic Wedding Day</h4>
-            <p>Complete bridal chooda & veil draping</p>
-          </div>
-        </div></div>
-      <div class="bridal-booking"><div class="services-cta-banner">
-        <div class="cta-banner-text">
-          <h3>Looking for customized Wedding Packages or special inquiries?</h3>
-          <p>Talk directly with Priyanka Gupta for personalized advice and package recommendations.</p>
-        </div>
-        <div class="cta-banner-buttons">
-          <a href="index.html#booking" class="btn btn-royal-gold btn-sm">📅 Book Your Slot</a>
-          <a href="https://wa.me/919523262455?text=Hello%2C%20I%20would%20like%20to%20know%20about%20your%20services%20and%20bridal%20packages." target="_blank" class="btn btn-whatsapp btn-sm">💬 Chat on WhatsApp</a>
-        </div>
-      </div>
-
-    </div>
-    </div>
-  </section>
-
-  <section class="achievements-section" aria-labelledby="achievementsTitle" data-achievements>
-    <h2 class="achievements-sr-only" id="achievementsTitle">Our experience</h2>
-    <ul class="achievements-strip">
-      <li class="achievement-card">
-        <svg class="achievement-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="16" cy="12" r="8"/><path d="m11 19-2 10 7-4 7 4-2-10M16 7l1.5 3 3.5.5-2.5 2.4.6 3.5-3.1-1.6-3.1 1.6.6-3.5-2.5-2.4 3.5-.5Z"/></svg>
-        <div class="achievement-details">
-          <p class="achievement-metric"><span class="achievements-sr-only">15+</span><span aria-hidden="true"><span class="achievement-number" data-count="15">15</span><span class="achievement-plus">+</span></span></p>
-          <p class="achievement-label">Years of Experience</p>
-        </div>
-      </li>
-      <li class="achievement-card">
-        <svg class="achievement-icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m5 10 5 5 6-9 6 9 5-5-3 14H8ZM9 28h14"/><circle cx="5" cy="7" r="1.5"/><circle cx="16" cy="3" r="1.5"/><circle cx="27" cy="7" r="1.5"/></svg>
-        <div class="achievement-details">
-          <p class="achievement-metric"><span class="achievements-sr-only">300+</span><span aria-hidden="true"><span class="achievement-number" data-count="300">300</span><span class="achievement-plus">+</span></span></p>
-          <p class="achievement-label">Bridal Makeovers</p>
-        </div>
-      </li>
-    </ul>
-  </section>
-  </main>
+            </article></div></section>
+ <section class="bridal-consultation inner-consultation" aria-labelledby="consultationTitle"><h2 id="consultationTitle">Plan Your Bridal Look</h2><p>Share your date, outfit and style on WhatsApp. Message early to check date availability.</p><a class="btn btn-royal-gold" href="https://wa.me/919523262455?text=Hello%20Priyanka%20Ji%2C%20I%20would%20like%20to%20book%20my%20bridal%20date.%20Please%20let%20me%20know%20your%20availability." target="_blank" rel="noopener noreferrer">Book Your Bridal Date <span aria-hidden="true">&#8599;</span></a></section>
+</div></section></main>
 <dialog class="lightbox-modal" id="lightboxModal" aria-labelledby="lightboxCaption">
     <div class="lightbox-toolbar">
       <span class="lightbox-counter" id="lightboxCounter" aria-live="polite"></span>
@@ -157,7 +198,7 @@
       </div>
     </div>
     <div class="lightbox-stage" id="lightboxStage">
-      <img class="lightbox-img" id="lightboxImg" alt="">
+      <img class="lightbox-img" id="lightboxImg" alt="" width="1" height="1">
     </div>
     <p class="lightbox-caption" id="lightboxCaption" aria-live="polite">Photo preview</p>
     <div class="lightbox-navigation">
@@ -171,7 +212,7 @@
       <div class="footer-col brand-col">
         <a class="footer-brand-header" href="index.html#home" aria-label="Priyanka Beauty Parlour — home">
           <span class="footer-logo-ring">
-            <img src="images/logo.jpg" alt="" class="footer-logo-img" width="56" height="56" loading="lazy">
+            <img src="images/optimized/logo-144w.webp" alt="" class="footer-logo-img" width="144" height="144" loading="lazy">
           </span>
           <span class="footer-wordmark">
             <span class="footer-logo-name">Priyanka</span>
@@ -190,8 +231,9 @@
           <li><a href="about.html">About</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="bridal.html">Bridal</a></li>
+          <li><a href="courses.html">Courses</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li><a href="index.html#booking">Book Appointment <span aria-hidden="true">↗</span></a></li>
         </ul>
       </nav>
@@ -203,7 +245,7 @@
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
             <span><span class="footer-contact-label">Address</span>Ashram Road, in front of Middle School,<br>Raxaul, Bihar – 845305</span>
           </a>
-          <a class="footer-contact-item" href="tel:9523262455">
+          <a class="footer-contact-item" href="tel:+919523262455">
             <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="m7 3 3 5-3 2a16 16 0 0 0 7 7l2-3 5 3v3a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1Z"/></svg><span><span class="footer-contact-label">Phone</span>+91 95232 62455</span>
           </a>
           <a class="footer-contact-item" href="mailto:Pg525702@gmail.com">
@@ -237,8 +279,8 @@
   </footer>
   <!-- Floating Mobile Action Buttons -->
   <div class="floating-buttons">
-    <a href="tel:9523262455" class="floating-btn call-btn" aria-label="Call Now">
-      📞
+    <a href="tel:+919523262455" class="floating-btn call-btn" aria-label="Call Now">
+      <svg class="wa-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m7 3 3 5-3 2a16 16 0 0 0 7 7l2-3 5 3v3a1 1 0 0 1-1 1C10.6 21 3 13.4 3 4a1 1 0 0 1 1-1Z"/></svg>
     <span class="wa-tooltip" aria-hidden="true">Call us</span>
       </a>
     <a href="https://wa.me/919523262455?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20beauty%20parlour%20services." target="_blank" class="floating-btn wa-btn" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
@@ -250,6 +292,9 @@
   </div>
 
   <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" hidden>&#8593;</button>
-  <script src="script.js"></script>
+  <script src="js/nav.js" defer></script>
+  <script src="js/lightbox.js" defer></script>
+  <script src="js/motion.js" defer></script>
+  <script src="js/contact-hints.js" defer></script>
 </body>
 </html>

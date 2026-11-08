@@ -1,0 +1,67 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Local layout audit</title>
+<body><pre id="results">RUNNING</pre><script>
+const pages = ['index','about','services','bridal','courses','gallery','contact','404'];
+const widths = [320,360,390,768,1024,1280,1440,1920];
+const results = [];
+function inspect(frame, page, width) {
+  const w = frame.contentWindow, d = w.document;
+  const visible = e => e.getClientRects().length && w.getComputedStyle(e).visibility !== 'hidden' && !e.closest('[inert],[hidden],dialog:not([open]),.achievements-sr-only,.about-sr-only');
+  const label = e => e.tagName.toLowerCase() + (e.id ? '#'+e.id : '') + '.' + [...e.classList].join('.') + ': ' + e.textContent.trim().slice(0,55);
+  const reduced = w.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const activeAnimations = d.getAnimations().filter(a=>a.playState==='running').length;
+  const animationDetails = d.getAnimations().filter(a=>a.playState==='running').map(a=>({target:a.effect.target.className,name:a.animationName||a.transitionProperty,duration:a.effect.getTiming().duration}));
+  // End reveal transitions before measuring final geometry.
+  d.querySelectorAll('.reveal').forEach(e => e.classList.add('is-visible'));
+  const style = d.createElement('style'); style.textContent = '*{animation:none!important;transition:none!important}'; d.head.append(style);
+  const outside = [], clipped = [], smallText = [], smallTargets = [];
+  for (const e of d.querySelectorAll('main *,header *,footer *, .floating-btn')) {
+    if (!visible(e)) continue;
+    const r = e.getBoundingClientRect(), s = w.getComputedStyle(e);
+    if (r.width && (r.left < -1 || r.right > width + 1) && !e.closest('.about-slide:not(.is-active)')) outside.push(label(e));
+    const text = [...e.childNodes].some(n => n.nodeType === 3 && n.textContent.trim());
+    if (text && parseFloat(s.fontSize) < 12) smallText.push(label(e));
+    if (text && ['hidden','clip'].includes(s.overflowX) && e.scrollWidth > e.clientWidth+1) clipped.push(label(e));
+    if (e.matches('a,button,summary') && (r.width < 44 || r.height < 44)) smallTargets.push({element:label(e),width:Math.round(r.width),height:Math.round(r.height)});
+  }
+  const interactions = {};
+  if (width === 390 || width === 1280) {
+    const key = (target,key,shiftKey=false) => target.dispatchEvent(new w.KeyboardEvent('keydown',{key,shiftKey,bubbles:true,cancelable:true}));
+    if (width === 390) {
+      const hamburger=d.getElementById('hamburgerBtn'), menu=d.getElementById('navMenu');
+      hamburger.click();
+      const controls=[...menu.querySelectorAll('a[href],button')].filter(visible), first=controls[0], last=controls.at(-1);
+      interactions.navOpen=hamburger.getAttribute('aria-expanded')==='true' && menu.contains(d.activeElement);
+      first.focus(); key(first,'Tab',true); interactions.navReverseTrap=d.activeElement===last;
+      last.focus(); key(last,'Tab'); interactions.navForwardTrap=d.activeElement===first;
+      key(d.activeElement,'Escape'); interactions.navEscape=hamburger.getAttribute('aria-expanded')==='false' && d.activeElement===hamburger;
+    }
+    const trigger=[...d.querySelectorAll('[data-photo]')].find(visible);
+    if(trigger){
+      trigger.click(); const modal=d.getElementById('lightboxModal');
+      interactions.lightboxOpen=modal.open;
+      key(d.activeElement,'Escape'); interactions.lightboxEscape=!modal.open && d.activeElement===trigger;
+    }
+    const filter=d.querySelector('[data-gallery-filter]:not([data-gallery-filter="all"])');
+    if(filter){filter.click();interactions.galleryFilter=filter.getAttribute('aria-pressed')==='true' && [...d.querySelectorAll('[data-filter-gallery] [data-category]')].every(c=>c.hidden === (c.dataset.category!==filter.dataset.galleryFilter));d.querySelector('[data-gallery-filter="all"]').click()}
+    const summary=d.querySelector('summary');
+    if(summary){summary.click();interactions.faqOpen=summary.parentElement.open;summary.click();interactions.faqClose=!summary.parentElement.open}
+    const next=d.querySelector('[data-carousel-next]');
+    if(next){const root=next.closest('[data-about-carousel]'),before=root.querySelector('[data-carousel-status]').textContent;next.click();interactions.carouselNext=root.querySelector('[data-carousel-status]').textContent!==before}
+  }
+  return {page,width,innerWidth:w.innerWidth,scrollWidth:d.documentElement.scrollWidth,outside:[...new Set(outside)],clipped,smallText,smallTargets,interactions,reduced,activeAnimations,animationDetails,errors:w.auditErrors||[]};
+}
+(async () => {
+  const selected = new URLSearchParams(location.search).get('page');
+  for (const page of selected ? [selected] : pages) {
+    for (const width of widths) {
+      const f = document.createElement('iframe'); f.style.cssText=`width:${width}px;height:900px;border:0;display:block`; f.src='../'+page+'.html';
+      document.body.append(f);
+      await new Promise(resolve=>{const timer=setInterval(()=>{const d=f.contentDocument;if(d && d.URL.includes(page+'.html') && d.readyState!=='loading' && [...d.querySelectorAll('link[rel="stylesheet"][href^="css/"]')].every(l=>l.sheet)){clearInterval(timer);resolve()}},50)});
+      await new Promise(resolve=>setTimeout(resolve,200));
+      results.push(inspect(f,page,width)); document.getElementById('results').textContent=JSON.stringify(results); f.remove();
+    }
+  }
+  document.getElementById('results').textContent=JSON.stringify(results);
+  document.title='AUDIT COMPLETE';
+})();
+</script></body></html>

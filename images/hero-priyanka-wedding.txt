@@ -1,0 +1,4 @@
+Asset: hero-priyanka-wedding.png
+Method: Built-in image_gen image editing.
+Source: User-supplied wedding-makeup-packages-for-a-flawless-and-memorable-celebration.webp.
+Prompt: Use case: text-localization. Edit target: supplied wedding banner. Preserve the exact landscape composition, bride face, pose, clothing, jewellery, background, floral ornament, and all lower text and decorative lines unchanged. Replace ONLY the top-left black HT monogram and HEENA TAMANNA MAKEOVERS branding. In that same area put an elegant black calligraphic intertwined "PG" signature monogram, below it "Priyanka Gupta" in refined stylish flowing signature lettering, and below that "MAKEOVER" in small spaced uppercase. Exact remaining text unchanged: "Wedding Makeup Packages" and "for a Flawless and Memorable Celebration". Preserve image aspect ratio 1199:675 and all content, no crop. Professional polished salon branding.
