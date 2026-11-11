@@ -1,0 +1,247 @@
+[
+  {
+    "height": 3576,
+    "scrollWidth": 345,
+    "innerWidth": 360,
+    "header": 88,
+    "hero": 325,
+    "servicesTop": 478.828125,
+    "footer": 222,
+    "sections": [
+      {
+        "id": "home",
+        "height": 325
+      },
+      {
+        "id": "",
+        "height": 65.828125
+      },
+      {
+        "id": "services",
+        "height": 360.640625
+      },
+      {
+        "id": "bridal",
+        "height": 522.96875
+      },
+      {
+        "id": "learn",
+        "height": 268.296875
+      },
+      {
+        "id": "meet-priyanka",
+        "height": 256.21875
+      },
+      {
+        "id": "gallery",
+        "height": 369.296875
+      },
+      {
+        "id": "how-to-book",
+        "height": 453.46875
+      },
+      {
+        "id": "booking",
+        "height": 424.6875
+      }
+    ],
+    "errors": [],
+    "width": 360
+  },
+  {
+    "height": 3620,
+    "scrollWidth": 375,
+    "innerWidth": 390,
+    "header": 88,
+    "hero": 325,
+    "servicesTop": 478.828125,
+    "footer": 222,
+    "sections": [
+      {
+        "id": "home",
+        "height": 325
+      },
+      {
+        "id": "",
+        "height": 65.828125
+      },
+      {
+        "id": "services",
+        "height": 369.640625
+      },
+      {
+        "id": "bridal",
+        "height": 537.203125
+      },
+      {
+        "id": "learn",
+        "height": 268.296875
+      },
+      {
+        "id": "meet-priyanka",
+        "height": 256.21875
+      },
+      {
+        "id": "gallery",
+        "height": 389.296875
+      },
+      {
+        "id": "how-to-book",
+        "height": 453.46875
+      },
+      {
+        "id": "booking",
+        "height": 424.6875
+      }
+    ],
+    "errors": [],
+    "width": 390
+  },
+  {
+    "height": 3658,
+    "scrollWidth": 415,
+    "innerWidth": 430,
+    "header": 88,
+    "hero": 325,
+    "servicesTop": 478.828125,
+    "footer": 222,
+    "sections": [
+      {
+        "id": "home",
+        "height": 325
+      },
+      {
+        "id": "",
+        "height": 65.828125
+      },
+      {
+        "id": "services",
+        "height": 380.9375
+      },
+      {
+        "id": "bridal",
+        "height": 555.078125
+      },
+      {
+        "id": "learn",
+        "height": 268.296875
+      },
+      {
+        "id": "meet-priyanka",
+        "height": 240.03125
+      },
+      {
+        "id": "gallery",
+        "height": 414.390625
+      },
+      {
+        "id": "how-to-book",
+        "height": 453.46875
+      },
+      {
+        "id": "booking",
+        "height": 424.6875
+      }
+    ],
+    "errors": [],
+    "width": 430
+  },
+  {
+    "height": 10443,
+    "scrollWidth": 753,
+    "innerWidth": 768,
+    "header": 64,
+    "hero": 710.109375,
+    "servicesTop": 915.15625,
+    "footer": 613.1875,
+    "sections": [
+      {
+        "id": "home",
+        "height": 710.109375
+      },
+      {
+        "id": "",
+        "height": 141.046875
+      },
+      {
+        "id": "services",
+        "height": 1974.75
+      },
+      {
+        "id": "bridal",
+        "height": 1705.796875
+      },
+      {
+        "id": "learn",
+        "height": 986.6875
+      },
+      {
+        "id": "meet-priyanka",
+        "height": 1211.515625
+      },
+      {
+        "id": "gallery",
+        "height": 1330.828125
+      },
+      {
+        "id": "how-to-book",
+        "height": 836.203125
+      },
+      {
+        "id": "booking",
+        "height": 869.28125
+      }
+    ],
+    "errors": [],
+    "width": 768
+  },
+  {
+    "height": 7929,
+    "scrollWidth": 1425,
+    "innerWidth": 1440,
+    "header": 76,
+    "hero": 757,
+    "servicesTop": 983.25,
+    "footer": 554.5,
+    "sections": [
+      {
+        "id": "home",
+        "height": 757
+      },
+      {
+        "id": "",
+        "height": 150.25
+      },
+      {
+        "id": "services",
+        "height": 1513.625
+      },
+      {
+        "id": "bridal",
+        "height": 1064.171875
+      },
+      {
+        "id": "learn",
+        "height": 663.40625
+      },
+      {
+        "id": "meet-priyanka",
+        "height": 858.734375
+      },
+      {
+        "id": "gallery",
+        "height": 819.859375
+      },
+      {
+        "id": "how-to-book",
+        "height": 903.71875
+      },
+      {
+        "id": "booking",
+        "height": 568
+      }
+    ],
+    "errors": [],
+    "width": 1440
+  }
+]

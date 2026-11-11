@@ -57,6 +57,7 @@
   ]
 }
   </script>
+  <link rel="stylesheet" href="css/phone.css">
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -81,7 +82,7 @@
         <a href="contact.html" class="nav-link" aria-current="page">Contact</a>
         <a href="index.html#booking" class="btn header-book nav-mobile-book">Book Appointment</a>
       </nav>
-      <a href="index.html#booking" class="btn header-book header-book-desktop">Book Appointment <span aria-hidden="true">&#8599;</span></a>
+      <a href="index.html#booking" class="btn header-book header-book-desktop"><span class="phone-hide">Book Appointment <span aria-hidden="true">&#8599;</span></span><span class="phone-only">Book</span></a>
       <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Open Navigation" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
     </div>
   </header>
@@ -310,6 +311,7 @@
 
   <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top" hidden>&#8593;</button>
   <script src="js/nav.js" defer></script>
+  <script src="js/phone.js" defer></script>
   <script src="js/motion.js" defer></script>
   <script src="js/contact-hints.js" defer></script>
 </body>
