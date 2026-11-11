@@ -25,11 +25,8 @@
     let pointer = null;
     let suppressClick = false;
     let active = false;
-    const touches = new Map();
-    let pinch = null;
 
     function resetZoom() {
-      touches.clear(); pinch = null;
       zoomed = false;
       stage.classList.remove('is-zoomed', 'is-dragging');
       image.style.width = '';
@@ -142,7 +139,6 @@
     modal.addEventListener('close', finishClose);
     modal.addEventListener('cancel', event => { event.preventDefault(); closeViewer(); });
     modal.addEventListener('click', event => {
-      if (suppressClick) { suppressClick = false; return; }
       if (event.target === modal || (event.target === stage && !zoomed)) closeViewer();
     });
     modal.addEventListener('keydown', event => {
@@ -160,15 +156,6 @@
     // Native touch scrolling pans an enlarged photo; a horizontal swipe browses fitted photos.
     stage.addEventListener('pointerdown', event => {
       suppressClick = false;
-      if (event.pointerType === 'touch' && matchMedia('(max-width: 767px)').matches) {
-        touches.set(event.pointerId, {x:event.clientX,y:event.clientY});
-        if (touches.size === 2) {
-          const [a,b] = [...touches.values()];
-          pinch = {distance:Math.hypot(a.x-b.x,a.y-b.y),width:image.getBoundingClientRect().width};
-          pointer = null; suppressClick = true;
-          return;
-        }
-      }
       pointer = { x: event.clientX, y: event.clientY, left: stage.scrollLeft, top: stage.scrollTop, type: event.pointerType };
       if (zoomed && event.pointerType === 'mouse') {
         event.preventDefault();
@@ -177,28 +164,13 @@
       }
     });
     stage.addEventListener('pointermove', event => {
-      if (touches.has(event.pointerId)) touches.set(event.pointerId,{x:event.clientX,y:event.clientY});
-      if (pinch && touches.size === 2) {
-        const [a,b] = [...touches.values()];
-        const ratio = Math.hypot(a.x-b.x,a.y-b.y) / Math.max(1,pinch.distance);
-        const width = Math.max(stage.clientWidth * .5, Math.min(stage.clientWidth * 4,pinch.width * ratio));
-        zoomed = true; suppressClick = true;
-        stage.classList.add('is-zoomed');
-        image.style.width = `${width}px`;
-        zoomButton.setAttribute('aria-pressed','true');
-        zoomButton.setAttribute('aria-label','Zoom out');
-        zoomButton.textContent = 'Zoom -';
-        return;
-      }
-      if (!pointer || !zoomed || (pointer.type !== 'mouse' && !matchMedia('(max-width: 767px)').matches)) return;
+      if (!pointer || !zoomed || pointer.type !== 'mouse') return;
       const dx = event.clientX - pointer.x, dy = event.clientY - pointer.y;
       stage.scrollLeft = pointer.left - dx;
       stage.scrollTop = pointer.top - dy;
       if (Math.abs(dx) + Math.abs(dy) > 5) suppressClick = true;
     });
     stage.addEventListener('pointerup', event => {
-      touches.delete(event.pointerId);
-      if (pinch) { if (!touches.size) pinch = null; pointer = null; suppressClick = true; return; }
       if (pointer && !zoomed && pointer.type === 'touch') {
         const dx = event.clientX - pointer.x, dy = event.clientY - pointer.y;
         if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.3) {
@@ -209,7 +181,7 @@
       pointer = null;
       stage.classList.remove('is-dragging');
     });
-    stage.addEventListener('pointercancel', event => { touches.delete(event.pointerId); pinch = null; pointer = null; stage.classList.remove('is-dragging'); });
+    stage.addEventListener('pointercancel', () => { pointer = null; stage.classList.remove('is-dragging'); });
     window.addEventListener('resize', () => { if (active) resetZoom(); });
   }
 

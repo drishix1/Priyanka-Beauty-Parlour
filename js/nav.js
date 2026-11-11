@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navCloseBtn = document.getElementById('navCloseBtn');
 
   if (hamburgerBtn && navMenu) {
-    const mobileView = window.matchMedia('(min-width: 768px) and (max-width: 992px)');
+    const mobileView = window.matchMedia('(max-width: 992px)');
     let menuOpen = false;
     const menuControls = () => Array.from(navMenu.querySelectorAll('a[href], button:not([disabled])'))
       .filter(control => control.getClientRects().length && getComputedStyle(control).visibility !== 'hidden');

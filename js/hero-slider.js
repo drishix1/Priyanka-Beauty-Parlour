@@ -19,9 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   function sync() {
     stop();
-    const phone = matchMedia('(max-width: 767px)').matches;
-    const focusedSlide = slides[index].contains(document.activeElement);
-    if (reduced.matches || (phone ? focusedSlide : root.contains(document.activeElement)) || document.hidden || !inView || !pageActive) return;
+    if (reduced.matches || root.contains(document.activeElement) || document.hidden || !inView || !pageActive) return;
     root.classList.add('is-playing');
     deadline = performance.now() + remaining;
     timer = setTimeout(() => { timer = null; show(index + 1, false); }, remaining);
